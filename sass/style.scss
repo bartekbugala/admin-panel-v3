@@ -1,10 +1,11 @@
-@import "layout";
-@import "mixins";
 @import "normalize";
 @import "variables";
+@import "layout";
+@import "mixins";
 
 /* Components */
 //@import "components/form_field";
+@import "components/buttons";
 
 /* Sections */
 //@import "section/registration_form";

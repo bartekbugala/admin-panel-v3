@@ -1,0 +1,37 @@
+a.btn {
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    text-transform: capitalize;
+    //user-select: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+
+    }
+}
+
+.btn-disabled {
+    background-color: $disabled-color;
+}
+
+.btn-secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+        background-color: $secondary-color-hover;
+    }
+}
+
+.btn-warning {
+    background-color: $warning-color;
+
+    &:hover {
+        background-color: $warning-color-hover;
+    }
+}

@@ -1,38 +1,49 @@
 /* Colors */
 $body-background-color: #f5f5f2;
+$panel-background-color: #ffffff;
+
+$panel-main-color: #a6a6a6; // headings, field descriptions
+
+$input-color: #333333;
+$input-border-color: #e3e3e3;
 
 $menu-background-color: #191919;
 $menu-background-color-hover: #282828;
 $menu-color: #999999;
 
+$warning-color: #f58220;
+$warning-color-hover: #ffa200;
+
+$secondary-color: #979797;
+$secondary-color-hover: #bababa;
+
+$disabled-color: $input-border-color; 
+
 $link-color: #56819f;
-$link-color-hover: #ffa200;
+$link-color-hover: $warning-color-hover;
 
 $chart-signups-color: #80bfca;
 $chart-ftd-color: #ff9a38;
 $chart-earned-color: #59b66d;
 $chart-button-color: #f3f3f1;
 
-$checkbox-marked: #04ae00;
-$messenger-online: $scroll-bright-color;
+$scroll-light-color: #e3e3e3;
+$scroll-dark-color: #9c9c9c;
 
-$button-orange: #f58220;
-$button-orange-hover: $link-color-hover;
+$success-color: #04ae00;
+$messenger-online: $scroll-light-color;
 
-$panel-background-color: #ffffff;
-$panel-main-color: #a6a6a6; // headings, field descriptions
 
-$input-field-color: #333333;
-$input-field-border-color: #e3e3e3;
+
+
 
 $brand-main-color: #ff0000;
 
-$scroll-light-color: #e3e3e3;
-$scroll-dark-color: #9c9c9c;
+
 
 /* Font sizes */
 $paragraph-font-size: 16px;
 
 /* Fonts */
 $brand-font: "Open Sans", Helvetica, Arial;
-$paragraph-font: "Open Sans", Helvetica, Arial;
+$main-font: "Open Sans", Helvetica, Arial;
