@@ -389,6 +389,14 @@ a.btn {
   background-color: #ffa200;
 }
 
+.btn-lg {
+  font-size: 30px;
+}
+
+.btn-sm {
+  font-size: 10px;
+}
+
 /* Sections */
 /* Pages / Views */
 /*# sourceMappingURL=style.css.map */
