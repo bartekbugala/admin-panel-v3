@@ -367,7 +367,10 @@ a.btn {
 .btn {
   display: inline-block;
   text-transform: capitalize;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-radius: 3px;
   padding: 10px 20px;
   text-decoration: none;
@@ -410,7 +413,13 @@ a.btn {
   color: #a6a6a6;
 }
 
+.btn-xlg {
+  font-size: 80px;
+}
+
 /* Sections */
 /* Pages / Views */
-
+* {
+  margin: 0;
+}
 /*# sourceMappingURL=style.css.map */
