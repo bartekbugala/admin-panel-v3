@@ -2,6 +2,11 @@ h1,h2,h3,h4,h5,h6,p,a,div,ul,ol {
     font-family: $main-font;
 }
 
+a {
+    text-decoration: none;
+    color: $link-color;
+}
+
 main {
     background-color: $body-background-color;
 }
