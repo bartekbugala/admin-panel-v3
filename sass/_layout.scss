@@ -1,5 +1,6 @@
 h1,h2,h3,h4,h5,h6,p,a,div,ul,ol {
     font-family: $main-font;
+    color: $panel-main-color;
 }
 
 a {
@@ -12,4 +13,5 @@ body {
 }
 section {
     background-color: $panel-background-color;
+    padding: 30px;
 }

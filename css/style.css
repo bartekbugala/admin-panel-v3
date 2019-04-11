@@ -342,6 +342,7 @@ template {
 /* Fonts */
 h1, h2, h3, h4, h5, h6, p, a, div, ul, ol {
   font-family: "Open Sans", Helvetica, Arial;
+  color: #a6a6a6;
 }
 
 a {
@@ -355,6 +356,7 @@ body {
 
 section {
   background-color: #ffffff;
+  padding: 30px;
 }
 
 /* Components */
@@ -401,6 +403,11 @@ a.btn {
 
 .btn-sm {
   font-size: 10px;
+}
+
+.btn-chart {
+  background-color: #f3f3f1;
+  color: #a6a6a6;
 }
 
 /* Sections */
