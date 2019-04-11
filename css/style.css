@@ -356,7 +356,11 @@ a.btn {
 .btn {
   display: inline-block;
   text-transform: capitalize;
-  border-radius: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 3px;
   padding: 10px 20px;
   text-decoration: none;
 }
