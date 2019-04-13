@@ -21,6 +21,7 @@ aside {
         li {
             padding-left: $menu-left-padding-hover;
             background-color: $menu-background-color;
+            overflow: hidden;
             &:hover {
                 background-color: $menu-left-padding-color-hover;
                 background-color: $menu-left-padding-color-hover;
@@ -34,6 +35,7 @@ aside {
             width: 100%;
             color: $menu-color;
             background-color: $menu-background-color;
+            
             &:hover {
                 color: $menu-color-hover;
                 background-color: $menu-background-color-hover
