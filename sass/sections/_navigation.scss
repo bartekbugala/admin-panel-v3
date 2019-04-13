@@ -7,6 +7,7 @@ aside {
 
     div {
         position: relative;
+        overflow: hidden;
         height: 75px;
 
         .logo {
@@ -15,10 +16,6 @@ aside {
             position: absolute;
             left: 20px;
             top: -15px;
-
-            &:hover {
-                color: $panel-main-color;
-            }
         }
 
         .hamburger {

@@ -554,6 +554,7 @@ aside {
 
 aside div {
   position: relative;
+  overflow: hidden;
   height: 75px;
 }
 
@@ -563,10 +564,6 @@ aside div .logo {
   position: absolute;
   left: 20px;
   top: -15px;
-}
-
-aside div .logo:hover {
-  color: #a6a6a6;
 }
 
 aside div .hamburger {
