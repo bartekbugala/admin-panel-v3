@@ -337,10 +337,25 @@ template {
   display: none;
 }
 
-/* Colors */
+/* Variables */
 /* Font sizes */
 /* Fonts */
-h1, h2, h3, h4, h5, h6, p, a, div, ul, ol {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+ul,
+ol {
   font-family: "Open Sans", Helvetica, Arial;
   color: #a6a6a6;
 }
@@ -357,6 +372,112 @@ body {
 section {
   background-color: #ffffff;
   padding: 30px;
+}
+
+.row::before, .row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class*="col-"] {
+  float: left;
+}
+
+.row .col-1 {
+  width: 8.33%;
+}
+
+.row .col-2 {
+  width: 16.66%;
+}
+
+.row .col-3 {
+  width: 25%;
+}
+
+.row .col-4 {
+  width: 33.33%;
+}
+
+.row .col-5 {
+  width: 41.66%;
+}
+
+.row .col-6 {
+  width: 50%;
+}
+
+.row .col-7 {
+  width: 58.33%;
+}
+
+.row .col-8 {
+  width: 66.66%;
+}
+
+.row .col-9 {
+  width: 75%;
+}
+
+.row .col-10 {
+  width: 83.33%;
+}
+
+.row .col-11 {
+  width: 91.66%;
+}
+
+.row .col-12 {
+  width: 100%;
+}
+
+.row .col-offset-0 {
+  margin-left: 0;
+}
+
+.row .col-offset-1 {
+  margin-left: 8.33%;
+}
+
+.row .col-offset-2 {
+  margin-left: 16.66%;
+}
+
+.row .col-offset-3 {
+  margin-left: 25%;
+}
+
+.row .col-offset-4 {
+  margin-left: 33.33%;
+}
+
+.row .col-offset-5 {
+  margin-left: 41.66%;
+}
+
+.row .col-offset-6 {
+  margin-left: 50%;
+}
+
+.row .col-offset-7 {
+  margin-left: 58.33%;
+}
+
+.row .col-offset-8 {
+  margin-left: 66.66%;
+}
+
+.row .col-offset-9 {
+  margin-left: 75%;
+}
+
+.row .col-offset-10 {
+  margin-left: 83.33%;
+}
+
+.row .col-offset-11 {
+  margin-left: 91.66%;
 }
 
 /* Components */
@@ -382,6 +503,7 @@ a.btn {
 
 .btn-disabled {
   background-color: #e3e3e3;
+  pointer-events: none;
 }
 
 .btn-secondary {
@@ -418,8 +540,81 @@ a.btn {
 }
 
 /* Sections */
-/* Pages / Views */
-* {
-  margin: 0;
+section h3 {
+  text-transform: uppercase;
 }
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #191919;
+  width: 250px;
+}
+
+aside div {
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+}
+
+aside div .logo {
+  font-size: 110px;
+  color: #ffffff;
+  position: absolute;
+  left: 20px;
+  top: -15px;
+}
+
+aside div .hamburger {
+  display: inline-block;
+  padding: 3px;
+  line-height: 25px;
+  color: #999999;
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  top: 23px;
+}
+
+aside div .hamburger:hover {
+  color: #ffffff;
+}
+
+aside nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside nav li {
+  padding-left: 5px;
+  background-color: #191919;
+  overflow: hidden;
+}
+
+aside nav li:hover {
+  background-color: #f58220;
+  background-color: #f58220;
+}
+
+aside nav a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 16px 20px;
+  height: 100%;
+  width: 100%;
+  color: #999999;
+  background-color: #191919;
+}
+
+aside nav a:hover {
+  color: #ffffff;
+  background-color: #282828;
+}
+
+aside nav i {
+  margin-right: 20px;
+}
+
+/* Pages / Views */
 /*# sourceMappingURL=style.css.map */

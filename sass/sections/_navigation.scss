@@ -1,0 +1,73 @@
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $menu-background-color;
+    width: 250px;
+
+    div {
+        position: relative;
+        overflow: hidden;
+        height: 75px;
+
+        .logo {
+            font-size: 110px;
+            color: $menu-color-hover;
+            position: absolute;
+            left: 20px;
+            top: -15px;
+        }
+
+        .hamburger {
+            display: inline-block;
+            padding: 3px;
+            line-height: 25px;
+            color: $menu-color;
+            font-size: 25px;
+            position: absolute;
+            right: 20px;
+            top: 23px;
+
+            &:hover {
+                color: $menu-color-hover;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding-left: $menu-left-padding-hover;
+            background-color: $menu-background-color;
+            overflow: hidden;
+
+            &:hover {
+                background-color: $menu-left-padding-color-hover;
+                background-color: $menu-left-padding-color-hover;
+            }
+        }
+
+        a {
+            display: inline-block;
+            font-size: 18px;
+            padding: 16px 20px;
+            height: 100%;
+            width: 100%;
+            color: $menu-color;
+            background-color: $menu-background-color;
+
+            &:hover {
+                color: $menu-color-hover;
+                background-color: $menu-background-color-hover
+            }
+        }
+
+        i {
+            margin-right: 20px;
+        }
+    }
+}
