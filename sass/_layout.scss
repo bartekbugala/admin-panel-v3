@@ -1,4 +1,19 @@
-h1,h2,h3,h4,h5,h6,p,a,div,ul,ol {
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+ul,
+ol {
     font-family: $main-font;
     color: $panel-main-color;
 }
@@ -11,6 +26,7 @@ a {
 body {
     background-color: $body-background-color;
 }
+
 section {
     background-color: $panel-background-color;
     padding: 30px;

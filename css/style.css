@@ -337,10 +337,25 @@ template {
   display: none;
 }
 
-/* Colors */
+/* Variables */
 /* Font sizes */
 /* Fonts */
-h1, h2, h3, h4, h5, h6, p, a, div, ul, ol {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div,
+ul,
+ol {
   font-family: "Open Sans", Helvetica, Arial;
   color: #a6a6a6;
 }
@@ -420,6 +435,59 @@ a.btn {
 /* Sections */
 section h3 {
   text-transform: uppercase;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #191919;
+  width: 220px;
+}
+
+aside .logo img {
+  max-width: 120px;
+  height: auto;
+  padding: 16px 20px;
+}
+
+aside nav {
+  background: red;
+}
+
+aside nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: blue;
+}
+
+aside nav li {
+  padding-left: 5px;
+  background-color: #191919;
+}
+
+aside nav li:hover {
+  background-color: #f58220;
+  background-color: #f58220;
+}
+
+aside nav a {
+  display: inline-block;
+  font-size: 18px;
+  padding: 16px 20px;
+  height: 100%;
+  width: 100%;
+  color: #999999;
+  background-color: #191919;
+}
+
+aside nav a:hover {
+  color: #ffffff;
+  background-color: #282828;
+}
+
+aside nav i {
+  margin-right: 20px;
 }
 
 /* Pages / Views */

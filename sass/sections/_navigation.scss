@@ -1,0 +1,46 @@
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $menu-background-color;
+    width: 220px;
+    .logo {
+        img{
+            max-width: 120px;
+            height: auto;
+            padding: 16px 20px;
+        }   
+    }
+    nav {
+        background: red;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: blue;
+        }
+        li {
+            padding-left: $menu-left-padding-hover;
+            background-color: $menu-background-color;
+            &:hover {
+                background-color: $menu-left-padding-color-hover;
+                background-color: $menu-left-padding-color-hover;
+            }
+        }
+        a {
+            display: inline-block;
+            font-size: 18px;
+            padding: 16px 20px;
+            height: 100%;
+            width: 100%;
+            color: $menu-color;
+            background-color: $menu-background-color;
+            &:hover {
+                color: $menu-color-hover;
+                background-color: $menu-background-color-hover
+            }
+        }
+        i {
+            margin-right: 20px;
+        }
+    }
+}
