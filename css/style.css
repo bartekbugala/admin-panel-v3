@@ -418,8 +418,9 @@ a.btn {
 }
 
 /* Sections */
-/* Pages / Views */
-* {
-  margin: 0;
+section h3 {
+  text-transform: uppercase;
 }
+
+/* Pages / Views */
 /*# sourceMappingURL=style.css.map */
