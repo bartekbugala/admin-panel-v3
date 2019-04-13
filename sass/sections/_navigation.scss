@@ -8,27 +8,31 @@ aside {
     div {
         position: relative;
         height: 75px;
+
         .logo {
             font-size: 110px;
             color: $menu-color-hover;
             position: absolute;
             left: 20px;
             top: -15px;
+
             &:hover {
                 color: $panel-main-color;
             }
         }
 
         .hamburger {
+            display: inline-block;
             padding: 3px;
+            line-height: 25px;
             color: $menu-color;
             font-size: 25px;
             position: absolute;
             right: 20px;
             top: 23px;
+
             &:hover {
                 color: $menu-color-hover;
-                background-color: $menu-background-color-hover;
             }
         }
     }
