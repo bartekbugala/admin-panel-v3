@@ -11,11 +11,11 @@ aside {
         height: 75px;
 
         .logo {
-            font-size: 110px;
+            font-size: 100px;
             color: $menu-color-hover;
             position: absolute;
             left: 20px;
-            top: -15px;
+            top: -12px;
         }
 
         .hamburger {
@@ -23,9 +23,9 @@ aside {
             padding: 3px;
             line-height: 20px;
             color: $menu-color;
-            font-size: 25px;
+            font-size: 22px;
             position: absolute;
-            right: 20px;
+            right: 18px;
             top: 23px;
 
             &:hover {

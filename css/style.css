@@ -606,11 +606,11 @@ aside div {
 }
 
 aside div .logo {
-  font-size: 110px;
+  font-size: 100px;
   color: #ffffff;
   position: absolute;
   left: 20px;
-  top: -15px;
+  top: -12px;
 }
 
 aside div .hamburger {
@@ -618,9 +618,9 @@ aside div .hamburger {
   padding: 3px;
   line-height: 20px;
   color: #999999;
-  font-size: 25px;
+  font-size: 22px;
   position: absolute;
-  right: 20px;
+  right: 18px;
   top: 23px;
 }
 
