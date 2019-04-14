@@ -1,0 +1,42 @@
+header {
+    background-color: $section-background-color;
+    margin-left: $menu-width;
+    width: calc(100% - #{$menu-width});
+    min-height: 50px;
+    font-size: 1.3em;
+    ul {
+        list-style: none;
+        float: right;
+        li {
+            float: left;
+            border-style: solid;
+            border-width: 0 0 0 2px;
+            border-color: $input-border-color;
+        }
+    }
+    .wallet {
+        span {
+            font-weight: 600;
+        }
+    }
+    .profile {
+        span {
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: 600;
+            color: $link-color;
+            line-height: 20xp;
+            height: 20px;
+        }
+    }
+    a {
+        display: inline-block;
+        color: $section-main-color;
+        padding: 10px;
+        line-height: 30px;
+        height: 30px;
+        span {            
+            margin: 0 10px;    
+        }
+    }
+}

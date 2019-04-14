@@ -15,7 +15,7 @@ div,
 ul,
 ol {
     font-family: $main-font;
-    color: $panel-main-color;
+    color: $section-main-color;
 }
 
 a {
@@ -28,8 +28,10 @@ body {
 }
 
 section {
-    background-color: $panel-background-color;
+    background-color: $section-background-color;
     padding: 30px;
+    margin: $section-margin;
+    margin-left: calc(#{$menu-width} + #{$section-margin});
 }
 
 //Grid + Clearfix + Offset
@@ -44,6 +46,9 @@ section {
 
     [class*="col-"] {
         float: left;
+    }
+    .col-right {
+        float: right;
     }
 
 

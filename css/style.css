@@ -372,6 +372,8 @@ body {
 section {
   background-color: #ffffff;
   padding: 30px;
+  margin: 20px;
+  margin-left: calc(250px + 20px);
 }
 
 .row::before, .row::after {
@@ -382,6 +384,10 @@ section {
 
 .row [class*="col-"] {
   float: left;
+}
+
+.row .col-right {
+  float: right;
 }
 
 .row .col-1 {
@@ -540,8 +546,49 @@ a.btn {
 }
 
 /* Sections */
-section h3 {
-  text-transform: uppercase;
+header {
+  background-color: #ffffff;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 50px;
+  font-size: 1.3em;
+}
+
+header ul {
+  list-style: none;
+  float: right;
+}
+
+header ul li {
+  float: left;
+  border-style: solid;
+  border-width: 0 0 0 2px;
+  border-color: #e3e3e3;
+}
+
+header .wallet span {
+  font-weight: 600;
+}
+
+header .profile span {
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: #56819f;
+  line-height: 20xp;
+  height: 20px;
+}
+
+header a {
+  display: inline-block;
+  color: #a6a6a6;
+  padding: 10px;
+  line-height: 30px;
+  height: 30px;
+}
+
+header a span {
+  margin: 0 10px;
 }
 
 aside {
@@ -614,6 +661,10 @@ aside nav a:hover {
 
 aside nav i {
   margin-right: 20px;
+}
+
+section h3 {
+  text-transform: uppercase;
 }
 
 /* Pages / Views */

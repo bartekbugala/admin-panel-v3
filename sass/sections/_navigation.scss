@@ -3,7 +3,7 @@ aside {
     top: 0;
     left: 0;
     background-color: $menu-background-color;
-    width: 250px;
+    width: $menu-width;
 
     div {
         position: relative;
