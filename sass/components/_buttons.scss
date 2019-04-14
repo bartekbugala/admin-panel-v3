@@ -49,6 +49,9 @@ a.btn {
     color: #a6a6a6;
 }
 
-.btn-xlg {
-    font-size: 80px;
+.btn-square {
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    height: 30px;
 }

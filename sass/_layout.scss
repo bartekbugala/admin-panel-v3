@@ -27,13 +27,6 @@ body {
     background-color: $body-background-color;
 }
 
-section {
-    background-color: $section-background-color;
-    padding: 30px;
-    margin: $section-margin;
-    margin-left: calc(#{$menu-width} + #{$section-margin});
-}
-
 //Grid + Clearfix + Offset
 .row {
 
@@ -47,10 +40,6 @@ section {
     [class*="col-"] {
         float: left;
     }
-    .col-right {
-        float: right;
-    }
-
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -78,6 +67,5 @@ section {
 .col-offset-9 {margin-left: 75%;}
 .col-offset-10 {margin-left: 83.33%;}
 .col-offset-11 {margin-left: 91.66%;}
-
 }
 
