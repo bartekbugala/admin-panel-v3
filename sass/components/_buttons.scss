@@ -6,12 +6,11 @@ a.btn {
     display: inline-block;
     text-transform: capitalize;
     user-select: none;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 10px 20px;
     text-decoration: none;
     &:hover {
         cursor: pointer;
-
     }
 }
 
@@ -51,7 +50,5 @@ a.btn {
 
 .btn-square {
     display: inline-block;
-    width: 30px;
-    line-height: 30px;
-    height: 30px;
+    padding: 14px;
 }

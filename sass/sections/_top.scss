@@ -6,32 +6,37 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    i {font-size: 0.9em;}
+
+    i {
+        font-size: 0.9em;
+    }
+
     ul {
         list-style: none;
         display: flex;
+
         li {
-            border-style: solid;
-            border-width: 0 0 0 2px;
-            border-color: $input-border-color;
+            display: flex;
+            border-left: solid 2px $input-border-color;
         }
     }
+
     a {
         display: flex;
-        align-self: stretch;
         color: $section-main-color;
         padding: 18px;
-        background: red;
 
-        span {            
-            margin: 0 20px;    
+        span {
+            margin: 0 20px;
         }
     }
+
     .wallet {
         span {
             font-weight: 600;
         }
     }
+
     .profile {
         span {
             font-size: 0.7em;
