@@ -30,7 +30,7 @@ body {
 
 //Grid + Clearfix + Offset
 .row {
-
+    width: 100%;
     &::before,
     &::after {
         content: "";
