@@ -480,6 +480,38 @@ body {
   margin-left: 91.66%;
 }
 
+section {
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  margin: 20px;
+  margin-left: calc(200px + 20px);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section h3 {
+  text-transform: uppercase;
+}
+
+section header {
+  justify-self: stretch;
+}
+
+section header,
+section .section-part {
+  padding: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-bottom: solid 2px #e3e3e3;
+}
+
+section .section-part {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
 /* Components */
 a.btn {
   color: white;
@@ -544,28 +576,44 @@ a.btn {
 }
 
 .input-date-range {
+  width: 40%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -ms-flex-pack: stretch;
+      justify-content: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: auto;
+  margin-right: 10px;
+}
+
+.input-date-range .input-date {
+  border: solid 2px #e3e3e3;
+  -ms-flex: 1 1 25%;
+      flex: 1 1 25%;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333333;
+  line-height: 30px;
+  padding: 10px;
+}
+
+.input-date-range .input-date:first-of-type {
+  margin-right: -1px;
+}
+
+.input-date-range .input-date i {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  border: solid 2px #e3e3e3;
-  border-radius: 5px;
-  margin-right: 10px;
-  padding-right: 10px;
-}
-
-.input-date {
-  display: inline-block;
-  justify-self: flex-start;
-  padding: 0 30px 0 10px;
-}
-
-.input-date:first-of-type {
-  border-right: solid 2px #e3e3e3;
-}
-
-.input-date i {
-  justify-self: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex: 1 1 20%;
+      flex: 1 1 20%;
+  margin-left: 5px;
 }
 
 /* Sections */
@@ -691,57 +739,23 @@ aside nav i {
   margin-right: 20px;
 }
 
-section {
+section .counters {
   display: -ms-flexbox;
   display: flex;
-  background-color: #ffffff;
-  margin: 20px;
-  margin-left: calc(200px + 20px);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-section h3 {
-  text-transform: uppercase;
-}
-
-section header {
-  justify-self: stretch;
-}
-
-section header,
-section .section-part {
-  padding: 20px;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  border-bottom: solid 2px #e3e3e3;
-}
-
-section .sub-section-part {
-  display: block;
-  width: 150px;
+section .counters .underlined-counter {
+  width: 200px;
   margin: 10px;
-  -ms-flex: 0 0 40%;
-      flex: 0 0 40%;
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
   border-bottom: solid 2px #e3e3e3;
 }
 
-section .section-part {
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-section img {
+section .chart-img {
   max-width: 100%;
-}
-
-section .counters {
-  display: block;
-  justify-self: center;
-  margin: 0 auto;
-  -ms-flex: 0 0 15%;
-      flex: 0 0 15%;
 }
 
 /* Pages / Views */

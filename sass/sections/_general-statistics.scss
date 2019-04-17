@@ -1,0 +1,17 @@
+section {
+    .counters {
+        display: flex;
+        flex-wrap: wrap;
+
+        .underlined-counter {
+            width: 200px;
+            margin: 10px;
+            flex: 1 1 50%;
+            border-bottom: solid 2px $input-border-color;
+        }
+    }
+
+    .chart-img {
+        max-width: 100%;
+    }
+}
