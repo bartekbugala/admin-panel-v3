@@ -4,16 +4,17 @@ section {
         flex-flow: column wrap;
         align-content: stretch;
         flex-wrap: wrap;
-        width: 300px;
-   
+        width: 600px;
+        background: lightcyan;
 
-        .underlined-counter {
+           .underlined-counter {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             width: 200px;
             border-bottom: solid 2px $input-border-color;
-            
+            flex-basis: 2 2 50%;
+            background: lightpink;
             span:nth-of-type(1) {
                 flex: 1 1 20%;
                 justify-content: flex-start;
