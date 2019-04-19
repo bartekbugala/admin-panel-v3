@@ -1,33 +1,25 @@
-section {
+    .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
     .counters {
         display: flex;
-        flex-flow: column wrap;
-        align-content: stretch;
         flex-wrap: wrap;
-        width: 600px;
-        background: lightcyan;
-
-           .underlined-counter {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            width: 200px;
-            border-bottom: solid 2px $input-border-color;
-            flex-basis: 2 2 50%;
-            background: lightpink;
-            span:nth-of-type(1) {
-                flex: 1 1 20%;
-                justify-content: flex-start;
-                flex-wrap: wrap;
-            }
-            span:nth-of-type(2) {
-                justify-content: flex-end;
-                flex-wrap: wrap;
-            }
+        justify-content: center;
+        .underlined-counter {
+        flex-basis: 20%;
+        margin: 10px 30px;
+        border-bottom: solid 2px $input-border-color;
+        display: flex;
+        justify-content: space-between;
+        span:last-of-type {
+            color: $input-color;
+        }
         }
     }
 
     .chart-img {
         max-width: 100%;
+        width: 80%;
     }
-}

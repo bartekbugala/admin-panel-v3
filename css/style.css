@@ -501,23 +501,26 @@ section header {
 section header,
 section .section-part {
   padding: 20px;
-  display: -ms-flexbox;
-  display: flex;
   width: 100%;
   border-bottom: solid 2px #e3e3e3;
 }
 
-section .section-part {
+section .flex-center-wrap {
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: center;
       justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* Components */
-a.btn {
+button {
+  font-family: inherit;
+  font-size: 100%;
+  border: 0;
+  padding: 0;
   color: white;
-}
-
-.btn {
   display: inline-block;
   text-transform: capitalize;
   -webkit-user-select: none;
@@ -529,7 +532,7 @@ a.btn {
   text-decoration: none;
 }
 
-.btn:hover {
+button:hover {
   cursor: pointer;
 }
 
@@ -739,51 +742,40 @@ aside nav i {
   margin-right: 20px;
 }
 
-section .counters {
+.flex-wrap {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: column wrap;
-      flex-flow: column wrap;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 600px;
-  background: lightcyan;
 }
 
-section .counters .underlined-counter {
+.counters {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 200px;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.counters .underlined-counter {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin: 10px 30px;
   border-bottom: solid 2px #e3e3e3;
-  -ms-flex-preferred-size: 2 2 50%;
-      flex-basis: 2 2 50%;
-  background: lightpink;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
-section .counters .underlined-counter span:nth-of-type(1) {
-  -ms-flex: 1 1 20%;
-      flex: 1 1 20%;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.counters .underlined-counter span:last-of-type {
+  color: #333333;
 }
 
-section .counters .underlined-counter span:nth-of-type(2) {
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-section .chart-img {
+.chart-img {
   max-width: 100%;
+  width: 80%;
 }
 
 /* Pages / Views */
