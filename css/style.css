@@ -742,13 +742,6 @@ aside nav i {
   margin-right: 20px;
 }
 
-.flex-wrap {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .counters {
   display: -ms-flexbox;
   display: flex;
