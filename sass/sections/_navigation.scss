@@ -4,8 +4,8 @@ aside {
     left: 0;
     background-color: $menu-background-color;
     width: $menu-width;
-
-    div {
+    height: 100vh;
+    .logo-section {
         position: relative;
         overflow: hidden;
         height: 75px;
@@ -35,11 +35,12 @@ aside {
     }
 
     nav {
+             
         ul {
             list-style-type: none;
-            padding: 0;
+            padding: 0 0 20px 0;
+            border-bottom: solid 2px $menu-background-color-hover;
         }
-
         li {
             padding-left: $menu-left-padding-hover;
             background-color: $menu-background-color;
@@ -68,6 +69,31 @@ aside {
 
         i {
             margin-right: 20px;
+        }   
+    }
+    .avatar-section {
+        padding: 0 15px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        h4 {
+            text-transform: uppercase;
+            justify-self: stretch;
+            margin: 20px 0;
         }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        .avatar-img {
+            margin-right: 10px;
+            border-radius: 50%;
+            max-width: 100%;
+            width: 60px;
+        }
+    }
+
     }
 }

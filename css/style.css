@@ -485,7 +485,7 @@ section {
   display: flex;
   background-color: #ffffff;
   margin: 20px;
-  margin-left: calc(200px + 20px);
+  margin-left: calc(230px + 20px);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -622,8 +622,8 @@ button:hover {
 /* Sections */
 .top-header {
   background-color: #ffffff;
-  margin-left: 200px;
-  width: calc(100% - 200px);
+  margin-left: 230px;
+  width: calc(100% - 230px);
   font-size: 1.3em;
   display: -ms-flexbox;
   display: flex;
@@ -675,16 +675,17 @@ aside {
   top: 0;
   left: 0;
   background-color: #191919;
-  width: 200px;
+  width: 230px;
+  height: 100vh;
 }
 
-aside div {
+aside .logo-section {
   position: relative;
   overflow: hidden;
   height: 75px;
 }
 
-aside div .logo {
+aside .logo-section .logo {
   font-size: 100px;
   color: #ffffff;
   position: absolute;
@@ -692,7 +693,7 @@ aside div .logo {
   top: -12px;
 }
 
-aside div .hamburger {
+aside .logo-section .hamburger {
   display: inline-block;
   padding: 3px;
   line-height: 20px;
@@ -703,13 +704,14 @@ aside div .hamburger {
   top: 23px;
 }
 
-aside div .hamburger:hover {
+aside .logo-section .hamburger:hover {
   color: #ffffff;
 }
 
 aside nav ul {
   list-style-type: none;
-  padding: 0;
+  padding: 0 0 20px 0;
+  border-bottom: solid 2px #282828;
 }
 
 aside nav li {
@@ -740,6 +742,41 @@ aside nav a:hover {
 
 aside nav i {
   margin-right: 20px;
+}
+
+aside .avatar-section {
+  padding: 0 15px;
+  margin-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+aside .avatar-section h4 {
+  text-transform: uppercase;
+  justify-self: stretch;
+  margin: 20px 0;
+}
+
+aside .avatar-section a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+aside .avatar-section a .avatar-img {
+  margin-right: 10px;
+  border-radius: 50%;
+  max-width: 100%;
+  width: 60px;
 }
 
 .counters {
