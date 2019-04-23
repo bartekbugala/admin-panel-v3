@@ -1,0 +1,43 @@
+[class^="status-"] {
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+    }
+}
+
+[class^="status-i-"] {
+    &::after {
+        width: 10px;
+        height: 10px;
+        top: 20%;
+        right: 25%;
+    }
+}
+
+[class^="status-img-"] {
+    &::after {
+        width: 15px;
+        height: 15px;
+        top: 0;
+        right: 10%;
+    }
+}
+
+.status-img-green,
+.status-i-green
+ {
+    &::after {
+        background-color: $success-color;
+    }
+}
+
+.status-img-orange,
+.status-i-orange
+ {
+    &::after {
+        background-color: $warning-color;
+    }
+}

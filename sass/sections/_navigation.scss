@@ -51,7 +51,6 @@ aside {
                 background-color: $menu-left-padding-color-hover;
             }
         }
-
         a {
             display: inline-block;
             font-size: 16px;
@@ -71,7 +70,7 @@ aside {
             margin-right: 20px;
         }   
     }
-    .avatar-section {
+    .menu-manager-section {
         padding: 0 15px;
         margin-top: 20px;
         display: flex;
@@ -87,13 +86,13 @@ aside {
             display: flex;
             justify-content: center;
             align-items: center;
-        .avatar-img {
-            margin-right: 10px;
-            border-radius: 50%;
-            max-width: 100%;
-            width: 60px;
+            cursor: pointer;        
+                .avatar-img {
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    max-width: 100%;
+                    width: 60px;
+            }
         }
-    }
-
     }
 }

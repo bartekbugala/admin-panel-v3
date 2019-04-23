@@ -619,6 +619,41 @@ button:hover {
   margin-left: 5px;
 }
 
+[class^="status-"] {
+  position: relative;
+}
+
+[class^="status-"]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+
+[class^="status-i-"]::after {
+  width: 10px;
+  height: 10px;
+  top: 20%;
+  right: 25%;
+}
+
+[class^="status-img-"]::after {
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 10%;
+}
+
+.status-img-green::after,
+.status-i-green::after {
+  background-color: #04ae00;
+}
+
+.status-img-orange::after,
+.status-i-orange::after {
+  background-color: #f58220;
+}
+
 /* Sections */
 .top-header {
   background-color: #ffffff;
@@ -744,7 +779,7 @@ aside nav i {
   margin-right: 20px;
 }
 
-aside .avatar-section {
+aside .menu-manager-section {
   padding: 0 15px;
   margin-top: 20px;
   display: -ms-flexbox;
@@ -757,22 +792,23 @@ aside .avatar-section {
       flex-wrap: wrap;
 }
 
-aside .avatar-section h4 {
+aside .menu-manager-section h4 {
   text-transform: uppercase;
   justify-self: stretch;
   margin: 20px 0;
 }
 
-aside .avatar-section a {
+aside .menu-manager-section a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  cursor: pointer;
 }
 
-aside .avatar-section a .avatar-img {
+aside .menu-manager-section a .avatar-img {
   margin-right: 10px;
   border-radius: 50%;
   max-width: 100%;
@@ -797,6 +833,10 @@ aside .avatar-section a .avatar-img {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+}
+
+.counters .underlined-counter span:first-of-type {
+  font-weight: bold;
 }
 
 .counters .underlined-counter span:last-of-type {
