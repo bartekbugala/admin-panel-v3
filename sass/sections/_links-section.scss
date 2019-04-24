@@ -27,6 +27,11 @@
                 display: flex;
                 justify-content: flex-start;
             }
+            &:first-of-type :first-of-type {
+                flex: unset;
+                margin: 0 auto;
+                margin-bottom: 10px;
+            }
 
         }
 
