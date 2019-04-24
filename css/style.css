@@ -858,7 +858,17 @@ aside .menu-manager-section a .avatar-img {
       align-items: center;
 }
 
-.links-section .underlined-link {
+.links-section .links-list {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.links-section .links-list .underlined-link {
   display: -ms-flexbox;
   display: flex;
   width: 60%;
@@ -869,9 +879,22 @@ aside .menu-manager-section a .avatar-img {
   justify-self: stretch;
 }
 
-.links-section .underlined-link a,
-.links-section .underlined-link span {
-  text-align: left;
+.links-section .links-list .underlined-link span {
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+.links-section .links-list .underlined-link a {
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 /* Pages / Views */
