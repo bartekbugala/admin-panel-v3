@@ -371,11 +371,13 @@ body {
 }
 
 section {
+  display: -ms-flexbox;
   display: flex;
   background-color: #ffffff;
   margin: 20px;
   margin-left: calc(230px + 20px);
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 section h3 {
@@ -394,9 +396,12 @@ section .section-part {
 }
 
 section .flex-center-wrap {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* Components */
@@ -407,7 +412,10 @@ section .flex-center-wrap {
   padding: 0;
   color: #ffffff;
   display: inline-block;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-radius: 5px;
   padding: 10px 20px;
   text-decoration: none;
@@ -456,17 +464,23 @@ section .flex-center-wrap {
 
 .input-date-range {
   width: 40%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  -ms-flex-pack: stretch;
+      justify-content: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   overflow: auto;
   margin-right: 10px;
 }
 
 .input-date-range .input-date {
   border: solid 2px #e3e3e3;
-  flex: 1 1 25%;
+  -ms-flex: 1 1 25%;
+      flex: 1 1 25%;
+  display: -ms-flexbox;
   display: flex;
   color: #333333;
   line-height: 30px;
@@ -478,10 +492,14 @@ section .flex-center-wrap {
 }
 
 .input-date-range .input-date i {
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 1 1 20%;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex: 1 1 20%;
+      flex: 1 1 20%;
   margin-left: 5px;
 }
 
@@ -526,9 +544,12 @@ section .flex-center-wrap {
   margin-left: 230px;
   width: calc(100% - 230px);
   font-size: 1.3em;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .top-header i {
@@ -537,15 +558,18 @@ section .flex-center-wrap {
 
 .top-header ul {
   list-style: none;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .top-header ul li {
+  display: -ms-flexbox;
   display: flex;
   border-left: solid 2px #e3e3e3;
 }
 
 .top-header a {
+  display: -ms-flexbox;
   display: flex;
   color: #a6a6a6;
   padding: 18px;
@@ -565,30 +589,26 @@ section .flex-center-wrap {
   color: #56819f;
 }
 
-aside {
+.menu {
   position: fixed;
   top: 0;
   left: 0;
   background-color: #191919;
-  width: 230px;
+  width: calc(230px - 165px);
   height: 100vh;
 }
 
-aside .logo-section {
+.menu .logo-section {
   position: relative;
   overflow: hidden;
   height: 75px;
 }
 
-aside .logo-section .logo {
-  font-size: 100px;
-  color: #ffffff;
-  position: absolute;
-  left: 20px;
-  top: -12px;
+.menu .logo-section .logo {
+  display: none;
 }
 
-aside .logo-section .hamburger {
+.menu .logo-section .hamburger {
   display: inline-block;
   padding: 3px;
   line-height: 20px;
@@ -599,28 +619,28 @@ aside .logo-section .hamburger {
   top: 23px;
 }
 
-aside .logo-section .hamburger:hover {
+.menu .logo-section .hamburger:hover {
   color: #ffffff;
 }
 
-aside nav ul {
+.menu nav ul {
   list-style-type: none;
   padding: 0 0 20px 0;
   border-bottom: solid 2px #282828;
 }
 
-aside nav li {
+.menu nav li {
   padding-left: 5px;
   background-color: #191919;
   overflow: hidden;
 }
 
-aside nav li:hover {
+.menu nav li:hover {
   background-color: #f58220;
   background-color: #f58220;
 }
 
-aside nav a {
+.menu nav a {
   display: inline-block;
   font-size: 16px;
   padding: 16px 20px;
@@ -630,56 +650,195 @@ aside nav a {
   background-color: #191919;
 }
 
-aside nav a:hover {
+.menu nav a:hover {
   color: #ffffff;
   background-color: #282828;
 }
 
-aside nav i {
+.menu nav i {
   margin-right: 20px;
 }
 
-aside .menu-manager-section {
+.menu nav span {
+  display: none;
+}
+
+.menu .menu-manager-section {
   padding: 0 15px;
   margin-top: 20px;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-aside .menu-manager-section h4 {
-  text-transform: uppercase;
-  justify-self: stretch;
-  margin: 20px 0;
+.menu .menu-manager-section h4 {
+  display: none;
 }
 
-aside .menu-manager-section a {
+.menu .menu-manager-section a {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   cursor: pointer;
 }
 
-aside .menu-manager-section a .avatar-img {
+.menu .menu-manager-section a .avatar-img {
   margin-right: 10px;
   border-radius: 50%;
   max-width: 100%;
   width: 60px;
 }
 
-.counters {
+.menu .menu-manager-section a .manager-name {
+  display: none;
+}
+
+.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #191919;
+  width: 230px;
+  height: 100vh;
+}
+
+.show .logo-section {
+  position: relative;
+  overflow: hidden;
+  height: 75px;
+}
+
+.show .logo-section .logo {
+  display: unset;
+  font-size: 100px;
+  color: #ffffff;
+  position: absolute;
+  left: 20px;
+  top: -12px;
+}
+
+.show .logo-section .hamburger {
+  display: inline-block;
+  padding: 3px;
+  line-height: 20px;
+  color: #999999;
+  font-size: 22px;
+  position: absolute;
+  right: 18px;
+  top: 23px;
+}
+
+.show .logo-section .hamburger:hover {
+  color: #ffffff;
+}
+
+.show nav ul {
+  list-style-type: none;
+  padding: 0 0 20px 0;
+  border-bottom: solid 2px #282828;
+}
+
+.show nav li {
+  padding-left: 5px;
+  background-color: #191919;
+  overflow: hidden;
+}
+
+.show nav li:hover {
+  background-color: #f58220;
+  background-color: #f58220;
+}
+
+.show nav a {
+  display: inline-block;
+  font-size: 16px;
+  padding: 16px 20px;
+  height: 100%;
+  width: 100%;
+  color: #999999;
+  background-color: #191919;
+}
+
+.show nav a:hover {
+  color: #ffffff;
+  background-color: #282828;
+}
+
+.show nav i {
+  margin-right: 20px;
+}
+
+.show nav span {
+  display: inline-block;
+}
+
+.show .menu-manager-section {
+  padding: 0 15px;
+  margin-top: 20px;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.show .menu-manager-section h4 {
+  display: unset;
+  text-transform: uppercase;
+  justify-self: stretch;
+  margin: 20px 0;
+}
+
+.show .menu-manager-section a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  cursor: pointer;
+}
+
+.show .menu-manager-section a .avatar-img {
+  margin-right: 10px;
+  border-radius: 50%;
+  max-width: 100%;
+  width: 60px;
+}
+
+.show .menu-manager-section a .manager-name {
+  display: unset;
+}
+
+.counters {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .counters .underlined-counter {
-  flex-basis: 30%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
   margin: 10px 30px;
   border-bottom: solid 2px #e3e3e3;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 
 .counters .underlined-counter span {
@@ -695,10 +854,14 @@ aside .menu-manager-section a .avatar-img {
 }
 
 .chart-legend {
-  flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
 }
 
 .chart-description-box {
@@ -744,42 +907,57 @@ aside .menu-manager-section a .avatar-img {
 .links-section {
   padding: 30px;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .links-section .links-list {
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .links-section .links-list .underlined-link {
+  display: -ms-flexbox;
   display: flex;
   width: 60%;
-  justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   padding: 20px;
   border-bottom: solid 2px #e3e3e3;
   justify-self: stretch;
 }
 
 .links-section .links-list .underlined-link span {
-  flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 .links-section .links-list .underlined-link a {
-  flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 .links-section .links-list .underlined-link:first-of-type .btn,
 .links-section .links-list .underlined-link:last-of-type .btn {
-  flex: unset;
+  -ms-flex: unset;
+      flex: unset;
   margin: 0 auto;
   margin-bottom: 10px;
 }
@@ -790,5 +968,4 @@ aside .menu-manager-section a .avatar-img {
 }
 
 /* Pages / Views */
-
 /*# sourceMappingURL=style.css.map */
