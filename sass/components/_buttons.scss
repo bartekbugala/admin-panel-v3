@@ -3,7 +3,7 @@
     font-size: 100%;
     border: 0;
     padding: 0;
-    color: white;
+    color: $button-color;
     display: inline-block;
     user-select: none;
     border-radius: 5px;
@@ -41,11 +41,6 @@
 
 .btn-sm {
     font-size: 10px;
-}
-
-.btn-chart {
-    background-color: $chart-button-color;
-    color: #a6a6a6;
 }
 
 .btn-square {
