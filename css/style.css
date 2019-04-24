@@ -897,11 +897,17 @@ aside .menu-manager-section a .avatar-img {
       justify-content: flex-start;
 }
 
-.links-section .links-list .underlined-link:first-of-type :first-of-type {
+.links-section .links-list .underlined-link:first-of-type .btn,
+.links-section .links-list .underlined-link:last-of-type .btn {
   -ms-flex: unset;
       flex: unset;
   margin: 0 auto;
   margin-bottom: 10px;
+}
+
+.links-section .links-list .underlined-link:last-of-type {
+  margin-top: 10px;
+  border-bottom: unset;
 }
 
 /* Pages / Views */

@@ -27,10 +27,15 @@
                 display: flex;
                 justify-content: flex-start;
             }
-            &:first-of-type :first-of-type {
+            &:first-of-type .btn,
+            &:last-of-type .btn {
                 flex: unset;
                 margin: 0 auto;
                 margin-bottom: 10px;
+            }
+            &:last-of-type {
+            margin-top: 10px;
+            border-bottom: unset;
             }
 
         }
