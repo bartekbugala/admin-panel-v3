@@ -731,6 +731,52 @@ aside .menu-manager-section a .avatar-img {
   color: #333333;
 }
 
+.chart-legend {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.chart-description-box {
+  display: inline-block;
+  background-color: #f3f3f1;
+  color: #a6a6a6;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+.chart-description-box:last-of-type {
+  background: unset;
+}
+
+[class^="chart-legend-"] {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 10%;
+}
+
+.chart-legend-signups {
+  background-color: #80bfca;
+}
+
+.chart-legend-ftd {
+  background-color: #ff9a38;
+}
+
+.chart-legend-earned {
+  background-color: #59b66d;
+}
+
 .chart-img {
   max-width: 70%;
   width: 70%;

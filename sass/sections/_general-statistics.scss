@@ -27,6 +27,47 @@
      }
  }
 
+ .chart-legend {
+     flex: 0 0 100%;
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+ }
+
+ .chart-description-box {
+     display: inline-block;
+     background-color: $chart-button-bg-color;
+     color: $chart-button-color;
+     border-radius: 5px;
+     padding: 10px 20px;
+     margin: 5px;
+     &:last-of-type {
+        background: unset
+    }
+ }
+
+
+ [class^="chart-legend-"] {
+        content: "";
+        display: inline-block;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        top: 0;
+        right: 10%;
+
+}
+
+ .chart-legend-signups {
+    background-color: $chart-signups-color;
+ }
+ .chart-legend-ftd {
+    background-color: $chart-ftd-color; 
+ }
+ .chart-legend-earned {
+    background-color: $chart-earned-color;
+ }
+
  .chart-img {
      max-width: 70%;
      width: 70%;
