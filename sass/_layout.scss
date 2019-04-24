@@ -56,6 +56,20 @@ section {
         flex-wrap: wrap;
     }
 }
+
 .section-show-menu {
     margin-left: calc(#{$menu-width} + #{$section-margin});
 }
+
+.scroll-wrapper {
+    display: block;
+    width: 70%;
+
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  
+  .scroll-wrapper img {
+    width: 100%;
+    max-width: 100%;
+  }
