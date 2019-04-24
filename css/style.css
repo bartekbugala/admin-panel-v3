@@ -522,7 +522,6 @@ button {
   padding: 0;
   color: white;
   display: inline-block;
-  text-transform: capitalize;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -846,6 +845,33 @@ aside .menu-manager-section a .avatar-img {
 .chart-img {
   max-width: 100%;
   width: 80%;
+}
+
+.links-section {
+  padding: 30px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.links-section .underlined-link {
+  display: -ms-flexbox;
+  display: flex;
+  width: 60%;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  padding: 20px;
+  border-bottom: solid 2px #e3e3e3;
+  justify-self: stretch;
+}
+
+.links-section .underlined-link a,
+.links-section .underlined-link span {
+  text-align: left;
 }
 
 /* Pages / Views */
