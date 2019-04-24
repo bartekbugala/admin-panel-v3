@@ -515,7 +515,7 @@ section .flex-center-wrap {
 }
 
 /* Components */
-button {
+.btn {
   font-family: inherit;
   font-size: 100%;
   border: 0;
@@ -531,7 +531,7 @@ button {
   text-decoration: none;
 }
 
-button:hover {
+.btn:hover {
   cursor: pointer;
 }
 
