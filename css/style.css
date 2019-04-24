@@ -819,14 +819,18 @@ aside .menu-manager-section a .avatar-img {
 }
 
 .counters .underlined-counter {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
   margin: 10px 30px;
   border-bottom: solid 2px #e3e3e3;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+}
+
+.counters .underlined-counter span {
+  padding: 5px;
 }
 
 .counters .underlined-counter span:first-of-type {
@@ -838,8 +842,8 @@ aside .menu-manager-section a .avatar-img {
 }
 
 .chart-img {
-  max-width: 100%;
-  width: 80%;
+  max-width: 70%;
+  width: 70%;
 }
 
 .links-section {

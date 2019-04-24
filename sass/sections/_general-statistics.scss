@@ -4,23 +4,30 @@
      justify-content: center;
 
      .underlined-counter {
-         flex-basis: 20%;
+         flex-basis: 30%;
          margin: 10px 30px;
          border-bottom: solid 2px $input-border-color;
          display: flex;
          justify-content: space-between;
 
-         span:first-of-type {
-             font-weight: bold;
+         span {
+             padding: 5px;
+
+             &:first-of-type {
+                 font-weight: bold;
+
+             }
+
+             &:last-of-type {
+                 color: $input-color;
+
+             }
          }
 
-         span:last-of-type {
-             color: $input-color;
-         }
      }
  }
 
  .chart-img {
-     max-width: 100%;
-     width: 80%;
+     max-width: 70%;
+     width: 70%;
  }
