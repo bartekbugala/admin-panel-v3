@@ -1,6 +1,6 @@
 {
   "name": "banner_link_admin_panel",
-  "version": "9.1.0",
+  "version": "10.1.0",
   "description": "Banner and link administration panel",
   "main": "index.html",
   "scripts": {
