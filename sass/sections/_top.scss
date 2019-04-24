@@ -1,7 +1,7 @@
 .top-header {
     background-color: $section-background-color;
-    margin-left: $menu-width;
-    width: calc(100% - #{$menu-width});
+    margin-left: calc(#{$menu-width} - #{$menu-minus-width});
+    width: calc(100% - (#{$menu-width} - #{$menu-minus-width}));
     font-size: 1.3em;
     display: flex;
     flex-wrap: wrap;
@@ -44,4 +44,9 @@
             color: $link-color;
         }
     }
+}
+
+.top-header-show-menu {
+    margin-left: $menu-width;
+    width: calc(100% - #{$menu-width});
 }

@@ -33,7 +33,7 @@ section {
     display: flex;
     background-color: $section-background-color;
     margin: $section-margin;
-    margin-left: calc(#{$menu-width} + #{$section-margin});
+    margin-left: calc(#{$menu-width} - #{$menu-minus-width} + #{$section-margin});
     flex-wrap: wrap;
 
     h3 {
@@ -55,4 +55,7 @@ section {
         justify-content: center;
         flex-wrap: wrap;
     }
+}
+.section-show-menu {
+    margin-left: calc(#{$menu-width} + #{$section-margin});
 }
