@@ -1,2 +1,2 @@
-# BannerLink-Admin-Panel-Layout
-## Kodilla-9.1 Administration panel layout for banners and links
+# BannerLink-Admin-Panel-RWD
+## Kodilla-10.1 Administration panel layout for banners and links
