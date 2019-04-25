@@ -1212,7 +1212,7 @@ aside .menu-manager-section a .manager-name {
   }
   .links-section .links-list .underlined-link {
     width: 100%;
-    overflow: scroll;
+    overflow: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
