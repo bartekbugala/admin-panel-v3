@@ -2,7 +2,7 @@
 @import "variables";
 @import "layout";
 @import "mixins";
-@import "media-queries";
+
 
 /* Components */
 //@import "components/form_field";
@@ -19,3 +19,6 @@
 
 /* Pages / Views */
 //@import "pages/registration";
+
+/* Media Queries */
+@import "media-queries";
