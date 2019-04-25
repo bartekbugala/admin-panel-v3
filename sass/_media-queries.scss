@@ -12,7 +12,9 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    li {}
+    li {
+      overflow: auto;
+    }
   }
 
   aside {
@@ -49,9 +51,39 @@
     nav,
     .menu-manager-section {
       display: unset;
+
+    }
+
+    .menu-manager-section {
+      a {
+        justify-content: flex-start;
+        margin: 20px;
+      }
     }
 
   }
+  .chart-legend {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.scroll-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+  .links-section {
+    padding: 0;
+    .links-list .underlined-link {
+      width: 100%;
+      overflow: scroll;
+      flex-wrap: wrap;
+    }
+  }
+
+
 }
 
 @media(min-width: 768px) {
