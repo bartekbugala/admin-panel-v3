@@ -1012,11 +1012,6 @@ aside .menu-manager-section a .manager-name {
   background-color: #59b66d;
 }
 
-.chart-img {
-  min-width: 500px;
-  width: auto;
-}
-
 .links-section {
   padding: 30px;
   width: 100%;
@@ -1142,6 +1137,197 @@ aside .menu-manager-section a .manager-name {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
+  }
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #191919;
+    width: 100vw;
+    height: 100vh;
+  }
+  aside .logo-section {
+    position: relative;
+    overflow: hidden;
+    height: 75px;
+  }
+  aside .logo-section .logo {
+    display: unset;
+    font-size: 100px;
+    color: #ffffff;
+    position: absolute;
+    left: 20px;
+    top: -12px;
+  }
+  aside .logo-section .hamburger {
+    display: inline-block;
+    padding: 3px;
+    line-height: 20px;
+    color: #999999;
+    font-size: 22px;
+    position: absolute;
+    right: 18px;
+    top: 23px;
+  }
+  aside .logo-section .hamburger:hover {
+    color: #ffffff;
+  }
+  aside nav ul {
+    list-style-type: none;
+    padding: 0 0 20px 0;
+    border-bottom: solid 2px #282828;
+  }
+  aside nav li {
+    padding-left: 5px;
+    background-color: #191919;
+    overflow: hidden;
+  }
+  aside nav li:hover {
+    background-color: #f58220;
+    background-color: #f58220;
+  }
+  aside nav a {
+    display: inline-block;
+    font-size: 16px;
+    padding: 16px 20px;
+    height: 100%;
+    width: 100%;
+    color: #999999;
+    background-color: #191919;
+  }
+  aside nav a:hover {
+    color: #ffffff;
+    background-color: #282828;
+  }
+  aside nav i {
+    margin-right: 20px;
+  }
+  aside nav span {
+    display: inline-block;
+  }
+  aside .menu-manager-section {
+    padding: 0 15px;
+    margin-top: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  aside .menu-manager-section h4 {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    text-transform: uppercase;
+    justify-self: stretch;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  aside .menu-manager-section a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    cursor: pointer;
+  }
+  aside .menu-manager-section a .avatar-img {
+    margin-right: 10px;
+    border-radius: 50%;
+    max-width: 100%;
+    width: 60px;
+  }
+  aside .menu-manager-section a .manager-name {
+    display: unset;
+  }
+  .show {
+    position: unset;
+    top: 0;
+    left: 0;
+    background-color: #191919;
+    width: 100vw;
+    height: auto;
+  }
+  .show .logo-section {
+    position: relative;
+    overflow: hidden;
+    height: 75px;
+  }
+  .show .logo-section .logo {
+    display: unset;
+    font-size: 100px;
+    color: #ffffff;
+    position: absolute;
+    left: 20px;
+    top: -12px;
+  }
+  .show .logo-section .hamburger {
+    display: inline-block;
+    padding: 3px;
+    line-height: 20px;
+    color: #999999;
+    font-size: 22px;
+    position: absolute;
+    right: 18px;
+    top: 23px;
+  }
+  .show .logo-section .hamburger:hover {
+    color: #ffffff;
+  }
+  .show nav {
+    display: none;
+  }
+  .show .menu-manager-section {
+    display: none;
+  }
+  .top-header {
+    background-color: #ffffff;
+    margin-left: unset;
+    width: unset;
+    font-size: 1.3em;
+  }
+  .top-header i {
+    font-size: 0.9em;
+  }
+  .top-header ul {
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .top-header ul li {
+    display: -ms-flexbox;
+    display: flex;
+    border-left: solid 2px #e3e3e3;
+    width: 100%;
+  }
+  .top-header a {
+    display: -ms-flexbox;
+    display: flex;
+    color: #a6a6a6;
+    padding: 18px;
+  }
+  .top-header a span {
+    margin: 0 20px;
+  }
+  .top-header .wallet span {
+    font-weight: 600;
+  }
+  .top-header .profile span {
+    font-size: 0.7em;
+    font-weight: 600;
+    color: #56819f;
+  }
+  .top-header-show-menu {
+    display: none;
   }
 }
 

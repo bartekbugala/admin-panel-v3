@@ -1,5 +1,222 @@
 @media(max-width: 767px) {
   @include grid('sm');
+
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $menu-background-color;
+    width: 100vw;
+    height: 100vh;
+
+    .logo-section {
+      position: relative;
+      overflow: hidden;
+      height: 75px;
+
+      .logo {
+        display: unset;
+        font-size: 100px;
+        color: $menu-color-hover;
+        position: absolute;
+        left: 20px;
+        top: -12px;
+      }
+
+      .hamburger {
+        display: inline-block;
+        padding: 3px;
+        line-height: 20px;
+        color: $menu-color;
+        font-size: 22px;
+        position: absolute;
+        right: 18px;
+        top: 23px;
+
+        &:hover {
+          color: $menu-color-hover;
+        }
+      }
+    }
+
+    nav {
+
+      ul {
+        list-style-type: none;
+        padding: 0 0 20px 0;
+        border-bottom: solid 2px $menu-background-color-hover;
+      }
+
+      li {
+        padding-left: $menu-left-padding-hover;
+        background-color: $menu-background-color;
+        overflow: hidden;
+
+        &:hover {
+          background-color: $menu-left-padding-color-hover;
+          background-color: $menu-left-padding-color-hover;
+        }
+      }
+
+      a {
+        display: inline-block;
+        font-size: 16px;
+        padding: 16px 20px;
+        height: 100%;
+        width: 100%;
+        color: $menu-color;
+        background-color: $menu-background-color;
+
+        &:hover {
+          color: $menu-color-hover;
+          background-color: $menu-background-color-hover
+        }
+      }
+
+      i {
+        margin-right: 20px;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    .menu-manager-section {
+      padding: 0 15px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      h4 {
+        display: flex;
+        width: 100%;
+        text-transform: uppercase;
+        justify-self: stretch;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .avatar-img {
+          margin-right: 10px;
+          border-radius: 50%;
+          max-width: 100%;
+          width: 60px;
+        }
+
+        .manager-name {
+          display: unset;
+        }
+      }
+    }
+  }
+
+  .show {
+    position: unset;
+    top: 0;
+    left: 0;
+    background-color: $menu-background-color;
+    width: 100vw;
+    height: auto;
+
+    .logo-section {
+      position: relative;
+      overflow: hidden;
+      height: 75px;
+
+      .logo {
+        display: unset;
+        font-size: 100px;
+        color: $menu-color-hover;
+        position: absolute;
+        left: 20px;
+        top: -12px;
+      }
+
+      .hamburger {
+        display: inline-block;
+        padding: 3px;
+        line-height: 20px;
+        color: $menu-color;
+        font-size: 22px;
+        position: absolute;
+        right: 18px;
+        top: 23px;
+
+        &:hover {
+          color: $menu-color-hover;
+        }
+      }
+    }
+
+    nav {
+      display: none;
+    }
+
+    .menu-manager-section {
+      display: none;
+    }
+  }
+
+  .top-header {
+    background-color: $section-background-color;
+    margin-left: unset;
+    width: unset;
+    font-size: 1.3em;
+    i {
+        font-size: 0.9em;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        li {
+            display: flex;
+            border-left: solid 2px $input-border-color;
+            width: 100%;
+        }
+    }
+
+    a {
+        display: flex;
+        color: $section-main-color;
+        padding: 18px;
+
+        span {
+            margin: 0 20px;
+        }
+    }
+
+    .wallet {
+        span {
+            font-weight: 600;
+        }
+    }
+
+    .profile {
+        span {
+            font-size: 0.7em;
+            font-weight: 600;
+            color: $link-color;
+        }
+    }
+}
+
+.top-header-show-menu {
+    display: none;
+}
+
 }
 
 @media(min-width: 768px) {
