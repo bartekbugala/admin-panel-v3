@@ -89,14 +89,17 @@ section {
 }
 
 .scroll-wrapper {
+    padding-top: 20px;
     display: block;
-    width: 100%;
-
-    overflow-x: auto;
+    margin: 0 auto;
+    width: 70%;
+    overflow: auto;
    
   }
   
   .scroll-wrapper img {
-    width: 100%;
-    //max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
   }
