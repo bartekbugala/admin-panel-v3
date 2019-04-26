@@ -503,14 +503,12 @@ section .flex-center-wrap {
 
 .scroll-wrapper {
   display: block;
-  width: 70%;
+  width: 100%;
   overflow-x: auto;
-  overflow-y: auto;
 }
 
 .scroll-wrapper img {
   width: 100%;
-  max-width: 100%;
 }
 
 /* Components */
@@ -1009,11 +1007,6 @@ aside .menu-manager-section a .manager-name {
   background-color: #59b66d;
 }
 
-.chart-img {
-  max-width: 70%;
-  width: auto;
-}
-
 .links-section {
   padding: 30px;
   width: 100%;
@@ -1205,7 +1198,6 @@ aside .menu-manager-section a .manager-name {
     display: block;
     width: 100%;
     overflow-x: auto;
-    overflow-y: auto;
   }
   .links-section {
     padding: 0;
