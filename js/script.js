@@ -1,6 +1,7 @@
 const topHeader = document.querySelector('.top-header');
 const aside = document.querySelector('aside');
 const elements = document.querySelectorAll('section');
+const hamburger = document.querySelector('.hamburger');
 
 function toggleMenu(visible) {
   
@@ -9,25 +10,14 @@ function toggleClasses(elements) {
     elements[i].classList.toggle('section-show-menu', visible);
   }
 }
-    document.querySelector('aside').classList.toggle('show', visible);
-    document.querySelector('.top-header').classList.toggle('top-header-show-menu', visible);
+    aside.classList.toggle('show', visible);
+    topHeader.classList.toggle('top-header-show-menu', visible);
     toggleClasses(elements);
-    
-
-
  }
 
-document.querySelector('.hamburger').addEventListener('click', function(e) {
+ hamburger.addEventListener('click', function(e) {
     e.preventDefault();
     toggleMenu();
     
 });
-
-
-if (document.documentElement.clientWidth < 767) {
-  aside.appendChild(topHeader);
-}
-if (document.documentElement.clientWidth <= 767) {
-  aside.parentNode.insertBefore(topHeader, aside.nextSibling);
-}
 

@@ -2,12 +2,10 @@
   @include grid('sm');
 
   aside {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: unset;
     background-color: $menu-background-color;
     width: 100vw;
-    height: 100vh;
+    height: auto;
 
     .logo-section {
       position: relative;
@@ -30,7 +28,7 @@
         color: $menu-color;
         font-size: 22px;
         position: absolute;
-        right: 18px;
+        right: 20px;
         top: 23px;
 
         &:hover {
@@ -83,7 +81,7 @@
     }
 
     .menu-manager-section {
-      padding: 0 15px;
+      padding: 15px;
       margin-top: 20px;
       display: flex;
       align-items: center;
@@ -96,7 +94,6 @@
         text-transform: uppercase;
         justify-self: stretch;
         flex-wrap: wrap;
-        margin: 20px 0;
       }
 
       a {
@@ -121,8 +118,6 @@
 
   .show {
     position: unset;
-    top: 0;
-    left: 0;
     background-color: $menu-background-color;
     width: 100vw;
     height: auto;
@@ -167,9 +162,10 @@
   }
 
   .top-header {
+    position: unset;
     background-color: $section-background-color;
     margin-left: unset;
-    width: unset;
+    width: 100vw;
     font-size: 1.3em;
     i {
         font-size: 0.9em;
@@ -216,6 +212,36 @@
 .top-header-show-menu {
     display: none;
 }
+
+section {
+  margin: $section-margin 0;
+  flex-wrap: wrap;
+
+  h3 {
+      text-transform: uppercase;
+  }
+
+  header {
+      justify-self: stretch;
+  }
+
+  header,
+  .section-part {
+      padding: $section-padding;
+      width: 100%;
+      border-bottom: solid 2px $input-border-color;
+  } 
+  .flex-center-wrap {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+}
+
+.section-show-menu {
+  margin-left: 0;
+}
+
 
 }
 

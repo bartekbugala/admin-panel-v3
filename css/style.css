@@ -1139,12 +1139,10 @@ aside .menu-manager-section a .manager-name {
     max-width: 100%;
   }
   aside {
-    position: fixed;
-    top: 0;
-    left: 0;
+    position: unset;
     background-color: #191919;
     width: 100vw;
-    height: 100vh;
+    height: auto;
   }
   aside .logo-section {
     position: relative;
@@ -1166,7 +1164,7 @@ aside .menu-manager-section a .manager-name {
     color: #999999;
     font-size: 22px;
     position: absolute;
-    right: 18px;
+    right: 20px;
     top: 23px;
   }
   aside .logo-section .hamburger:hover {
@@ -1206,7 +1204,7 @@ aside .menu-manager-section a .manager-name {
     display: inline-block;
   }
   aside .menu-manager-section {
-    padding: 0 15px;
+    padding: 15px;
     margin-top: 20px;
     display: -ms-flexbox;
     display: flex;
@@ -1225,7 +1223,6 @@ aside .menu-manager-section a .manager-name {
     justify-self: stretch;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 20px 0;
   }
   aside .menu-manager-section a {
     display: -ms-flexbox;
@@ -1247,8 +1244,6 @@ aside .menu-manager-section a .manager-name {
   }
   .show {
     position: unset;
-    top: 0;
-    left: 0;
     background-color: #191919;
     width: 100vw;
     height: auto;
@@ -1286,9 +1281,10 @@ aside .menu-manager-section a .manager-name {
     display: none;
   }
   .top-header {
+    position: unset;
     background-color: #ffffff;
     margin-left: unset;
-    width: unset;
+    width: 100vw;
     font-size: 1.3em;
   }
   .top-header i {
@@ -1328,6 +1324,34 @@ aside .menu-manager-section a .manager-name {
   }
   .top-header-show-menu {
     display: none;
+  }
+  section {
+    margin: 20px 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section h3 {
+    text-transform: uppercase;
+  }
+  section header {
+    justify-self: stretch;
+  }
+  section header,
+  section .section-part {
+    padding: 20px;
+    width: 100%;
+    border-bottom: solid 2px #e3e3e3;
+  }
+  section .flex-center-wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .section-show-menu {
+    margin-left: 0;
   }
 }
 
