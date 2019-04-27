@@ -12,6 +12,7 @@ function toggleClasses(elements) {
   }
 }
     aside.classList.toggle('show', visible);
+    aside.classList.toggle('show-mobile-nav', visible);
     mobileMenuWrapper.classList.toggle('show-mobile-menu', visible);
     topHeader.classList.toggle('top-header-show-menu', visible);
     toggleClasses(elements);
