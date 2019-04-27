@@ -6,22 +6,38 @@ aside {
     width: calc(#{$menu-width} - 165px);
     height: 100vh;
     .logo-section {
-        position: relative;
-        overflow: hidden;
         height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        a {
+            height: 22px;
+            display: flex;
+            align-items: center;
+            i {
+                line-height: 22px;
+                &:first-of-type{
+                    
+                }
+                &:last-of-type {
+                    
+                }
+            }
+        }
         .logo {
+            flex: 8 2;
             display: none;
+            color: $menu-color-hover;
+            font-size: 100px;
+            margin-left: 15px;    
+                       
         }
         .hamburger {
-            display: inline-block;
-            padding: 3px;
-            line-height: 20px;
+            justify-content: center;
+            flex: 3 1;
             color: $menu-color;
             font-size: 22px;
-            position: absolute;
-            right: 18px;
-            top: 23px;
-
             &:hover {
                 color: $menu-color-hover;
             }
@@ -104,28 +120,17 @@ aside {
     width: $menu-width;
     height: 100vh;
     .logo-section {
-        position: relative;
-        overflow: hidden;
-        height: 75px;
-
         .logo {
-            display: unset;
-            font-size: 100px;
+            display: flex;          
             color: $menu-color-hover;
-            position: absolute;
-            left: 20px;
-            top: -12px;
         }
 
         .hamburger {
-            display: inline-block;
-            padding: 3px;
-            line-height: 20px;
+
             color: $menu-color;
             font-size: 22px;
-            position: absolute;
-            right: 18px;
-            top: 23px;
+
+   
 
             &:hover {
                 color: $menu-color-hover;

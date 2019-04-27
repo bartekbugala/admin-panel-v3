@@ -712,24 +712,45 @@ aside {
 }
 
 aside .logo-section {
-  position: relative;
-  overflow: hidden;
   height: 75px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+aside .logo-section a {
+  height: 22px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+aside .logo-section a i {
+  line-height: 22px;
 }
 
 aside .logo-section .logo {
+  -ms-flex: 8 2;
+      flex: 8 2;
   display: none;
+  color: #ffffff;
+  font-size: 100px;
+  margin-left: 15px;
 }
 
 aside .logo-section .hamburger {
-  display: inline-block;
-  padding: 3px;
-  line-height: 20px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex: 3 1;
+      flex: 3 1;
   color: #999999;
   font-size: 22px;
-  position: absolute;
-  right: 18px;
-  top: 23px;
 }
 
 aside .logo-section .hamburger:hover {
@@ -823,30 +844,15 @@ aside .menu-manager-section a .manager-name {
   height: 100vh;
 }
 
-.show .logo-section {
-  position: relative;
-  overflow: hidden;
-  height: 75px;
-}
-
 .show .logo-section .logo {
-  display: unset;
-  font-size: 100px;
+  display: -ms-flexbox;
+  display: flex;
   color: #ffffff;
-  position: absolute;
-  left: 20px;
-  top: -12px;
 }
 
 .show .logo-section .hamburger {
-  display: inline-block;
-  padding: 3px;
-  line-height: 20px;
   color: #999999;
   font-size: 22px;
-  position: absolute;
-  right: 18px;
-  top: 23px;
 }
 
 .show .logo-section .hamburger:hover {
@@ -1148,24 +1154,16 @@ aside .menu-manager-section a .manager-name {
     position: relative;
     overflow: hidden;
     height: 75px;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
   }
   aside .logo-section .logo {
-    display: unset;
     font-size: 100px;
     color: #ffffff;
-    position: absolute;
-    left: 20px;
-    top: -12px;
-  }
-  aside .logo-section .hamburger {
-    display: inline-block;
-    padding: 3px;
-    line-height: 20px;
-    color: #999999;
-    font-size: 22px;
-    position: absolute;
-    right: 20px;
-    top: 23px;
   }
   aside .logo-section .hamburger:hover {
     color: #ffffff;
@@ -1254,22 +1252,8 @@ aside .menu-manager-section a .manager-name {
     height: 75px;
   }
   .show .logo-section .logo {
-    display: unset;
     font-size: 100px;
     color: #ffffff;
-    position: absolute;
-    left: 20px;
-    top: -12px;
-  }
-  .show .logo-section .hamburger {
-    display: inline-block;
-    padding: 3px;
-    line-height: 20px;
-    color: #999999;
-    font-size: 22px;
-    position: absolute;
-    right: 18px;
-    top: 23px;
   }
   .show .logo-section .hamburger:hover {
     color: #ffffff;

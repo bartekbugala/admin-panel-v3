@@ -11,25 +11,16 @@
       position: relative;
       overflow: hidden;
       height: 75px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: center;
 
       .logo {
-        display: unset;
         font-size: 100px;
         color: $menu-color-hover;
-        position: absolute;
-        left: 20px;
-        top: -12px;
       }
 
       .hamburger {
-        display: inline-block;
-        padding: 3px;
-        line-height: 20px;
-        color: $menu-color;
-        font-size: 22px;
-        position: absolute;
-        right: 20px;
-        top: 23px;
 
         &:hover {
           color: $menu-color-hover;
@@ -128,23 +119,14 @@
       height: 75px;
 
       .logo {
-        display: unset;
+
         font-size: 100px;
         color: $menu-color-hover;
-        position: absolute;
-        left: 20px;
-        top: -12px;
+
       }
 
       .hamburger {
-        display: inline-block;
-        padding: 3px;
-        line-height: 20px;
-        color: $menu-color;
-        font-size: 22px;
-        position: absolute;
-        right: 18px;
-        top: 23px;
+
 
         &:hover {
           color: $menu-color-hover;
