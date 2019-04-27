@@ -471,6 +471,7 @@ section {
   margin-left: calc(230px - 165px + 20px);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  transition: margin-left linear .3s;
 }
 
 section h3 {
@@ -709,6 +710,7 @@ aside {
   background-color: #191919;
   width: calc(230px - 165px);
   height: 100vh;
+  transition: width linear .3s;
 }
 
 aside .logo-section {
@@ -719,8 +721,9 @@ aside .logo-section {
       align-items: center;
   -ms-flex-pack: start;
       justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
 }
 
 aside .logo-section a {
@@ -738,10 +741,10 @@ aside .logo-section a i {
 aside .logo-section .logo {
   -ms-flex: 8 2;
       flex: 8 2;
-  display: none;
   color: #ffffff;
   font-size: 100px;
   margin-left: 15px;
+  display: none;
 }
 
 aside .logo-section .hamburger {
@@ -775,13 +778,16 @@ aside nav li:hover {
 }
 
 aside nav a {
-  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 16px;
   padding: 16px 20px;
   height: 100%;
   width: 100%;
   color: #999999;
   background-color: #191919;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 aside nav a:hover {
@@ -794,7 +800,13 @@ aside nav i {
 }
 
 aside nav span {
-  display: none;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  white-space: nowrap;
+  transition: opacity ease-in-out .4s, visibility ease-in-out .4s;
 }
 
 aside .menu-manager-section {
@@ -877,9 +889,12 @@ aside .menu-manager-section a .manager-name {
 }
 
 .show nav a {
-  display: inline-block;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   font-size: 16px;
-  padding: 16px 20px;
   height: 100%;
   width: 100%;
   color: #999999;
@@ -896,7 +911,11 @@ aside .menu-manager-section a .manager-name {
 }
 
 .show nav span {
-  display: inline-block;
+  white-space: nowrap;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+  opacity: 1;
 }
 
 .show .menu-manager-section {
@@ -1162,8 +1181,19 @@ aside .menu-manager-section a .manager-name {
         align-items: center;
   }
   aside .logo-section .logo {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 8 6;
+        flex: 8 6;
     font-size: 100px;
     color: #ffffff;
+  }
+  aside .logo-section .hamburger {
+    -ms-flex: 1 0;
+        flex: 1 0;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin-right: 20px;
   }
   aside .logo-section .hamburger:hover {
     color: #ffffff;
@@ -1200,6 +1230,8 @@ aside .menu-manager-section a .manager-name {
   }
   aside nav span {
     display: inline-block;
+    visibility: visible;
+    opacity: 1;
   }
   aside .menu-manager-section {
     padding: 15px;
@@ -1216,11 +1248,10 @@ aside .menu-manager-section a .manager-name {
   aside .menu-manager-section h4 {
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 10px;
     width: 100%;
     text-transform: uppercase;
     justify-self: stretch;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   aside .menu-manager-section a {
     display: -ms-flexbox;
@@ -1230,6 +1261,8 @@ aside .menu-manager-section a .manager-name {
     -ms-flex-align: center;
         align-items: center;
     cursor: pointer;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   aside .menu-manager-section a .avatar-img {
     margin-right: 10px;
@@ -1241,7 +1274,7 @@ aside .menu-manager-section a .manager-name {
     display: unset;
   }
   .show {
-    position: unset;
+    position: fixed;
     background-color: #191919;
     width: 100vw;
     height: auto;
@@ -1313,6 +1346,9 @@ aside .menu-manager-section a .manager-name {
     margin: 20px 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  section:first-of-type {
+    margin-top: calc(20px + 75px);
   }
   section h3 {
     text-transform: uppercase;

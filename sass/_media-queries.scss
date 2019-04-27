@@ -16,12 +16,16 @@
       align-items: center;
 
       .logo {
+        display: flex;
+        flex: 8 6;
         font-size: 100px;
         color: $menu-color-hover;
       }
 
       .hamburger {
-
+        flex: 1 0;
+        justify-content: center;
+        margin-right: 20px;
         &:hover {
           color: $menu-color-hover;
         }
@@ -68,6 +72,8 @@
 
       span {
         display: inline-block;
+        visibility: visible;
+        opacity: 1;
       }
     }
 
@@ -81,10 +87,10 @@
 
       h4 {
         display: flex;
+        padding-bottom: 10px;
         width: 100%;
         text-transform: uppercase;
-        justify-self: stretch;
-        flex-wrap: wrap;
+        justify-self: stretch;   
       }
 
       a {
@@ -92,7 +98,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-
+        flex-wrap: wrap;
         .avatar-img {
           margin-right: 10px;
           border-radius: 50%;
@@ -108,7 +114,7 @@
   }
 
   .show {
-    position: unset;
+    position: fixed;
     background-color: $menu-background-color;
     width: 100vw;
     height: auto;
@@ -196,8 +202,11 @@
 }
 
 section {
-  margin: $section-margin 0;
+  margin: #{$section-margin} 0;
   flex-wrap: wrap;
+  &:first-of-type {
+    margin-top: calc(#{$section-margin} + 75px);
+  }
 
   h3 {
       text-transform: uppercase;

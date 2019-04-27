@@ -2,6 +2,7 @@ const topHeader = document.querySelector('.top-header');
 const aside = document.querySelector('aside');
 const elements = document.querySelectorAll('section');
 const hamburger = document.querySelector('.hamburger');
+const mobileMenuWrapper = document.querySelector('.mobile-menu-wrapper');
 
 function toggleMenu(visible) {
   
@@ -11,6 +12,7 @@ function toggleClasses(elements) {
   }
 }
     aside.classList.toggle('show', visible);
+    mobileMenuWrapper.classList.toggle('show-mobile-menu', visible);
     topHeader.classList.toggle('top-header-show-menu', visible);
     toggleClasses(elements);
  }

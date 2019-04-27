@@ -5,12 +5,14 @@ aside {
     background-color: $menu-background-color;
     width: calc(#{$menu-width} - 165px);
     height: 100vh;
+    transition: width linear .3s;
     .logo-section {
         height: 75px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        overflow: hidden;
         a {
             height: 22px;
             display: flex;
@@ -27,10 +29,10 @@ aside {
         }
         .logo {
             flex: 8 2;
-            display: none;
             color: $menu-color-hover;
             font-size: 100px;
-            margin-left: 15px;    
+            margin-left: 15px;
+            display: none;
                        
         }
         .hamburger {
@@ -62,14 +64,14 @@ aside {
             }
         }
         a {
-            display: inline-block;
+            display: flex;
             font-size: 16px;
             padding: 16px 20px;
             height: 100%;
             width: 100%;
             color: $menu-color;
             background-color: $menu-background-color;
-
+            flex-wrap: nowrap;
             &:hover {
                 color: $menu-color-hover;
                 background-color: $menu-background-color-hover
@@ -79,8 +81,13 @@ aside {
         i {
             margin-right: 20px;
         }
-        span {
-            display: none;
+        span {   
+            display: flex;
+            opacity: 0;
+            overflow: hidden;
+            visibility: hidden;
+            white-space: nowrap;
+            transition: opacity ease-in-out .4s, visibility ease-in-out .4s;
         }  
          
     }
@@ -121,8 +128,8 @@ aside {
     height: 100vh;
     .logo-section {
         .logo {
-            display: flex;          
-            color: $menu-color-hover;
+            display: flex;                     
+            color: $menu-color-hover; 
         }
 
         .hamburger {
@@ -156,9 +163,11 @@ aside {
             }
         }
         a {
-            display: inline-block;
+            display: flex;
+            visibility: visible;
+            flex-wrap: nowrap;
             font-size: 16px;
-            padding: 16px 20px;
+      
             height: 100%;
             width: 100%;
             color: $menu-color;
@@ -174,7 +183,10 @@ aside {
             margin-right: 20px;
         }
         span {
-            display: inline-block;
+            white-space: nowrap;
+            display: flex;
+            visibility: visible;
+            opacity: 1;
         }     
     }
     .menu-manager-section {
