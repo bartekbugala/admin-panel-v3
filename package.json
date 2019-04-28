@@ -42,5 +42,6 @@
   "bugs": {
     "url": "https://git@github.com:bartekbugala/BannerLink-Admin-Panel-RWD.git/issues"
   },
-  "homepage": "https://git@github.com:bartekbugala/BannerLink-Admin-Panel-RWD.git#readme"
+  "homepage": "https://git@github.com:bartekbugala/BannerLink-Admin-Panel-RWD.git#readme",
+  "dependencies": {}
 }
