@@ -1,0 +1,176 @@
+.menu-wrapper {
+    aside {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $menu-background-color;
+        width: $menu-width;
+        height: 100vh;
+
+        .logo-section {
+            height: $logo-bar-height;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow: hidden;
+
+            a {
+                height: 22px;
+                display: flex;
+                align-items: center;
+
+                i {
+                    line-height: 22px;
+                }
+            }
+
+            .logo {
+                display: flex;
+                color: $menu-color-hover;
+                flex: 8 2;
+                color: $menu-color-hover;
+                font-size: 100px;
+                margin-left: 15px;
+                opacity: 1;
+
+            }
+
+            .hamburger {
+                justify-content: flex-end;
+                padding-right: 20px;
+                flex: 3 1;
+                color: $menu-color;
+                font-size: 22px;
+                margin-right: 0;
+
+
+                &:hover {
+                    color: $menu-color-hover;
+                }
+            }
+        }
+
+        nav {
+
+            ul {
+                list-style-type: none;
+                padding: 0 0 20px 0;
+                border-bottom: solid 2px $menu-background-color-hover;
+
+                li {
+                    padding-left: $menu-left-padding-hover;
+                    background-color: $menu-background-color;
+                    overflow: hidden;
+                    a {
+                        background-color: $menu-background-color;
+                        color: $menu-color;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        font-size: 16px;
+                        padding: 16px 20px;           
+                        flex-wrap: nowrap;
+                        i {
+                            margin-right: 20px;
+                        }
+            
+                        span {
+                            white-space: nowrap;
+                            display: flex;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                        &:hover {
+                            color: $menu-color-hover;
+                            background-color: $menu-background-color-hover
+                        }
+                    }
+                    &:hover {
+                        background-color: $menu-left-padding-color-hover;
+                        background-color: $menu-left-padding-color-hover;
+                    }
+                }
+            }
+        }
+
+        .menu-manager-section {
+            padding: 0 15px;
+            margin-top: 20px;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            overflow: hidden;
+            h4 {
+                white-space: nowrap;
+                display: unset;
+                text-transform: uppercase;
+                justify-self: stretch;
+                margin: 20px 0;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                flex-wrap: nowrap;
+                .avatar-img {
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    max-width: 100%;
+                    max-width: 60px;
+                }
+
+                .manager-name {
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.menu-wrapper-toggle {
+    aside {
+        background-color: $menu-background-color;
+        width: calc(#{$menu-width} - 165px);
+
+        .logo-section {
+            .logo {
+                //visibility: hidden;
+                //opacity: 0;
+                margin-left: calc((#{$menu-width} + 15px)*-1);
+            }
+
+            .hamburger {
+                padding-right: 20px;
+            }
+        }
+
+        nav ul li a span {
+                display: flex;
+                opacity: 0;
+                overflow: hidden;
+                visibility: hidden;
+                white-space: nowrap;     
+        }
+
+        .menu-manager-section {
+            justify-content: center;
+            align-items: center;
+            h4 {
+                display: none;
+            }
+            a {
+                flex-direction: column;
+                .avatar-img {
+                    padding: 0 10px;
+                }
+                .manager-name {
+                    display: none;
+                }
+            }
+        }
+    }
+}
