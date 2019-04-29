@@ -6,7 +6,8 @@
         background-color: $menu-background-color;
         width: $menu-width;
         height: 100vh;
-
+        display: flex;
+        flex-direction: column;
         .logo-section {
             height: $logo-bar-height;
             display: flex;
@@ -29,7 +30,6 @@
                 display: flex;
                 color: $menu-color-hover;
                 flex: 8 2;
-                color: $menu-color-hover;
                 font-size: 100px;
                 margin-left: 15px;
                 opacity: 1;
@@ -99,6 +99,7 @@
             margin-top: 20px;
             display: flex;
             align-items: flex-start;
+            justify-content: flex-start;
             flex-direction: column;
             overflow: hidden;
             h4 {
@@ -111,11 +112,12 @@
 
             a {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 cursor: pointer;
                 flex-wrap: nowrap;
                 .avatar-img {
+                    justify-content: flex-start;
                     margin-right: 10px;
                     border-radius: 50%;
                     max-width: 60px;
@@ -124,6 +126,7 @@
                 .manager-name {
                     white-space: nowrap;
                     overflow: hidden;
+
                 }
             }
         }
@@ -156,18 +159,21 @@
         }
 
         .menu-manager-section {
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             h4 {
                 display: none;
             }
             a {
                 flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
                 .avatar-img {
+                    justify-content: flex-start;
                     padding: 0 10px;
                 }
                 .manager-name {
-                    display: none;
+                    visibility: hidden;
                 }
             }
         }

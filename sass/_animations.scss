@@ -1,5 +1,4 @@
 .menu-wrapper {
-    transition: width linear .3s;
     aside {
         transition: width linear .3s;
         nav {
@@ -28,6 +27,7 @@
 }
 
 .menu-wrapper-toggle {
+    
     aside {
         .logo-section {
             .logo {
@@ -36,7 +36,7 @@
         }
         .menu-manager-section {
             h4 {
-                transition: unset;
+               
             }
             a {
                 .avatar-img {
