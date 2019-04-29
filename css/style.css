@@ -516,30 +516,6 @@ section .flex-center-wrap {
   width: auto;
 }
 
-.menu-wrapper aside {
-  transition: width linear .3s;
-}
-
-.menu-wrapper aside nav span {
-  transition: opacity ease-in-out .4s, visibility ease-in-out .4s;
-}
-
-.menu-wrapper aside .logo-section .logo {
-  transition: visibility ease-in .4s, opacity ease-in .4s, margin-left linear .3s;
-}
-
-.menu-wrapper aside .menu-manager-section h4 {
-  transition: visibility ease-in .3s, opacity ease-in .3s;
-}
-
-.top-header {
-  transition: margin-left linear .3s, width linear .3s;
-}
-
-section {
-  transition: margin-left linear .3s;
-}
-
 /* Components */
 .btn {
   font-family: inherit;
@@ -1414,6 +1390,12 @@ section {
   .top-header-show-menu {
     margin-left: unset;
     width: 100%;
+  }
+  .top-header,
+  section,
+  aside,
+  .logo-section {
+    transition: unset;
   }
   .status-sm::after {
     width: 15px;

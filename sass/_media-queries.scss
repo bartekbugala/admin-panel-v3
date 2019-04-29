@@ -326,6 +326,13 @@
     width: 100%;
   }
 
+  .top-header,
+  section,
+  aside,
+  .logo-section {
+    transition: unset;
+  }
+
   .status-sm {
     &::after {
       width: 15px;
