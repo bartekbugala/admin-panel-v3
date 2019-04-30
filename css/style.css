@@ -826,8 +826,7 @@ section .flex-center-wrap {
 }
 
 .menu-wrapper aside .menu-manager-section {
-  padding: 0 15px;
-  margin-top: 20px;
+  padding: 30px 15px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: start;
@@ -1219,7 +1218,7 @@ section .flex-center-wrap {
   .menu-wrapper .top-header ul li a {
     background-color: #191919;
     color: #a6a6a6;
-    padding: 16px 20px;
+    width: calc(230px - 165px - 5px);
     height: 100%;
     color: #999999;
     display: -ms-flexbox;
@@ -1227,6 +1226,8 @@ section .flex-center-wrap {
     font-size: 16px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .menu-wrapper .top-header ul li a i {
     font-size: 1em;
@@ -1251,8 +1252,6 @@ section .flex-center-wrap {
   }
   .menu-wrapper .top-header ul .notification a span {
     display: block;
-    margin: 0;
-    padding: 0;
     width: 20px;
   }
   .menu-wrapper-toggle {
@@ -1315,7 +1314,7 @@ section .flex-center-wrap {
     background-color: #f58220;
   }
   .menu-wrapper-toggle aside .menu-manager-section {
-    padding: 10px 0 10px 20px;
+    padding: 20px 0 20px 20px;
     width: 100%;
     -ms-flex-align: start;
         align-items: flex-start;
@@ -1348,6 +1347,9 @@ section .flex-center-wrap {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     font-size: 1.3em;
+  }
+  .menu-wrapper-toggle .top-header ul {
+    width: 100%;
   }
   .menu-wrapper-toggle .top-header ul li {
     padding-left: 5px;

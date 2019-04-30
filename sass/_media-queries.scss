@@ -19,7 +19,6 @@
     display: flex;
     flex-direction: column;
     transition: width linear .3s;
-
     aside {
       position: unset;
       width: calc(#{$menu-width} - #{$menu-minus-width});
@@ -72,7 +71,7 @@
       width: 100%; //calc(#{$menu-width} - #{$menu-minus-width});
       flex-wrap: wrap;
       font-size: 1em;
-
+      
       ul {
         list-style: none;
         display: flex;
@@ -87,17 +86,17 @@
           padding-left: $menu-left-padding-hover;
           background-color: $menu-background-color;
           overflow: hidden;
-
           a {
             background-color: $menu-background-color;
             color: $section-main-color;
-            padding: 16px 20px;
+            width: calc(#{$menu-width} - #{$menu-minus-width} - #{$menu-left-padding-hover});
             height: 100%;
             color: $menu-color;
             display: flex;
             font-size: 16px;
             flex-wrap: nowrap;
-
+            padding-top: 16px;
+            padding-bottom: 16px;
             i {
               font-size: 1em;
               margin-right: 10px;
@@ -136,10 +135,9 @@
 
         .notification {
           a {
+
             span {
               display: block;
-              margin: 0;
-              padding: 0;
               width: 20px;
             }
 
@@ -222,7 +220,7 @@
       }
 
       .menu-manager-section {
-        padding: 10px 0 10px 20px;
+        padding: 20px 0 20px 20px;
         width: 100%;
         align-items: flex-start;
         justify-content: center;
@@ -254,7 +252,7 @@
       flex-wrap: nowrap;
       font-size: 1.3em;
       ul {
-
+        width: 100%;
         li {
           padding-left: $menu-left-padding-hover;
           background-color: $menu-background-color;
