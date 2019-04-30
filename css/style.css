@@ -711,6 +711,10 @@ section .flex-center-wrap {
   width: calc(100% - 230px);
 }
 
+.menu-wrapper {
+  background-color: #191919;
+}
+
 .menu-wrapper aside {
   position: fixed;
   top: 0;
@@ -818,7 +822,6 @@ section .flex-center-wrap {
 }
 
 .menu-wrapper aside nav ul li:hover {
-  background-color: #f58220;
   background-color: #f58220;
 }
 
@@ -1125,9 +1128,14 @@ section .flex-center-wrap {
         flex: 0 0 100%;
     max-width: 100%;
   }
+  .top-header {
+    background-color: unset;
+  }
+  .top-header a span {
+    margin: 0;
+  }
   .menu-wrapper {
     width: calc(230px - 165px);
-    background-color: #191919;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1175,11 +1183,10 @@ section .flex-center-wrap {
   .menu-wrapper .top-header {
     display: -ms-flexbox;
     display: flex;
-    width: calc(230px - 165px);
+    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    font-size: 1.3em;
-    background-color: #191919;
+    font-size: 1em;
   }
   .menu-wrapper .top-header ul {
     list-style: none;
@@ -1206,7 +1213,6 @@ section .flex-center-wrap {
     color: #a6a6a6;
     padding: 16px 20px;
     height: 100%;
-    width: 100%;
     color: #999999;
     display: -ms-flexbox;
     display: flex;
@@ -1216,6 +1222,7 @@ section .flex-center-wrap {
   }
   .menu-wrapper .top-header ul li a i {
     font-size: 1em;
+    margin-right: 10px;
   }
   .menu-wrapper .top-header ul li a span {
     display: none;
@@ -1310,6 +1317,8 @@ section .flex-center-wrap {
   .menu-wrapper-toggle aside .menu-manager-section a {
     -ms-flex-direction: row;
         flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
   }
   .menu-wrapper-toggle aside .menu-manager-section a .avatar-img {
     margin-right: 10px;
@@ -1319,16 +1328,15 @@ section .flex-center-wrap {
   .menu-wrapper-toggle aside .menu-manager-section a .manager-name {
     display: -ms-flexbox;
     display: flex;
+    visibility: visible;
+    opacity: 1;
   }
   .menu-wrapper-toggle .top-header {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     font-size: 1.3em;
-  }
-  .menu-wrapper-toggle .top-header ul {
-    background-color: #191919;
   }
   .menu-wrapper-toggle .top-header ul li {
     padding-left: 5px;
@@ -1354,12 +1362,9 @@ section .flex-center-wrap {
   .menu-wrapper-toggle .top-header ul li a span {
     display: -ms-flexbox;
     display: flex;
-    margin: 0 20px;
     white-space: nowrap;
-    visibility: visible;
     -ms-flex-pack: start;
         justify-content: flex-start;
-    opacity: 1;
   }
   .menu-wrapper-toggle .top-header ul li a:hover {
     color: #ffffff;
@@ -1369,7 +1374,6 @@ section .flex-center-wrap {
     display: none;
   }
   .menu-wrapper-toggle .top-header ul li:hover {
-    background-color: #f58220;
     background-color: #f58220;
   }
   .menu-wrapper-toggle .top-header ul .wallet span {
@@ -1389,13 +1393,6 @@ section .flex-center-wrap {
   .top-header,
   .top-header-show-menu {
     margin-left: unset;
-    width: 100%;
-  }
-  .top-header,
-  section,
-  aside,
-  .logo-section {
-    transition: unset;
   }
   .status-sm::after {
     width: 15px;

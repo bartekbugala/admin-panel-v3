@@ -1,4 +1,5 @@
 .menu-wrapper {
+    background-color: $menu-background-color;
     aside {
         position: fixed;
         top: 0;
@@ -15,17 +16,14 @@
             justify-content: flex-start;
             flex-wrap: nowrap;
             overflow: hidden;
-
             a {
                 height: 22px;
                 display: flex;
                 align-items: center;
-
                 i {
                     line-height: 22px;
                 }
             }
-
             .logo {
                 display: flex;
                 color: $menu-color-hover;
@@ -33,7 +31,6 @@
                 font-size: 100px;
                 margin-left: 15px;
                 opacity: 1;
-
             }
 
             .hamburger {
@@ -43,8 +40,6 @@
                 color: $menu-color;
                 font-size: 22px;
                 margin-right: 0;
-
-
                 &:hover {
                     color: $menu-color-hover;
                 }
@@ -87,7 +82,6 @@
                         }
                     }
                     &:hover {
-                        background-color: $menu-left-padding-color-hover;
                         background-color: $menu-left-padding-color-hover;
                     }
                 }
@@ -136,12 +130,10 @@
 .menu-wrapper-toggle {
     aside {
         background-color: $menu-background-color;
-        width: calc(#{$menu-width} - 165px);
+        width: calc(#{$menu-width} - #{$menu-minus-width});
 
         .logo-section {
             .logo {
-                //visibility: hidden;
-                //opacity: 0;
                 margin-left: calc((#{$menu-width} + 15px)*-1);
             }
 

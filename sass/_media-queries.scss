@@ -1,9 +1,16 @@
 @media(max-width: 767px) {
   @include grid('sm');
 
+  .top-header {
+    background-color: unset;
+
+    a span {
+      margin: 0;
+    }
+  }
+
   .menu-wrapper {
-    width: calc(#{$menu-width} - 165px);
-    background-color: $menu-background-color;
+    width: calc(#{$menu-width} - #{$menu-minus-width});
     position: fixed;
     top: 0;
     bottom: 0;
@@ -14,7 +21,7 @@
 
     aside {
       position: unset;
-      width: calc(#{$menu-width} - 165px);
+      width: calc(#{$menu-width} - #{$menu-minus-width});
       height: auto;
 
       .logo-section {
@@ -51,15 +58,13 @@
           }
         }
       }
-
     }
 
     .top-header {
       display: flex;
-      width: calc(#{$menu-width} - 165px);
+      width: 100%; //calc(#{$menu-width} - #{$menu-minus-width});
       flex-wrap: wrap;
-      font-size: 1.3em;
-      background-color: $menu-background-color;
+      font-size: 1em;
 
       ul {
         list-style: none;
@@ -81,7 +86,6 @@
             color: $section-main-color;
             padding: 16px 20px;
             height: 100%;
-            width: 100%;
             color: $menu-color;
             display: flex;
             font-size: 16px;
@@ -89,6 +93,7 @@
 
             i {
               font-size: 1em;
+              margin-right: 10px;
             }
 
             span {
@@ -219,6 +224,7 @@
 
         a {
           flex-direction: row;
+          align-items: center;
 
           .avatar-img {
             margin-right: 10px;
@@ -228,6 +234,8 @@
 
           .manager-name {
             display: flex;
+            visibility: visible;
+            opacity: 1;
           }
         }
       }
@@ -235,11 +243,10 @@
 
     .top-header {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       font-size: 1.3em;
 
       ul {
-        background-color: $menu-background-color;
 
         li {
           padding-left: $menu-left-padding-hover;
@@ -263,12 +270,8 @@
 
             span {
               display: flex;
-              margin: 0 20px;
               white-space: nowrap;
-
-              visibility: visible;
               justify-content: flex-start;
-              opacity: 1;
             }
 
             &:hover {
@@ -286,7 +289,6 @@
           }
 
           &:hover {
-            background-color: $menu-left-padding-color-hover;
             background-color: $menu-left-padding-color-hover;
           }
         }
@@ -323,14 +325,6 @@
   .top-header,
   .top-header-show-menu {
     margin-left: unset;
-    width: 100%;
-  }
-
-  .top-header,
-  section,
-  aside,
-  .logo-section {
-    transition: unset;
   }
 
   .status-sm {
@@ -362,12 +356,8 @@
 
   section,
   .section-show-menu {
-    margin-left: calc(#{$menu-width} - 165px);
+    margin-left: calc(#{$menu-width} - #{$menu-minus-width});
   }
-
-
-
-
 }
 
 @media(min-width: 768px) {
