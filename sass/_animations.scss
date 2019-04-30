@@ -1,7 +1,7 @@
 .menu-wrapper {
     //transition: width linear .3s;
     aside {
-        //transition: width linear .3s;
+        transition: width linear .3s;
         nav {
             span {
                 //transition: opacity ease-in-out .4s, visibility ease-in-out .4s;
@@ -50,9 +50,9 @@
 }
 
 .top-header {
-    //transition: width linear .3s;
+    transition: width linear .3s, margin-left linear .3s;
 }
 
 section {
-   //transition: margin-left linear .3s;
+   transition: margin-left linear .3s;
 }

@@ -516,6 +516,18 @@ section .flex-center-wrap {
   width: auto;
 }
 
+.menu-wrapper aside {
+  transition: width linear .3s;
+}
+
+.top-header {
+  transition: width linear .3s, margin-left linear .3s;
+}
+
+section {
+  transition: margin-left linear .3s;
+}
+
 /* Components */
 .btn {
   font-family: inherit;
