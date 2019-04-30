@@ -68,7 +68,7 @@
 
     .top-header {
       display: flex;
-      width: 100%; //calc(#{$menu-width} - #{$menu-minus-width});
+      width: 100%;
       flex-wrap: wrap;
       font-size: 1em;
       
@@ -88,15 +88,15 @@
           overflow: hidden;
           a {
             background-color: $menu-background-color;
-            color: $section-main-color;
+            color: $menu-color;
             width: calc(#{$menu-width} - #{$menu-minus-width} - #{$menu-left-padding-hover});
             height: 100%;
-            color: $menu-color;
-            display: flex;
-            font-size: 16px;
-            flex-wrap: nowrap;
             padding-top: 16px;
             padding-bottom: 16px;
+            font-size: 16px;
+            display: flex;
+            flex-wrap: nowrap;
+            
             i {
               font-size: 1em;
               margin-right: 10px;
@@ -362,6 +362,7 @@
   section,
   .section-show-menu {
     margin-left: calc(#{$menu-width} - #{$menu-minus-width});
+    padding: 0;
   }
 }
 

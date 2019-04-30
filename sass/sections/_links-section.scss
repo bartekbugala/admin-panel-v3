@@ -1,43 +1,98 @@
 .links-section {
-    padding: 30px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .links-list {  
+    .links-list {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .underlined-link {
             display: flex;
-            width: 60%;
+            width: 85%;
             justify-content: flex-start;
             padding: 20px;
             border-bottom: solid 2px $input-border-color;
-            justify-self: stretch;
+            flex-wrap: wrap;
+            overflow-x: auto;
+
             span {
-                flex: 1 1 50%;
+                padding: 5px;
+            }
+
+            span:first-child {
+                flex-basis: 40%;
                 display: flex;
                 justify-content: flex-start;
+                white-space: nowrap;
+
             }
-            a {
-                flex: 1 1 50%;
+
+            span:nth-child(2) {
+                flex-basis: 45%;
+                text-overflow: ellipsis;
                 display: flex;
                 justify-content: flex-start;
+
             }
+
+            span:nth-child(3) {
+                flex-basis: 10%;
+                display: flex;
+                justify-content: flex-end;
+
+                a {
+                    padding: 0 8px;
+                    opacity: 0;
+
+                }
+
+                .icon-links {
+                    color: $warning-color;
+                }
+
+                .icon-trash {
+                    color: $secondary-color;
+                }
+
+            }
+
             &:first-of-type .btn,
             &:last-of-type .btn {
                 flex: unset;
                 margin: 0 auto;
                 margin-bottom: 10px;
             }
+
             &:last-of-type {
-            margin-top: 10px;
-            border-bottom: unset;
+                margin-top: 10px;
+                border-bottom: unset;
             }
 
+            &:hover {
+                background-color: $section-background-color-hover;
+
+                span:nth-child(3) a {
+                    opacity: 1;
+
+                    &:hover {
+                        i {
+                            font-weight: bold;
+                        }
+                        .icon-links {
+                            color: $warning-color-hover;
+                        }
+                        .icon-trash {
+                            color: $secondary-color-hover;
+                        }
+
+                    }
+                }
+
+            }
         }
 
 
