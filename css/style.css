@@ -1033,6 +1033,7 @@ section {
       align-items: center;
 }
 
+.links-section .links-list .underlined-button,
 .links-section .links-list .underlined-link {
   display: -ms-flexbox;
   display: flex;
@@ -1044,6 +1045,19 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow-x: auto;
+}
+
+.links-section .links-list .underlined-button:first-of-type .btn,
+.links-section .links-list .underlined-button:last-of-type .btn {
+  -ms-flex: unset;
+      flex: unset;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.links-section .links-list .underlined-button:last-of-type {
+  margin-top: 10px;
+  border-bottom: unset;
 }
 
 .links-section .links-list .underlined-link span {
@@ -1090,19 +1104,6 @@ section {
 
 .links-section .links-list .underlined-link span:nth-child(3) .icon-trash {
   color: #979797;
-}
-
-.links-section .links-list .underlined-link:first-of-type .btn,
-.links-section .links-list .underlined-link:last-of-type .btn {
-  -ms-flex: unset;
-      flex: unset;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-
-.links-section .links-list .underlined-link:last-of-type {
-  margin-top: 10px;
-  border-bottom: unset;
 }
 
 .links-section .links-list .underlined-link:hover {
