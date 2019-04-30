@@ -1,1187 +1,373 @@
 @media(max-width: 767px) {
   @include grid('sm');
 
-  .mobile-menu-wrapper {
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    min-height: 100%;
-    transition: left linear .3s;
-    aside {
-      display: flex;
-      flex-direction: column;
-      background-color: $menu-background-color;
-      width: 100vw;
-      height: auto;
+  .top-header {
+    background-color: unset;
 
-      .logo-section {
-        position: absolute;
-        width: 100vw;
-        top: 0;
-        left: 100vw;
-        height: $logo-bar-height;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-items: center;
-        flex-direction: row;
-        transition: left linear .3s;
-        a {
-          height: 22px;
-          display: flex;
-          align-items: center;
-
-          i {
-            line-height: 22px;
-          }
-        }
-
-        .logo {
-          display: flex;
-          flex: 8 6;
-          font-size: 100px;
-          color: $menu-color-hover;
-        }
-
-        .hamburger {
-          flex: 1 0;
-          justify-content: center;
-          margin-right: 20px;
-          color: $menu-color;
-          font-size: 22px;
-
-          &:hover {
-            color: $menu-color-hover;
-          }
-        }
-      }
-
-      nav {
-        margin-top: $logo-bar-height;
-        ul {
-          list-style-type: none;
-          padding: 0 0 20px 0;
-          border-bottom: solid 2px $menu-background-color-hover;
-        }
-
-        li {
-          padding-left: $menu-left-padding-hover;
-          background-color: $menu-background-color;
-          overflow: hidden;
-
-          &:hover {
-            background-color: $menu-left-padding-color-hover;
-            background-color: $menu-left-padding-color-hover;
-          }
-        }
-
-        a {
-          display: inline-block;
-          font-size: 16px;
-          padding: 16px 20px;
-          height: 100%;
-          width: 100%;
-          color: $menu-color;
-          background-color: $menu-background-color;
-
-          &:hover {
-            color: $menu-color-hover;
-            background-color: $menu-background-color-hover
-          }
-        }
-
-        i {
-          margin-right: 20px;
-        }
-
-        span {
-          display: inline-block;
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-
-      .menu-manager-section {
-        padding: 15px;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-
-        h4 {
-          display: flex;
-          padding-bottom: 10px;
-          width: 100%;
-          text-transform: uppercase;
-          justify-self: stretch;
-        }
-
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          flex-wrap: wrap;
-
-          .avatar-img {
-            margin-right: 10px;
-            border-radius: 50%;
-            max-width: 100%;
-            width: 60px;
-          }
-
-          .manager-name {
-            display: unset;
-          }
-        }
-      }
-    }
-
-    .top-header {
-      position: unset;
-      background-color: $section-background-color;
-      margin-left: unset;
-      width: 100vw;
-      min-height: 100vh;
-      font-size: 1.3em;
-
-      i {
-        font-size: 0.9em;
-      }
-
-      ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-        li {
-          display: flex;
-          border-left: solid 2px $input-border-color;
-          width: 100%;
-        }
-      }
-
-      a {
-        display: flex;
-        color: $section-main-color;
-        padding: 18px;
-
-        span {
-          margin: 0 20px;
-        }
-      }
-
-      .wallet {
-        span {
-          font-weight: 600;
-        }
-      }
-
-      .profile {
-        span {
-          font-size: 0.7em;
-          font-weight: 600;
-          color: $link-color;
-        }
-      }
+    a span {
+      margin: 0;
     }
   }
 
-  .show-mobile-menu {
+  .menu-wrapper {
+    width: calc(#{$menu-width} - #{$menu-minus-width});
     position: fixed;
     top: 0;
-    left: 0;
-    overflow: auto;
-    transition: left linear .3s;
-
-    .show-mobile-nav {
-      display: flex;
-      flex-direction: column;
-      background-color: $menu-background-color;
-      width: 100vw;
-      height: auto;
-      
-      .logo-section {
-        position: absolute;
-        width: 100vw;
-        top: 0;
-        left: 0;
-        height: $logo-bar-height;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-items: center;
-        flex-direction: row;
-        transition: left linear .3s;
-        a {
-          height: 22px;
-          display: flex;
-          align-items: center;
-
-          i {
-            line-height: 22px;
-          }
-        }
-
-        .logo {
-          display: flex;
-          flex: 8 6;
-          font-size: 100px;
-          color: $menu-color-hover;
-        }
-
-        .hamburger {
-          flex: 1 0;
-          justify-content: center;
-          margin-right: 20px;
-          color: $menu-color;
-          font-size: 22px;
-
-          &:hover {
-            color: $menu-color-hover;
-          }
-        }
-      }
-
-
-      nav {
-        margin-top: $logo-bar-height;
-        ul {
-          list-style-type: none;
-          padding: 0 0 20px 0;
-          border-bottom: solid 2px $menu-background-color-hover;
-        }
-
-        li {
-          padding-left: $menu-left-padding-hover;
-          background-color: $menu-background-color;
-          overflow: hidden;
-
-          &:hover {
-            background-color: $menu-left-padding-color-hover;
-            background-color: $menu-left-padding-color-hover;
-          }
-        }
-
-        a {
-          display: inline-block;
-          font-size: 16px;
-          padding: 16px 20px;
-          height: 100%;
-          width: 100%;
-          color: $menu-color;
-          background-color: $menu-background-color;
-
-          &:hover {
-            color: $menu-color-hover;
-            background-color: $menu-background-color-hover
-          }
-        }
-
-        i {
-          margin-right: 20px;
-        }
-
-        span {
-          display: inline-block;
-          visibility: visible;
-          opacity: 1;
-        }
-      }
-
-      .menu-manager-section {
-        padding: 15px;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-
-        h4 {
-          display: flex;
-          padding-bottom: 10px;
-          width: 100%;
-          text-transform: uppercase;
-          justify-self: stretch;
-        }
-
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          flex-wrap: wrap;
-
-          .avatar-img {
-            margin-right: 10px;
-            border-radius: 50%;
-            max-width: 100%;
-            width: 60px;
-          }
-
-          .manager-name {
-            display: unset;
-          }
-        }
-      }
-    }
-
-    .top-header {
-      position: unset;
-      background-color: $section-background-color;
-      margin-left: unset;
-      width: 100vw;
-      font-size: 1.3em;
-
-      i {
-        font-size: 0.9em;
-      }
-
-      ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-        li {
-          display: flex;
-          border-left: solid 2px $input-border-color;
-          width: 100%;
-        }
-      }
-
-      a {
-        display: flex;
-        color: $section-main-color;
-        padding: 18px;
-
-        span {
-          margin: 0 20px;
-        }
-      }
-
-      .wallet {
-        span {
-          font-weight: 600;
-        }
-      }
-
-      .profile {
-        span {
-          font-size: 0.7em;
-          font-weight: 600;
-          color: $link-color;
-        }
-      }
-    }
-  }
-  
-  .logo-section {
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    left: 100vw;
+    bottom: 0;
+    overflow-y: auto;
     display: flex;
-    height: $logo-bar-height;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    background-color: $menu-background-color;
-    transition: left linear .3s;
-    a {
-      height: 22px;
-      display: flex;
-      align-items: center;
+    flex-direction: column;
+    transition: width linear .3s;
 
-      i {
-        line-height: 22px;
+    aside {
+      position: unset;
+      width: calc(#{$menu-width} - #{$menu-minus-width});
+      height: auto;
+
+      .logo-section {
+        .logo {
+          margin-left: calc((#{$menu-width} + 15px)*-1);
+          display: none;
+        }
+      }
+
+      nav ul li a span {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .menu-manager-section {
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        padding-bottom: 10px;
+
+        h4 {
+          display: none;
+        }
+
+        a {
+          flex-direction: column;
+
+          .avatar-img {
+            padding: 0 10px;
+          }
+
+          .manager-name {
+            display: none;
+          }
+        }
       }
     }
 
-    .logo {
+    .top-header {
       display: flex;
-      flex: 8 6;
-      font-size: 100px;
-      color: $menu-color-hover;
+      width: 100%; //calc(#{$menu-width} - #{$menu-minus-width});
+      flex-wrap: wrap;
+      font-size: 1em;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 0 20px 0;
+
+        li {
+          display: flex;
+          justify-content: flex-start;
+          border-left: unset;
+          padding-left: $menu-left-padding-hover;
+          background-color: $menu-background-color;
+          overflow: hidden;
+
+          a {
+            background-color: $menu-background-color;
+            color: $section-main-color;
+            padding: 16px 20px;
+            height: 100%;
+            color: $menu-color;
+            display: flex;
+            font-size: 16px;
+            flex-wrap: nowrap;
+
+            i {
+              font-size: 1em;
+              margin-right: 10px;
+            }
+
+            span {
+              display: none;
+
+            }
+
+            &:hover {
+              color: $menu-color-hover;
+              background-color: $menu-background-color-hover
+            }
+          }
+
+          &:first-of-type {
+            i {
+              &:last-of-type {
+                display: none;
+              }
+            }
+          }
+
+          &:hover {
+            background-color: $menu-left-padding-color-hover;
+            background-color: $menu-left-padding-color-hover;
+          }
+        }
+
+        .wallet {
+          span {
+            font-weight: 400;
+          }
+        }
+
+        .notification {
+          a {
+            span {
+              display: block;
+              margin: 0;
+              padding: 0;
+              width: 20px;
+            }
+
+          }
+        }
+
+        .profile {
+          span {}
+        }
+      }
+    }
+  }
+
+  .menu-wrapper-toggle {
+    width: $menu-width;
+
+    aside {
+      width: $menu-width;
+
+      .logo-section {
+        .logo {
+          display: flex;
+          font-size: 100px;
+          margin-left: 15px;
+          opacity: 1;
+        }
+
+        .hamburger {
+          justify-content: flex-end;
+          padding-right: 20px;
+          margin-right: 0;
+        }
+      }
+
+      nav {
+
+        ul {
+          list-style-type: none;
+          padding: 0 0 20px 0;
+          border-bottom: solid 2px $menu-background-color-hover;
+
+          li {
+            padding-left: $menu-left-padding-hover;
+            background-color: $menu-background-color;
+            overflow: hidden;
+
+            a {
+              background-color: $menu-background-color;
+              color: $menu-color;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              font-size: 16px;
+              padding: 16px 20px;
+              flex-wrap: nowrap;
+
+              i {
+                margin-right: 20px;
+              }
+
+              span {
+                white-space: nowrap;
+                display: flex;
+                visibility: visible;
+                opacity: 1;
+              }
+
+              &:hover {
+                color: $menu-color-hover;
+                background-color: $menu-background-color-hover
+              }
+            }
+
+            &:hover {
+              background-color: $menu-left-padding-color-hover;
+              background-color: $menu-left-padding-color-hover;
+            }
+          }
+        }
+      }
+
+      .menu-manager-section {
+        margin-top: 10px;
+        align-items: flex-start;
+
+        h4 {
+          display: unset;
+        }
+
+        a {
+          flex-direction: row;
+          align-items: center;
+
+          .avatar-img {
+            margin-right: 10px;
+            border-radius: 50%;
+            max-width: 70px;
+          }
+
+          .manager-name {
+            display: flex;
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+      }
     }
 
-    .hamburger {
-      flex: 1 0;
-      justify-content: center;
-      margin-right: 20px;
-      color: $menu-color;
-      font-size: 22px;
+    .top-header {
+      display: flex;
+      flex-wrap: nowrap;
+      font-size: 1.3em;
 
-      &:hover {
-        color: $menu-color-hover;
+      ul {
+
+        li {
+          padding-left: $menu-left-padding-hover;
+          background-color: $menu-background-color;
+          overflow: hidden;
+
+          a {
+            background-color: $menu-background-color;
+            color: $section-main-color;
+            padding: 16px 20px;
+            height: 100%;
+            width: 100%;
+            color: $menu-color;
+            display: flex;
+            font-size: 16px;
+            flex-wrap: nowrap;
+
+            i {
+              font-size: 1em;
+            }
+
+            span {
+              display: flex;
+              white-space: nowrap;
+              justify-content: flex-start;
+            }
+
+            &:hover {
+              color: $menu-color-hover;
+              background-color: $menu-background-color-hover
+            }
+          }
+
+          &:first-of-type {
+            i {
+              &:last-of-type {
+                display: none;
+              }
+            }
+          }
+
+          &:hover {
+            background-color: $menu-left-padding-color-hover;
+          }
+        }
+
+        .wallet {
+          span {
+            font-weight: 400;
+          }
+        }
+
+        .notification {
+          a {
+            span {
+              display: block;
+              margin: 0;
+              padding: 0;
+              width: 20px;
+            }
+
+          }
+        }
+
+        .profile {
+          span {
+            font-size: 1em;
+            font-weight: 400;
+            color: $link-color;
+          }
+        }
       }
+    }
+  }
+
+  .top-header,
+  .top-header-show-menu {
+    margin-left: unset;
+  }
+
+  .status-sm {
+    &::after {
+      width: 15px;
+      height: 15px;
+
+    }
+  }
+
+  .status-md {
+    &::after {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  section {
+    margin-right: 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
   section,
-  .section-part,
-  .section-show-menu,
-  header {
-    margin: 0;
-    padding: 0;
-
+  .section-show-menu {
+    margin-left: calc(#{$menu-width} - #{$menu-minus-width});
   }
-  section {
-    &:first-of-type{
-      margin-top: $logo-bar-height;
-    }
-    
-  }
-
-
 }
 
 @media(min-width: 768px) {
   @include grid('md');
-
-  aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $menu-background-color;
-    width: calc(#{$menu-width} - 165px);
-    height: 100vh;
-    transition: width linear .3s;
-
-    .logo-section {
-      height: $logo-bar-height;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-      overflow: hidden;
-
-      a {
-        height: 22px;
-        display: flex;
-        align-items: center;
-
-        i {
-          line-height: 22px;
-
-          &:first-of-type {}
-
-          &:last-of-type {}
-        }
-      }
-
-      .logo {
-        flex: 8 2;
-        color: $menu-color-hover;
-        font-size: 100px;
-        margin-left: 15px;
-        display: none;
-
-      }
-
-      .hamburger {
-        justify-content: center;
-        flex: 3 1;
-        color: $menu-color;
-        font-size: 22px;
-
-        &:hover {
-          color: $menu-color-hover;
-        }
-      }
-    }
-
-    nav {
-
-      ul {
-        list-style-type: none;
-        padding: 0 0 20px 0;
-        border-bottom: solid 2px $menu-background-color-hover;
-      }
-
-      li {
-        padding-left: $menu-left-padding-hover;
-        background-color: $menu-background-color;
-        overflow: hidden;
-
-        &:hover {
-          background-color: $menu-left-padding-color-hover;
-          background-color: $menu-left-padding-color-hover;
-        }
-      }
-
-      a {
-        display: flex;
-        font-size: 16px;
-        padding: 16px 20px;
-        height: 100%;
-        width: 100%;
-        color: $menu-color;
-        background-color: $menu-background-color;
-        flex-wrap: nowrap;
-
-        &:hover {
-          color: $menu-color-hover;
-          background-color: $menu-background-color-hover
-        }
-      }
-
-      i {
-        margin-right: 20px;
-      }
-
-      span {
-        display: flex;
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
-        white-space: nowrap;
-        transition: opacity ease-in-out .4s, visibility ease-in-out .4s;
-      }
-
-    }
-
-    .menu-manager-section {
-      padding: 0 15px;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-
-      h4 {
-        display: none;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        .avatar-img {
-          margin-right: 10px;
-          border-radius: 50%;
-          max-width: 100%;
-          width: 60px;
-        }
-
-        .manager-name {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .show {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $menu-background-color;
-    width: $menu-width;
-    height: 100vh;
-
-    .logo-section {
-      .logo {
-        display: flex;
-        color: $menu-color-hover;
-      }
-
-      .hamburger {
-
-        color: $menu-color;
-        font-size: 22px;
-
-
-
-        &:hover {
-          color: $menu-color-hover;
-        }
-      }
-    }
-
-    nav {
-
-      ul {
-        list-style-type: none;
-        padding: 0 0 20px 0;
-        border-bottom: solid 2px $menu-background-color-hover;
-      }
-
-      li {
-        padding-left: $menu-left-padding-hover;
-        background-color: $menu-background-color;
-        overflow: hidden;
-
-        &:hover {
-          background-color: $menu-left-padding-color-hover;
-          background-color: $menu-left-padding-color-hover;
-        }
-      }
-
-      a {
-        display: flex;
-        visibility: visible;
-        flex-wrap: nowrap;
-        font-size: 16px;
-
-        height: 100%;
-        width: 100%;
-        color: $menu-color;
-        background-color: $menu-background-color;
-
-        &:hover {
-          color: $menu-color-hover;
-          background-color: $menu-background-color-hover
-        }
-      }
-
-      i {
-        margin-right: 20px;
-      }
-
-      span {
-        white-space: nowrap;
-        display: flex;
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    .menu-manager-section {
-      padding: 0 15px;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-
-      h4 {
-        display: unset;
-        text-transform: uppercase;
-        justify-self: stretch;
-        margin: 20px 0;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        .avatar-img {
-          margin-right: 10px;
-          border-radius: 50%;
-          max-width: 100%;
-          width: 60px;
-        }
-
-        .manager-name {
-          display: unset;
-        }
-      }
-    }
-  }
-
 }
 
 @media(min-width: 992px) {
   @include grid('lg');
-
-  aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $menu-background-color;
-    width: calc(#{$menu-width} - 165px);
-    height: 100vh;
-    transition: width linear .3s;
-
-    .logo-section {
-      height: $logo-bar-height;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-      overflow: hidden;
-
-      a {
-        height: 22px;
-        display: flex;
-        align-items: center;
-
-        i {
-          line-height: 22px;
-
-          &:first-of-type {}
-
-          &:last-of-type {}
-        }
-      }
-
-      .logo {
-        flex: 8 2;
-        color: $menu-color-hover;
-        font-size: 100px;
-        margin-left: 15px;
-        display: none;
-
-      }
-
-      .hamburger {
-        justify-content: center;
-        flex: 3 1;
-        color: $menu-color;
-        font-size: 22px;
-
-        &:hover {
-          color: $menu-color-hover;
-        }
-      }
-    }
-
-    nav {
-
-      ul {
-        list-style-type: none;
-        padding: 0 0 20px 0;
-        border-bottom: solid 2px $menu-background-color-hover;
-      }
-
-      li {
-        padding-left: $menu-left-padding-hover;
-        background-color: $menu-background-color;
-        overflow: hidden;
-
-        &:hover {
-          background-color: $menu-left-padding-color-hover;
-          background-color: $menu-left-padding-color-hover;
-        }
-      }
-
-      a {
-        display: flex;
-        font-size: 16px;
-        padding: 16px 20px;
-        height: 100%;
-        width: 100%;
-        color: $menu-color;
-        background-color: $menu-background-color;
-        flex-wrap: nowrap;
-
-        &:hover {
-          color: $menu-color-hover;
-          background-color: $menu-background-color-hover
-        }
-      }
-
-      i {
-        margin-right: 20px;
-      }
-
-      span {
-        display: flex;
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
-        white-space: nowrap;
-        transition: opacity ease-in-out .4s, visibility ease-in-out .4s;
-      }
-
-    }
-
-    .menu-manager-section {
-      padding: 0 15px;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-
-      h4 {
-        display: none;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        .avatar-img {
-          margin-right: 10px;
-          border-radius: 50%;
-          max-width: 100%;
-          width: 60px;
-        }
-
-        .manager-name {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .show {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $menu-background-color;
-    width: $menu-width;
-    height: 100vh;
-
-    .logo-section {
-      .logo {
-        display: flex;
-        color: $menu-color-hover;
-      }
-
-      .hamburger {
-
-        color: $menu-color;
-        font-size: 22px;
-
-
-
-        &:hover {
-          color: $menu-color-hover;
-        }
-      }
-    }
-
-    nav {
-
-      ul {
-        list-style-type: none;
-        padding: 0 0 20px 0;
-        border-bottom: solid 2px $menu-background-color-hover;
-      }
-
-      li {
-        padding-left: $menu-left-padding-hover;
-        background-color: $menu-background-color;
-        overflow: hidden;
-
-        &:hover {
-          background-color: $menu-left-padding-color-hover;
-          background-color: $menu-left-padding-color-hover;
-        }
-      }
-
-      a {
-        display: flex;
-        visibility: visible;
-        flex-wrap: nowrap;
-        font-size: 16px;
-
-        height: 100%;
-        width: 100%;
-        color: $menu-color;
-        background-color: $menu-background-color;
-
-        &:hover {
-          color: $menu-color-hover;
-          background-color: $menu-background-color-hover
-        }
-      }
-
-      i {
-        margin-right: 20px;
-      }
-
-      span {
-        white-space: nowrap;
-        display: flex;
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    .menu-manager-section {
-      padding: 0 15px;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-
-      h4 {
-        display: unset;
-        text-transform: uppercase;
-        justify-self: stretch;
-        margin: 20px 0;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        .avatar-img {
-          margin-right: 10px;
-          border-radius: 50%;
-          max-width: 100%;
-          width: 60px;
-        }
-
-        .manager-name {
-          display: unset;
-        }
-      }
-    }
-  }
-
 }
 
 @media(min-width: 1200px) {
   @include grid('xl');
-
-  aside {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $menu-background-color;
-    width: calc(#{$menu-width} - 165px);
-    height: 100vh;
-    transition: width linear .3s;
-
-    .logo-section {
-      height: $logo-bar-height;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: nowrap;
-      overflow: hidden;
-
-      a {
-        height: 22px;
-        display: flex;
-        align-items: center;
-
-        i {
-          line-height: 22px;
-
-          &:first-of-type {}
-
-          &:last-of-type {}
-        }
-      }
-
-      .logo {
-        flex: 8 2;
-        color: $menu-color-hover;
-        font-size: 100px;
-        margin-left: 15px;
-        display: none;
-
-      }
-
-      .hamburger {
-        justify-content: center;
-        flex: 3 1;
-        color: $menu-color;
-        font-size: 22px;
-
-        &:hover {
-          color: $menu-color-hover;
-        }
-      }
-    }
-
-    nav {
-
-      ul {
-        list-style-type: none;
-        padding: 0 0 20px 0;
-        border-bottom: solid 2px $menu-background-color-hover;
-      }
-
-      li {
-        padding-left: $menu-left-padding-hover;
-        background-color: $menu-background-color;
-        overflow: hidden;
-
-        &:hover {
-          background-color: $menu-left-padding-color-hover;
-          background-color: $menu-left-padding-color-hover;
-        }
-      }
-
-      a {
-        display: flex;
-        font-size: 16px;
-        padding: 16px 20px;
-        height: 100%;
-        width: 100%;
-        color: $menu-color;
-        background-color: $menu-background-color;
-        flex-wrap: nowrap;
-
-        &:hover {
-          color: $menu-color-hover;
-          background-color: $menu-background-color-hover
-        }
-      }
-
-      i {
-        margin-right: 20px;
-      }
-
-      span {
-        display: flex;
-        opacity: 0;
-        overflow: hidden;
-        visibility: hidden;
-        white-space: nowrap;
-        transition: opacity ease-in-out .4s, visibility ease-in-out .4s;
-      }
-
-    }
-
-    .menu-manager-section {
-      padding: 0 15px;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-
-      h4 {
-        display: none;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        .avatar-img {
-          margin-right: 10px;
-          border-radius: 50%;
-          max-width: 100%;
-          width: 60px;
-        }
-
-        .manager-name {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .show {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: $menu-background-color;
-    width: $menu-width;
-    height: 100vh;
-
-    .logo-section {
-      .logo {
-        display: flex;
-        color: $menu-color-hover;
-      }
-
-      .hamburger {
-
-        color: $menu-color;
-        font-size: 22px;
-
-
-
-        &:hover {
-          color: $menu-color-hover;
-        }
-      }
-    }
-
-    nav {
-
-      ul {
-        list-style-type: none;
-        padding: 0 0 20px 0;
-        border-bottom: solid 2px $menu-background-color-hover;
-      }
-
-      li {
-        padding-left: $menu-left-padding-hover;
-        background-color: $menu-background-color;
-        overflow: hidden;
-
-        &:hover {
-          background-color: $menu-left-padding-color-hover;
-          background-color: $menu-left-padding-color-hover;
-        }
-      }
-
-      a {
-        display: flex;
-        visibility: visible;
-        flex-wrap: nowrap;
-        font-size: 16px;
-
-        height: 100%;
-        width: 100%;
-        color: $menu-color;
-        background-color: $menu-background-color;
-
-        &:hover {
-          color: $menu-color-hover;
-          background-color: $menu-background-color-hover
-        }
-      }
-
-      i {
-        margin-right: 20px;
-      }
-
-      span {
-        white-space: nowrap;
-        display: flex;
-        visibility: visible;
-        opacity: 1;
-      }
-    }
-
-    .menu-manager-section {
-      padding: 0 15px;
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-
-      h4 {
-        display: unset;
-        text-transform: uppercase;
-        justify-self: stretch;
-        margin: 20px 0;
-      }
-
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        .avatar-img {
-          margin-right: 10px;
-          border-radius: 50%;
-          max-width: 100%;
-          width: 60px;
-        }
-
-        .manager-name {
-          display: unset;
-        }
-      }
-    }
-  }
-
 }
