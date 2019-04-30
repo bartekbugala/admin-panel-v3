@@ -1140,6 +1140,7 @@ section .flex-center-wrap {
     top: 0;
     bottom: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
