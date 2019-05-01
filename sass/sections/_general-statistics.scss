@@ -1,3 +1,35 @@
+.input-date-range {
+    width: 40%;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin-right: 10px;
+
+    .input-date {
+        border: solid 2px $input-border-color;
+        flex: 1 1 25%;
+        display: flex;
+        color: $input-color;
+        line-height: 30px;
+        padding: 10px;
+
+        &:first-of-type {
+            margin-right: -1px;
+        }
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1 1 20%;
+            margin-left: 5px;
+        }
+    }
+}
+ 
+ 
  .counters {
      display: flex;
      flex-wrap: wrap;
