@@ -988,12 +988,6 @@ section {
       flex: 0 0 20%;
 }
 
-.chart-container {
-  display: block;
-  width: 500px;
-  margin: 0 auto;
-}
-
 .chart-container .chart-legend {
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
@@ -1040,6 +1034,11 @@ section {
 
 .chart-container .chart-legend-earned {
   background-color: #59b66d;
+}
+
+.chart-container .scroll-wrapper {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .links-section {
