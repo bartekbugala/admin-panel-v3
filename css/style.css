@@ -340,6 +340,7 @@ template {
 /* Variables */
 /* Font sizes */
 /* Fonts */
+/* Animations */
 * {
   padding: 0;
   margin: 0;
@@ -511,20 +512,40 @@ section .section-part {
   background: white;
 }
 
+.top-header li,
+nav li,
+nav a,
+.menu-manager-section a,
+.underlined-link {
+  transition: background-color ease-in 0.2s;
+}
+
+.top-header .profile span,
+nav a,
+.hamburger,
+.menu-manager-section a,
+.underlined-link a {
+  transition: color ease-in 0.2s;
+}
+
+.underlined-link a {
+  transition: opacity ease-in 0.3s;
+}
+
 .menu-wrapper {
-  transition: width linear .3s;
+  transition: width linear 0.3s;
 }
 
 .menu-wrapper aside {
-  transition: width linear .3s;
+  transition: width linear 0.3s;
 }
 
 .top-header {
-  transition: width linear .3s, margin-left linear .3s;
+  transition: width linear 0.3s, margin-left linear 0.3s;
 }
 
 section {
-  transition: width linear .3s, margin-left linear .3s;
+  transition: width linear 0.3s, margin-left linear 0.3s;
 }
 
 /* Components */
@@ -542,6 +563,7 @@ section {
   border-radius: 5px;
   padding: 10px 20px;
   text-decoration: none;
+  transition: background-color ease-in 0.2s, color ease-in 0.2s;
 }
 
 .btn:hover {
@@ -680,6 +702,10 @@ section {
   color: #56819f;
 }
 
+.top-header .profile:hover span {
+  color: #ffa200;
+}
+
 .top-header-show-menu {
   margin-left: 240px;
   width: calc(100% - 240px);
@@ -796,7 +822,7 @@ section {
 }
 
 .menu-wrapper aside .menu-manager-section {
-  padding: 30px 15px;
+  padding: 30px 0;
   height: auto;
   display: -ms-flexbox;
   display: flex;
@@ -814,10 +840,11 @@ section {
   display: unset;
   text-transform: uppercase;
   justify-self: stretch;
-  margin-bottom: 10px;
+  margin: 0 0 10px 10px;
 }
 
 .menu-wrapper aside .menu-manager-section a {
+  padding: 5px 15px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: start;
@@ -827,6 +854,7 @@ section {
   cursor: pointer;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 240px;
 }
 
 .menu-wrapper aside .menu-manager-section a .avatar-img {
@@ -838,6 +866,11 @@ section {
 .menu-wrapper aside .menu-manager-section a .manager-name {
   white-space: nowrap;
   overflow: hidden;
+}
+
+.menu-wrapper aside .menu-manager-section a:hover {
+  background-color: #282828;
+  color: #ffa200;
 }
 
 .menu-wrapper-toggle aside {
@@ -1119,6 +1152,10 @@ section {
       justify-content: flex-start;
 }
 
+.links-section .links-list .underlined-link span:nth-child(2) a:hover {
+  color: #ffa200;
+}
+
 .links-section .links-list .underlined-link span:nth-child(3) {
   -ms-flex: 0 0 4%;
       flex: 0 0 4%;
@@ -1360,6 +1397,9 @@ section {
   .menu-wrapper .top-header ul .notification a span {
     display: block;
     width: 20px;
+  }
+  .menu-wrapper .top-header ul .profile:hover span {
+    color: #ffa200;
   }
   .menu-wrapper-toggle {
     width: 240px;

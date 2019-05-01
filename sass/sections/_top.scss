@@ -52,6 +52,9 @@
             font-weight: 600;
             color: $link-color;
         }
+    &:hover span {
+        color: $link-color-hover;
+    }
     }
 }
 

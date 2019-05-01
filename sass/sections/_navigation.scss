@@ -89,7 +89,7 @@
         }
 
         .menu-manager-section {
-            padding: 30px 15px;
+            padding: 30px 0;
             height: auto;
             display: flex;
             align-items: flex-start;
@@ -101,14 +101,16 @@
                 display: unset;
                 text-transform: uppercase;
                 justify-self: stretch;
-                margin-bottom: 10px;
+                margin: 0 0 10px 10px;
             }
             a {
+                padding: 5px 15px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 cursor: pointer;
                 flex-wrap: nowrap;
+                width: $menu-width;
                 .avatar-img {                
                     margin-right: 10px;
                     border-radius: 50%;
@@ -119,6 +121,10 @@
                     white-space: nowrap;
                     overflow: hidden;
 
+                }
+                &:hover {
+                    background-color: $menu-background-color-hover;
+                    color: $link-color-hover;
                 }
             }
         }

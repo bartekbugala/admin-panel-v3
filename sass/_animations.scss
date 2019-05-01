@@ -1,14 +1,35 @@
+.top-header li,
+nav li,
+nav a,
+.menu-manager-section a,
+.underlined-link {
+    transition: background-color ease-in $color-transition-speed;
+}
+
+.top-header .profile span,
+nav a,
+.hamburger,
+.menu-manager-section a,
+.underlined-link a {
+    transition: color ease-in $color-transition-speed;
+}
+
+.underlined-link a {
+    transition: opacity ease-in $opacity-transition-speed;
+}
+
 .menu-wrapper {
-    transition: width linear .3s;
+    transition: width linear $size-transition-speed;
+
     aside {
-        transition: width linear .3s;
+        transition: width linear $size-transition-speed;
     }
 }
 
 .top-header {
-    transition: width linear .3s, margin-left linear .3s;
+    transition: width linear $size-transition-speed, margin-left linear $size-transition-speed;
 }
 
 section {
-   transition: width linear .3s, margin-left linear .3s;
+    transition: width linear $size-transition-speed, margin-left linear $size-transition-speed;
 }

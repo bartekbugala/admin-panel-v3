@@ -29,7 +29,7 @@
         height: auto;
         background-color: $menu-background-color;
         transition: unset;
-        
+
         .logo-section {
           .logo {
             margin-left: calc((#{$menu-width}) * -1);
@@ -153,6 +153,9 @@
               }
   
             }
+          }
+          .profile:hover span {
+            color: $link-color-hover;
           }
         }
       }
