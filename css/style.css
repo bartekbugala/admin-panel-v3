@@ -367,73 +367,73 @@ template {
       flex-wrap: wrap;
 }
 
-.col-sm-1 {
+.col-1 {
   -ms-flex: 0 0 8.33333%;
       flex: 0 0 8.33333%;
   max-width: 8.33333%;
 }
 
-.col-sm-2 {
+.col-2 {
   -ms-flex: 0 0 16.66667%;
       flex: 0 0 16.66667%;
   max-width: 16.66667%;
 }
 
-.col-sm-3 {
+.col-3 {
   -ms-flex: 0 0 25%;
       flex: 0 0 25%;
   max-width: 25%;
 }
 
-.col-sm-4 {
+.col-4 {
   -ms-flex: 0 0 33.33333%;
       flex: 0 0 33.33333%;
   max-width: 33.33333%;
 }
 
-.col-sm-5 {
+.col-5 {
   -ms-flex: 0 0 41.66667%;
       flex: 0 0 41.66667%;
   max-width: 41.66667%;
 }
 
-.col-sm-6 {
+.col-6 {
   -ms-flex: 0 0 50%;
       flex: 0 0 50%;
   max-width: 50%;
 }
 
-.col-sm-7 {
+.col-7 {
   -ms-flex: 0 0 58.33333%;
       flex: 0 0 58.33333%;
   max-width: 58.33333%;
 }
 
-.col-sm-8 {
+.col-8 {
   -ms-flex: 0 0 66.66667%;
       flex: 0 0 66.66667%;
   max-width: 66.66667%;
 }
 
-.col-sm-9 {
+.col-9 {
   -ms-flex: 0 0 75%;
       flex: 0 0 75%;
   max-width: 75%;
 }
 
-.col-sm-10 {
+.col-10 {
   -ms-flex: 0 0 83.33333%;
       flex: 0 0 83.33333%;
   max-width: 83.33333%;
 }
 
-.col-sm-11 {
+.col-11 {
   -ms-flex: 0 0 91.66667%;
       flex: 0 0 91.66667%;
   max-width: 91.66667%;
 }
 
-.col-sm-12 {
+.col-12 {
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
   max-width: 100%;
@@ -976,6 +976,8 @@ section {
       justify-content: center;
   -ms-flex-direction: row;
       flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .chart-description-box {
@@ -1065,8 +1067,8 @@ section {
 }
 
 .links-section .links-list .underlined-link span:first-child {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex: 0 0 45%;
+      flex: 0 0 45%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: start;
@@ -1075,8 +1077,8 @@ section {
 }
 
 .links-section .links-list .underlined-link span:nth-child(2) {
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
+  -ms-flex: 0 0 45%;
+      flex: 0 0 45%;
   text-overflow: ellipsis;
   display: -ms-flexbox;
   display: flex;
@@ -1085,17 +1087,20 @@ section {
 }
 
 .links-section .links-list .underlined-link span:nth-child(3) {
-  -ms-flex-preferred-size: 10%;
-      flex-basis: 10%;
+  -ms-flex: 0 0 4%;
+      flex: 0 0 4%;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 .links-section .links-list .underlined-link span:nth-child(3) a {
-  padding: 0 8px;
   opacity: 0;
+}
+
+.links-section .links-list .underlined-link span:nth-child(3) a:first-of-type {
+  padding-right: 20px;
 }
 
 .links-section .links-list .underlined-link span:nth-child(3) .icon-links {
@@ -1492,7 +1497,7 @@ section {
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 991px) {
   .col-md-1 {
     -ms-flex: 0 0 8.33333%;
         flex: 0 0 8.33333%;
@@ -1552,6 +1557,58 @@ section {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
+  }
+  .links-section .links-list .underlined-button,
+  .links-section .links-list .underlined-link {
+    display: -ms-flexbox;
+    display: flex;
+    width: 95%;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    padding: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow-x: auto;
+  }
+  .links-section .links-list .underlined-button:first-of-type .btn,
+  .links-section .links-list .underlined-button:last-of-type .btn {
+    margin-bottom: 10px;
+  }
+  .links-section .links-list .underlined-button:last-of-type {
+    margin-top: 10px;
+  }
+  .links-section .links-list .underlined-link span {
+    padding: 5px;
+  }
+  .links-section .links-list .underlined-link span:first-child {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .links-section .links-list .underlined-link span:nth-child(2) {
+    -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .links-section .links-list .underlined-link span:nth-child(3) {
+    -ms-flex: 0 0 4%;
+        flex: 0 0 4%;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+  .links-section .links-list .underlined-link span:nth-child(3) a {
+    opacity: 1;
+  }
+  .links-section .links-list .underlined-link span:nth-child(3) a:first-of-type {
+    padding-right: 20px;
+  }
+  .links-section .links-list .underlined-link span:nth-child(3) .icon-links {
+    color: #f58220;
+  }
+  .links-section .links-list .underlined-link span:nth-child(3) .icon-trash {
+    color: #979797;
   }
 }
 
