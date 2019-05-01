@@ -468,7 +468,7 @@ section {
   display: flex;
   background-color: #ffffff;
   margin: 20px;
-  margin-left: calc(230px - 165px + 20px);
+  margin-left: calc(240px - 175px + 20px);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -498,7 +498,7 @@ section .flex-center-wrap {
 }
 
 .section-show-menu {
-  margin-left: calc(230px + 20px);
+  margin-left: calc(240px + 20px);
 }
 
 .scroll-wrapper {
@@ -670,8 +670,8 @@ section {
 /* Sections */
 .top-header {
   background-color: #ffffff;
-  margin-left: calc(230px - 165px);
-  width: calc(100% - (230px - 165px));
+  margin-left: calc(240px - 175px);
+  width: calc(100% - (240px - 175px));
   font-size: 1.3em;
 }
 
@@ -719,8 +719,8 @@ section {
 }
 
 .top-header-show-menu {
-  margin-left: 230px;
-  width: calc(100% - 230px);
+  margin-left: 240px;
+  width: calc(100% - 240px);
 }
 
 .menu-wrapper {
@@ -732,7 +732,7 @@ section {
   top: 0;
   left: 0;
   background-color: #191919;
-  width: 230px;
+  width: 240px;
   height: 100vh;
   display: -ms-flexbox;
   display: flex;
@@ -779,9 +779,9 @@ section {
 .menu-wrapper aside .logo-section .hamburger {
   -ms-flex-pack: end;
       justify-content: flex-end;
-  padding-right: 20px;
-  -ms-flex: 3 1;
-      flex: 3 1;
+  padding-right: 31px;
+  -ms-flex: 2 1;
+      flex: 2 1;
   color: #999999;
   font-size: 22px;
   margin-right: 0;
@@ -883,11 +883,11 @@ section {
 
 .menu-wrapper-toggle aside {
   background-color: #191919;
-  width: calc(230px - 165px);
+  width: calc(240px - 175px);
 }
 
 .menu-wrapper-toggle aside .logo-section .logo {
-  margin-left: calc((230px + 15px)*-1);
+  margin-left: calc((240px + 15px)*-1);
 }
 
 .menu-wrapper-toggle aside .logo-section .hamburger {
@@ -1201,7 +1201,7 @@ section {
     margin: 0;
   }
   .menu-wrapper {
-    width: calc(230px - 165px);
+    width: calc(240px - 175px);
     position: fixed;
     top: 0;
     bottom: 0;
@@ -1215,12 +1215,14 @@ section {
   }
   .menu-wrapper aside {
     position: unset;
-    width: calc(230px - 165px);
+    width: calc(240px - 175px);
     height: auto;
   }
   .menu-wrapper aside .logo-section .logo {
-    margin-left: calc((230px + 15px)*-1);
-    display: none;
+    margin-left: calc((240px) * -1);
+  }
+  .menu-wrapper aside .logo-section .hamburger {
+    padding-right: 20px;
   }
   .menu-wrapper aside nav ul {
     padding-bottom: 0px;
@@ -1285,7 +1287,7 @@ section {
   .menu-wrapper .top-header ul li a {
     background-color: #191919;
     color: #999999;
-    width: calc(230px - 165px - 5px);
+    width: calc(240px - 175px - 5px);
     height: 100%;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -1321,10 +1323,10 @@ section {
     width: 20px;
   }
   .menu-wrapper-toggle {
-    width: 230px;
+    width: 240px;
   }
   .menu-wrapper-toggle aside {
-    width: 230px;
+    width: 240px;
   }
   .menu-wrapper-toggle aside .logo-section .logo {
     display: -ms-flexbox;
@@ -1334,9 +1336,7 @@ section {
     opacity: 1;
   }
   .menu-wrapper-toggle aside .logo-section .hamburger {
-    -ms-flex-pack: end;
-        justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 31px;
     margin-right: 0;
   }
   .menu-wrapper-toggle aside nav ul {
@@ -1492,17 +1492,17 @@ section {
   }
   section,
   .section-show-menu {
-    margin-left: calc(230px - 165px);
+    margin-left: calc(240px - 175px);
     padding: 0;
   }
   .links-section .links-list .underlined-button,
   .links-section .links-list .underlined-link {
     display: -ms-flexbox;
     display: flex;
-    width: 95%;
+    width: 85%;
     -ms-flex-pack: start;
         justify-content: flex-start;
-    padding: 20px;
+    padding: 10px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     overflow-x: auto;
@@ -1614,7 +1614,7 @@ section {
   .links-section .links-list .underlined-link {
     display: -ms-flexbox;
     display: flex;
-    width: 95%;
+    width: 70%;
     -ms-flex-pack: start;
         justify-content: flex-start;
     padding: 20px;
@@ -1729,7 +1729,7 @@ section {
   .links-section .links-list .underlined-link {
     display: -ms-flexbox;
     display: flex;
-    width: 70%;
+    width: 80%;
     -ms-flex-pack: start;
         justify-content: flex-start;
     padding: 20px;
@@ -1764,6 +1764,9 @@ section {
         flex: 0 0 4%;
     -ms-flex-pack: start;
         justify-content: flex-start;
+  }
+  .links-section .links-list .underlined-link span:nth-child(3) a {
+    opacity: 0;
   }
   .links-section .links-list .underlined-link span:nth-child(3) a:first-of-type {
     padding-right: 20px;
@@ -1876,6 +1879,9 @@ section {
         flex: 0 0 4%;
     -ms-flex-pack: start;
         justify-content: flex-start;
+  }
+  .links-section .links-list .underlined-link span:nth-child(3) a {
+    opacity: 0;
   }
   .links-section .links-list .underlined-link span:nth-child(3) a:first-of-type {
     padding-right: 20px;
