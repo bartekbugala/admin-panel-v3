@@ -373,6 +373,53 @@
       margin-left: calc(#{$menu-width} - #{$menu-minus-width});
       padding: 0;
     }
+
+    .input-date-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 50%;
+      .input-date-range {    
+          display: flex;
+          align-items: stretch;
+          justify-content: stretch;
+          flex-wrap: wrap;
+          flex-basis: 50%;
+          
+          border: solid 2px $input-border-color;
+          .input-date {
+              flex: 0 0 95%;
+              display: flex;
+              color: $input-color;
+              line-height: 30px;
+              padding: 5px;
+              margin: 5px;
+              &:first-of-type {
+                  border-right: unset;
+                  margin-right: unset;
+                  border-bottom: solid 2px $input-border-color;
+  
+              }
+  
+              i {
+                  display: flex;
+                  align-items: center;
+                  justify-content: flex-end;
+                  flex: 1 0 10%;
+                  margin-right: 10px;
+                  margin-left: 5px;
+              }
+          }
+      }
+      .input-date-btn {
+          margin: 10px;
+          flex-basis: 5%;
+      }
+  }
+
+
+
     .links-section {
       .links-list {
     

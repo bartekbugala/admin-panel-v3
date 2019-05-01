@@ -78,11 +78,6 @@ section {
         width: 100%;
         border-bottom: solid 2px $input-border-color;
     } 
-    .flex-center-wrap {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
 }
 
 .section-show-menu {
@@ -90,17 +85,16 @@ section {
 }
 
 .scroll-wrapper {
-    padding-top: 20px;
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-    overflow: auto;
-   
-  }
-  
-  .scroll-wrapper img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    width: auto;
-  }
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.scroll-wrapper table {
+  width: 100%;
+  max-width: 100%;
+}
+.scroll-wrapper img {
+  width: auto;
+  background: white;
+}
