@@ -3,13 +3,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 50%;
     .input-date-range {    
         display: flex;
         align-items: stretch;
         justify-content: stretch;
-        flex-wrap: wrap;
-        flex-basis: 50%;
+        flex-wrap: nowrap;
+        flex-basis: 40%;
         
         border: solid 2px $input-border-color;
         .input-date {

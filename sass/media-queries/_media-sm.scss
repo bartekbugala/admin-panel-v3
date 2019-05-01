@@ -3,6 +3,9 @@
   
     .top-header {
       background-color: unset;
+      position: unset;
+      top: unset;
+      right: unset;
   
       a span {
         margin: 0;
@@ -18,13 +21,15 @@
       overflow-x: hidden;
       display: flex;
       flex-direction: column;
-      transition: width linear .3s;
-  
+
+      background-color: $menu-background-color;
       aside {
         position: unset;
         width: calc(#{$menu-width} - #{$menu-minus-width});
         height: auto;
-  
+        background-color: $menu-background-color;
+        transition: unset;
+        
         .logo-section {
           .logo {
             margin-left: calc((#{$menu-width}) * -1);
@@ -76,7 +81,7 @@
         width: 100%;
         flex-wrap: wrap;
         font-size: 1em;
-  
+        transition: unset;
         ul {
           list-style: none;
           display: flex;
@@ -149,10 +154,6 @@
   
             }
           }
-  
-          /*.profile {
-           span {}
-          }*/
         }
       }
     }
@@ -358,6 +359,7 @@
   
     section {
       margin-right: 0;
+      transition: unset;
   
       &:first-of-type {
         margin-top: 0;
