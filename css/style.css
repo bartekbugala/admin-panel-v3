@@ -494,8 +494,9 @@ section .section-part {
 
 .scroll-wrapper {
   display: block;
-  width: 100%;
+  width: auto;
   overflow-x: auto;
+  padding: 20px 0;
 }
 
 .scroll-wrapper table {
@@ -505,6 +506,7 @@ section .section-part {
 
 .scroll-wrapper img {
   width: auto;
+  margin: 0 auto;
   background: white;
 }
 
@@ -790,6 +792,7 @@ section {
 
 .menu-wrapper aside .menu-manager-section {
   padding: 30px 15px;
+  height: auto;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: start;
@@ -1036,9 +1039,9 @@ section {
   background-color: #59b66d;
 }
 
-.chart-container .scroll-wrapper {
-  width: 80%;
-  margin: 0 auto;
+.chart-container .chart-wrapper {
+  display: inline;
+  text-align: center;
 }
 
 .links-section {
@@ -1299,6 +1302,9 @@ section {
     -ms-flex-pack: end;
         justify-content: flex-end;
     padding: 0 0 20px 0;
+    /*.profile {
+           span {}
+          }*/
   }
   .menu-wrapper .top-header ul li {
     display: -ms-flexbox;

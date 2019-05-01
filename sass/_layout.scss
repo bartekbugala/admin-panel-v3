@@ -86,8 +86,9 @@ section {
 
 .scroll-wrapper {
   display: block;
-  width: 100%;
+  width: auto;
   overflow-x: auto;
+  padding: 20px 0;
 }
 
 .scroll-wrapper table {
@@ -96,5 +97,7 @@ section {
 }
 .scroll-wrapper img {
   width: auto;
+  margin: 0 auto;
   background: white;
+
 }
