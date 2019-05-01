@@ -650,6 +650,10 @@ section {
   border-left: solid 2px #e3e3e3;
 }
 
+.top-header ul li:hover {
+  background-color: #f5f5f2;
+}
+
 .top-header a {
   display: -ms-flexbox;
   display: flex;

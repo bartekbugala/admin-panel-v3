@@ -16,6 +16,9 @@
         li {
             display: flex;
             border-left: solid 2px $input-border-color;
+            &:hover {
+                background-color: $section-background-color-hover;
+            }
         }
     }
 
