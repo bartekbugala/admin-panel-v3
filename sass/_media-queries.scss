@@ -19,6 +19,7 @@
     display: flex;
     flex-direction: column;
     transition: width linear .3s;
+
     aside {
       position: unset;
       width: calc(#{$menu-width} - #{$menu-minus-width});
@@ -33,16 +34,17 @@
 
       nav ul {
         padding-bottom: 0px;
+
         li a span {
           opacity: 0;
           visibility: hidden;
         }
-      } 
+      }
 
       .menu-manager-section {
         margin: 0;
         justify-content: center;
-        align-items: center;    
+        align-items: center;
         padding: 10px 0;
         border-bottom: solid 2px $menu-background-color-hover;
 
@@ -71,7 +73,7 @@
       width: 100%;
       flex-wrap: wrap;
       font-size: 1em;
-      
+
       ul {
         list-style: none;
         display: flex;
@@ -86,6 +88,7 @@
           padding-left: $menu-left-padding-hover;
           background-color: $menu-background-color;
           overflow: hidden;
+
           a {
             background-color: $menu-background-color;
             color: $menu-color;
@@ -96,7 +99,7 @@
             font-size: 16px;
             display: flex;
             flex-wrap: nowrap;
-            
+
             i {
               font-size: 1em;
               margin-right: 10px;
@@ -224,6 +227,7 @@
         width: 100%;
         align-items: flex-start;
         justify-content: center;
+
         h4 {
           display: unset;
         }
@@ -251,8 +255,10 @@
       display: flex;
       flex-wrap: nowrap;
       font-size: 1.3em;
+
       ul {
         width: 100%;
+
         li {
           padding-left: $menu-left-padding-hover;
           background-color: $menu-background-color;
@@ -364,76 +370,267 @@
     margin-left: calc(#{$menu-width} - #{$menu-minus-width});
     padding: 0;
   }
+  .links-section {
+    .links-list {
+  
+      .underlined-button,
+      .underlined-link {
+        display: flex;
+        width: 95%;
+        justify-content: flex-start;
+        padding: 20px;
+        flex-wrap: wrap;
+        overflow-x: auto;
+      }
+  
+      .underlined-button {
+  
+        &:first-of-type .btn,
+        &:last-of-type .btn {
+          margin-bottom: 10px;
+        }
+  
+        &:last-of-type {
+          margin-top: 10px;
+        }
+      }
+  
+      .underlined-link {
+        span {
+          padding: 5px;
+        }
+  
+        span:first-child {
+          flex: 0 0 100%;
+          justify-content: flex-start;
+        }
+  
+        span:nth-child(2) {
+          flex: 0 0 100%;
+          justify-content: flex-start;
+        }
+  
+        span:nth-child(3) {
+          flex: 0 0 4%;
+          justify-content: flex-start;
+  
+          a {
+            opacity: 1;
+  
+            &:first-of-type {
+              padding-right: 20px;
+            }
+          }
+  
+          .icon-links {
+            color: $warning-color;
+          }
+  
+          .icon-trash {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media(max-width: 991px) {
+@media(min-width: 768px) {
   @include grid('md');
 
   .links-section {
     .links-list {
-        .underlined-button,
-        .underlined-link {
-            display: flex;
-            width: 95%;
-            justify-content: flex-start;
-            padding: 20px;
-            flex-wrap: wrap;
-            overflow-x: auto;
-        }
-        .underlined-button {
-            &:first-of-type .btn,
-            &:last-of-type .btn {
-                margin-bottom: 10px;
-            }
 
-            &:last-of-type {
-                margin-top: 10px;
-            }
+      .underlined-button,
+      .underlined-link {
+        display: flex;
+        width: 95%;
+        justify-content: flex-start;
+        padding: 20px;
+        flex-wrap: wrap;
+        overflow-x: auto;
+      }
+
+      .underlined-button {
+
+        &:first-of-type .btn,
+        &:last-of-type .btn {
+          margin-bottom: 10px;
         }
 
-        .underlined-link {
-            span {
-                padding: 5px;
-            }
-
-            span:first-child {
-                flex: 0 0 100%;
-                justify-content: flex-start;
-            }
-
-            span:nth-child(2) {
-                flex: 0 0 100%;
-                justify-content: flex-start;
-            }
-
-            span:nth-child(3) {
-                flex: 0 0 4%;
-                justify-content: flex-start;
-
-                a {
-                    opacity: 1;
-                    &:first-of-type {
-                        padding-right: 20px;
-                    }
-                }
-
-                .icon-links {
-                    color: $warning-color;
-                }
-
-                .icon-trash {
-                    color: $secondary-color;
-                }
-            }
+        &:last-of-type {
+          margin-top: 10px;
         }
+      }
+
+      .underlined-link {
+        span {
+          padding: 5px;
+        }
+
+        span:first-child {
+          flex: 0 0 100%;
+          justify-content: flex-start;
+        }
+
+        span:nth-child(2) {
+          flex: 0 0 100%;
+          justify-content: flex-start;
+        }
+
+        span:nth-child(3) {
+          flex: 0 0 4%;
+          justify-content: flex-start;
+
+          a {
+            opacity: 1;
+
+            &:first-of-type {
+              padding-right: 20px;
+            }
+          }
+
+          .icon-links {
+            color: $warning-color;
+          }
+
+          .icon-trash {
+            color: $secondary-color;
+          }
+        }
+      }
     }
-}
+  }
 }
 
 @media(min-width: 992px) {
   @include grid('lg');
+
+  .links-section {
+    .links-list {
+
+      .underlined-button,
+      .underlined-link {
+        display: flex;
+        width: 70%;
+        justify-content: flex-start;
+        padding: 20px;
+        flex-wrap: wrap;
+        overflow-x: auto;
+      }
+
+      .underlined-button {
+
+        &:first-of-type .btn,
+        &:last-of-type .btn {
+          margin-bottom: 10px;
+        }
+
+        &:last-of-type {
+          margin-top: 10px;
+        }
+      }
+
+      .underlined-link {
+        span {
+          padding: 5px;
+        }
+
+        span:first-child {
+          flex: 0 0 30%;
+          justify-content: flex-start;
+        }
+
+        span:nth-child(2) {
+          flex: 4 0 45%;
+          justify-content: flex-start;
+        }
+
+        span:nth-child(3) {
+          flex: 0 0 4%;
+          justify-content: flex-start;
+
+          a {
+            &:first-of-type {
+              padding-right: 20px;
+            }
+          }
+
+          .icon-links {
+            color: $warning-color;
+          }
+
+          .icon-trash {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media(min-width: 1200px) {
   @include grid('xl');
+
+  .links-section {
+    .links-list {
+
+      .underlined-button,
+      .underlined-link {
+        display: flex;
+        width: 70%;
+        justify-content: flex-start;
+        padding: 20px;
+        flex-wrap: wrap;
+        overflow-x: auto;
+      }
+
+      .underlined-button {
+
+        &:first-of-type .btn,
+        &:last-of-type .btn {
+          margin-bottom: 10px;
+        }
+
+        &:last-of-type {
+          margin-top: 10px;
+        }
+      }
+
+      .underlined-link {
+        span {
+          padding: 5px;
+        }
+
+        span:first-child {
+          flex: 0 0 30%;
+          justify-content: flex-start;
+        }
+
+        span:nth-child(2) {
+          flex: 4 0 45%;
+          justify-content: flex-start;
+        }
+
+        span:nth-child(3) {
+          flex: 0 0 4%;
+          justify-content: flex-start;
+
+          a {
+            &:first-of-type {
+              padding-right: 20px;
+            }
+          }
+
+          .icon-links {
+            color: $warning-color;
+          }
+
+          .icon-trash {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
 }
