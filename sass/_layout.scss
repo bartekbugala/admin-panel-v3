@@ -62,7 +62,7 @@ section {
     margin: $section-margin;
     margin-left: calc(#{$menu-width} - #{$menu-minus-width} + #{$section-margin});
     flex-wrap: wrap;
-
+    box-shadow: 0px 0px 16px 1px $section-shadow-color;
 
     h3 {
         text-transform: uppercase;
