@@ -10,10 +10,10 @@
         justify-content: flex-end;
 
         li:after {
-            display: block;
+            display: flex;
             content: "";
             position: absolute;
-            z-index: -1;
+            z-index: -2;
             background-color: $section-background-color;
             height: 100%;
             width: 100%;
@@ -35,22 +35,18 @@
             a {
                 display: flex;
                 color: $section-main-color;
-                padding: 18px;
-                z-index: 1;
+                padding: 18px 16px;
 
                 span {
-                    margin: 0 20px;
-                    z-index: 1;
+                    margin: 0 15px;
 
                     i {
                         font-size: 0.9em;
-                        z-index: 1;
                     }
                 }
 
                 i {
                     font-size: 0.9em;
-                    z-index: 1;
                 }
             }
         }
@@ -62,9 +58,7 @@
         }
 
         .notification a {
-            span {
-                
-            }
+            span {}
         }
 
         .profile {
