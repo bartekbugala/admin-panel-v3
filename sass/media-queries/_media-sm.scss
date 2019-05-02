@@ -13,6 +13,14 @@
     }
 
     ul {
+
+      .wallet,
+      .notification,
+      .profile,
+      .quit {
+        flex: unset;
+      }
+
       li:after {
         display: none;
         background-color: unset;
@@ -73,7 +81,7 @@
           justify-content: center;
           align-items: center;
           width: 100%;
-          padding: 16px 20px;
+          padding: 12px 20px;
 
           .avatar-img {
             margin: 0;
@@ -98,12 +106,13 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
+        align-items: center;
         padding: 0 0 20px 0;
 
         li {
           display: flex;
-          justify-content: flex-start;
+          justify-content: center;
           border-left: unset;
           padding-left: $menu-left-padding-hover;
           background-color: $menu-background-color;
@@ -112,21 +121,22 @@
           a {
             background-color: $menu-background-color;
             color: $menu-color;
-            width: calc(#{$menu-width} - #{$menu-minus-width} - #{$menu-left-padding-hover});
             height: 100%;
-            padding-top: 16px;
-            padding-bottom: 16px;
+            width: calc(#{$menu-width} - #{$menu-minus-width} - #{$menu-left-padding-hover});
+            padding: 16px 20px;
             font-size: 16px;
             display: flex;
+            margin: 0;
             flex-wrap: nowrap;
 
             i {
               font-size: 1em;
-              margin-right: 10px;
+              margin: 0;
             }
 
             span {
               display: none;
+              margin: unset;
 
             }
 
@@ -146,7 +156,6 @@
 
           &:hover {
             background-color: $menu-left-padding-color-hover;
-            background-color: $menu-left-padding-color-hover;
           }
         }
 
@@ -159,10 +168,17 @@
         .notification {
           a {
             span {
-              display: flex;
-              margin: 0;
-              padding: 0;
-              width: 20px;
+              display: none;
+
+              i {
+                display: block;
+                width: 20px;
+                position: relative;
+              }
+            }
+
+            .status-icon {
+              display: block;
             }
 
           }
@@ -184,7 +200,7 @@
       .logo-section {
         .logo {
           margin-left: 0;
-          padding-left: 15px;
+          padding-left: 25px;
         }
       }
 
@@ -229,7 +245,6 @@
 
             &:hover {
               background-color: $menu-left-padding-color-hover;
-              background-color: $menu-left-padding-color-hover;
             }
           }
         }
@@ -247,7 +262,6 @@
         h4 {
           display: unset;
           text-transform: uppercase;
-          justify-self: stretch;
           margin: 16px 0 0 20px;
         }
 
@@ -286,6 +300,8 @@
 
       ul {
         width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
 
         li {
           padding-left: $menu-left-padding-hover;
@@ -293,18 +309,20 @@
           overflow: hidden;
 
           a {
+            display: flex;
             background-color: $menu-background-color;
             color: $section-main-color;
             padding: 16px 20px;
             height: 100%;
-            width: 100%;
+            width: calc(#{$menu-width} - #{$menu-left-padding-hover});
             color: $menu-color;
-            display: flex;
             font-size: 16px;
             flex-wrap: nowrap;
+            justify-content: flex-start;
 
             i {
               font-size: 1em;
+              margin-right: 10px;
             }
 
             span {
@@ -319,22 +337,21 @@
             }
           }
 
-          &:first-of-type {
-            i {
-              &:last-of-type {
-                display: none;
-              }
-            }
-          }
-
           &:hover {
             background-color: $menu-left-padding-color-hover;
           }
         }
 
         .wallet {
-          span {
-            font-weight: 400;
+          a {
+            span {
+              font-weight: 400;
+              margin-right: 10px;
+            }
+
+            i:last-of-type {
+              display: flex;
+            }
           }
         }
 
@@ -346,7 +363,6 @@
               padding: 0;
               width: 20px;
             }
-
           }
         }
 
@@ -367,7 +383,7 @@
   }
 
   .status-sm {
-    &::before {
+    &::after {
       width: 15px;
       height: 15px;
 
@@ -375,7 +391,7 @@
   }
 
   .status-md {
-    &::before {
+    &::after {
       width: 10px;
       height: 10px;
     }

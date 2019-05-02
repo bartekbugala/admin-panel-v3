@@ -347,6 +347,10 @@ template {
   box-sizing: border-box;
 }
 
+a {
+  outline: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1170px;
@@ -620,7 +624,7 @@ section {
   position: relative;
 }
 
-[class^="status-"]::before {
+[class^="status-"]::after {
   content: "";
   display: block;
   position: absolute;
@@ -628,32 +632,32 @@ section {
   z-index: 3;
 }
 
-.status-sm::before,
-.status-icon::before {
+.status-sm::after,
+.status-icon::after {
   width: 10px;
   height: 10px;
 }
 
-.status-md::before {
+.status-md::after {
   width: 15px;
   height: 15px;
 }
 
-.alert-status::before {
+.alert-status::after {
   top: -5px;
   right: 0;
 }
 
-.manager-status::before {
+.manager-status::after {
   top: 0;
   right: 0;
 }
 
-.status-green::before {
+.status-green::after {
   background-color: #04ae00;
 }
 
-.status-orange::before {
+.status-orange::after {
   background-color: #f58220;
 }
 
@@ -697,17 +701,21 @@ section {
   position: relative;
   background-color: unset;
   z-index: 0;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .top-header ul li a {
   display: -ms-flexbox;
   display: flex;
   color: #a6a6a6;
-  padding: 18px 16px;
-}
-
-.top-header ul li a span {
-  margin: 0 15px;
+  padding: 18px 14px;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .top-header ul li a span i {
@@ -718,18 +726,42 @@ section {
   font-size: 0.9em;
 }
 
+.top-header ul .wallet {
+  -ms-flex: 0 2 220px;
+      flex: 0 2 220px;
+}
+
 .top-header ul .wallet a span {
   font-weight: 600;
+  margin: 0 10px;
+}
+
+.top-header ul .notification {
+  -ms-flex: 0 2 60px;
+      flex: 0 2 60px;
+  background-color: red;
+}
+
+.top-header ul .profile {
+  -ms-flex: 0 2 220px;
+      flex: 0 2 220px;
 }
 
 .top-header ul .profile span {
   font-size: 0.7em;
   font-weight: 600;
   color: #56819f;
+  white-space: normal;
+  margin-left: 10px;
 }
 
 .top-header ul .profile:hover span {
   color: #ffa200;
+}
+
+.top-header ul .quit {
+  -ms-flex: 0 0 60px;
+      flex: 0 0 60px;
 }
 
 .top-header-show-menu {
@@ -787,7 +819,7 @@ section {
   -ms-flex: 0 0 calc(175px);
       flex: 0 0 calc(175px);
   font-size: 100px;
-  margin-left: 15px;
+  padding-left: 25px;
 }
 
 .menu-wrapper aside .logo-section .logo a {
@@ -804,7 +836,6 @@ section {
   -ms-flex: 0 0 calc(240px - 175px);
       flex: 0 0 calc(240px - 175px);
   font-size: 22px;
-  margin-right: 0;
 }
 
 .menu-wrapper aside .logo-section .hamburger a {
@@ -863,7 +894,7 @@ section {
 }
 
 .menu-wrapper aside .menu-manager-section {
-  padding: 30px 0;
+  padding: 20px 0;
   height: auto;
   display: -ms-flexbox;
   display: flex;
@@ -881,11 +912,11 @@ section {
   display: unset;
   text-transform: uppercase;
   justify-self: stretch;
-  margin: 0 0 10px 10px;
+  margin: 5px 0 10px 20px;
 }
 
 .menu-wrapper aside .menu-manager-section a {
-  padding: 5px 15px;
+  padding: 10px 20px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: start;
@@ -1309,6 +1340,13 @@ section {
   .top-header a span {
     margin: 0;
   }
+  .top-header ul .wallet,
+  .top-header ul .notification,
+  .top-header ul .profile,
+  .top-header ul .quit {
+    -ms-flex: unset;
+        flex: unset;
+  }
   .top-header ul li:after {
     display: none;
     background-color: unset;
@@ -1366,7 +1404,7 @@ section {
     -ms-flex-align: center;
         align-items: center;
     width: 100%;
-    padding: 16px 20px;
+    padding: 12px 20px;
   }
   .menu-wrapper aside .menu-manager-section a .avatar-img {
     margin: 0;
@@ -1390,15 +1428,17 @@ section {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     padding: 0 0 20px 0;
   }
   .menu-wrapper .top-header ul li {
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+    -ms-flex-pack: center;
+        justify-content: center;
     border-left: unset;
     padding-left: 5px;
     background-color: #191919;
@@ -1407,22 +1447,23 @@ section {
   .menu-wrapper .top-header ul li a {
     background-color: #191919;
     color: #999999;
-    width: calc(240px - 175px - 5px);
     height: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    width: calc(240px - 175px - 5px);
+    padding: 16px 20px;
     font-size: 16px;
     display: -ms-flexbox;
     display: flex;
+    margin: 0;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
   .menu-wrapper .top-header ul li a i {
     font-size: 1em;
-    margin-right: 10px;
+    margin: 0;
   }
   .menu-wrapper .top-header ul li a span {
     display: none;
+    margin: unset;
   }
   .menu-wrapper .top-header ul li a:hover {
     color: #ffffff;
@@ -1433,17 +1474,20 @@ section {
   }
   .menu-wrapper .top-header ul li:hover {
     background-color: #f58220;
-    background-color: #f58220;
   }
   .menu-wrapper .top-header ul .wallet span {
     font-weight: 400;
   }
   .menu-wrapper .top-header ul .notification a span {
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    display: none;
+  }
+  .menu-wrapper .top-header ul .notification a span i {
+    display: block;
     width: 20px;
+    position: relative;
+  }
+  .menu-wrapper .top-header ul .notification a .status-icon {
+    display: block;
   }
   .menu-wrapper .top-header ul .profile:hover span {
     color: #ffa200;
@@ -1456,7 +1500,7 @@ section {
   }
   .menu-wrapper-toggle aside .logo-section .logo {
     margin-left: 0;
-    padding-left: 15px;
+    padding-left: 25px;
   }
   .menu-wrapper-toggle aside nav ul {
     list-style-type: none;
@@ -1496,7 +1540,6 @@ section {
   }
   .menu-wrapper-toggle aside nav ul li:hover {
     background-color: #f58220;
-    background-color: #f58220;
   }
   .menu-wrapper-toggle aside .menu-manager-section {
     padding: 0;
@@ -1514,7 +1557,6 @@ section {
   .menu-wrapper-toggle aside .menu-manager-section h4 {
     display: unset;
     text-transform: uppercase;
-    justify-self: stretch;
     margin: 16px 0 0 20px;
   }
   .menu-wrapper-toggle aside .menu-manager-section a {
@@ -1551,6 +1593,10 @@ section {
   }
   .menu-wrapper-toggle .top-header ul {
     width: 100%;
+    -ms-flex-align: start;
+        align-items: flex-start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
   .menu-wrapper-toggle .top-header ul li {
     padding-left: 5px;
@@ -1558,20 +1604,23 @@ section {
     overflow: hidden;
   }
   .menu-wrapper-toggle .top-header ul li a {
+    display: -ms-flexbox;
+    display: flex;
     background-color: #191919;
     color: #a6a6a6;
     padding: 16px 20px;
     height: 100%;
-    width: 100%;
+    width: calc(240px - 5px);
     color: #999999;
-    display: -ms-flexbox;
-    display: flex;
     font-size: 16px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
   .menu-wrapper-toggle .top-header ul li a i {
     font-size: 1em;
+    margin-right: 10px;
   }
   .menu-wrapper-toggle .top-header ul li a span {
     display: -ms-flexbox;
@@ -1584,14 +1633,16 @@ section {
     color: #ffffff;
     background-color: #303030;
   }
-  .menu-wrapper-toggle .top-header ul li:first-of-type i:last-of-type {
-    display: none;
-  }
   .menu-wrapper-toggle .top-header ul li:hover {
     background-color: #f58220;
   }
-  .menu-wrapper-toggle .top-header ul .wallet span {
+  .menu-wrapper-toggle .top-header ul .wallet a span {
     font-weight: 400;
+    margin-right: 10px;
+  }
+  .menu-wrapper-toggle .top-header ul .wallet a i:last-of-type {
+    display: -ms-flexbox;
+    display: flex;
   }
   .menu-wrapper-toggle .top-header ul .notification a span {
     display: -ms-flexbox;
@@ -1609,11 +1660,11 @@ section {
   .top-header-show-menu {
     margin-left: unset;
   }
-  .status-sm::before {
+  .status-sm::after {
     width: 15px;
     height: 15px;
   }
-  .status-md::before {
+  .status-md::after {
     width: 10px;
     height: 10px;
   }

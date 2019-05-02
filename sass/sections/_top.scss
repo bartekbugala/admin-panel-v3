@@ -31,15 +31,16 @@
             position: relative;
             background-color: unset;
             z-index: 0;
+            align-items: center;
+            justify-content: center;
 
             a {
                 display: flex;
                 color: $section-main-color;
-                padding: 18px 16px;
-
+                padding: 18px 14px;
+                align-items: center;
+                justify-content: center;
                 span {
-                    margin: 0 15px;
-
                     i {
                         font-size: 0.9em;
                     }
@@ -51,22 +52,40 @@
             }
         }
 
-        .wallet a {
-            span {
-                font-weight: 600;
+        .wallet {
+            flex: 0 2 220px;
+
+            a {
+                span {
+                    font-weight: 600;
+                    margin: 0 10px;
+                }
             }
         }
 
+        .notification {
+            flex: 0 2 60px;
+            background-color: red;
+        }
+
         .profile {
+            flex: 0 2 220px;
+
             span {
                 font-size: 0.7em;
                 font-weight: 600;
                 color: $link-color;
+                white-space: normal;
+                margin-left: 10px;
             }
 
             &:hover span {
                 color: $link-color-hover;
             }
+        }
+
+        .quit {
+            flex: 0 0 60px;
         }
     }
 }
