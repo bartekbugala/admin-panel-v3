@@ -3,39 +3,43 @@ nav li,
 nav a,
 .menu-manager-section a,
 .underlined-link {
-    transition: background-color ease-in $color-transition-speed;
+    transition: background-color $color-transition $color-transition-speed;
 }
 
 .top-header .profile span,
 .top-header a,
 nav a,
-.hamburger,
+.logo-section .hamburger a,
 .menu-manager-section a,
 .underlined-link a {
-    transition: color ease-in $color-transition-speed;
+    transition: color $color-transition $color-transition-speed;
+}
+
+.logo-section div a {
+    transition: text-shadow $shadow-transition 1s;
 }
 
 .top-header ul li:after {
-    transition: background-color ease-in $color-transition-speed;
+    transition: background-color $color-transition $color-transition-speed;
 }
 
 
 .underlined-link a {
-    transition: opacity ease-in $opacity-transition-speed;
+    transition: opacity $opacity-transition $opacity-transition-speed;
 }
 
 .menu-wrapper {
-    transition: width linear $size-transition-speed;
+    transition: width $size-transition $size-transition-speed;
 
     aside {
-        transition: width linear $size-transition-speed;
+        transition: width $size-transition $size-transition-speed;
     }
 }
 
 .top-header {
-    transition: width linear $size-transition-speed, margin-left linear $size-transition-speed;
+    transition: width $size-transition $size-transition-speed, margin-left $size-transition $size-transition-speed;
 }
 
 section {
-    transition: width linear $size-transition-speed, margin-left linear $size-transition-speed;
+    transition: width $size-transition $size-transition-speed, margin-left $size-transition $size-transition-speed;
 }

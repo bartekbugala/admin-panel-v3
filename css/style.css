@@ -523,10 +523,14 @@ nav a,
 .top-header .profile span,
 .top-header a,
 nav a,
-.hamburger,
+.logo-section .hamburger a,
 .menu-manager-section a,
 .underlined-link a {
   transition: color ease-in 0.2s;
+}
+
+.logo-section div a {
+  transition: text-shadow ease-out 1s;
 }
 
 .top-header ul li:after {
@@ -753,14 +757,19 @@ section {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: start;
-      justify-content: flex-start;
+  -ms-flex-pack: center;
+      justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: hidden;
 }
 
-.menu-wrapper aside .logo-section a {
+.menu-wrapper aside .logo-section div {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-wrapper aside .logo-section div a {
   height: 22px;
   display: -ms-flexbox;
   display: flex;
@@ -768,33 +777,42 @@ section {
       align-items: center;
 }
 
-.menu-wrapper aside .logo-section a i {
+.menu-wrapper aside .logo-section div a i {
   line-height: 22px;
 }
 
 .menu-wrapper aside .logo-section .logo {
   display: -ms-flexbox;
   display: flex;
-  color: #ffffff;
-  -ms-flex: 8 2;
-      flex: 8 2;
+  -ms-flex: 0 0 calc(175px);
+      flex: 0 0 calc(175px);
   font-size: 100px;
   margin-left: 15px;
-  opacity: 1;
+}
+
+.menu-wrapper aside .logo-section .logo a {
+  color: #ffffff;
+}
+
+.menu-wrapper aside .logo-section .logo a:hover {
+  text-shadow: 0 0 10px #ffa200;
 }
 
 .menu-wrapper aside .logo-section .hamburger {
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  padding-right: 31px;
-  -ms-flex: 2 1;
-      flex: 2 1;
-  color: #999999;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex: 0 0 calc(240px - 175px);
+      flex: 0 0 calc(240px - 175px);
   font-size: 22px;
   margin-right: 0;
 }
 
-.menu-wrapper aside .logo-section .hamburger:hover {
+.menu-wrapper aside .logo-section .hamburger a {
+  color: #999999;
+}
+
+.menu-wrapper aside .logo-section .hamburger a:hover {
+  text-shadow: 0 0 10px #ffa200;
   color: #ffffff;
 }
 
@@ -902,11 +920,7 @@ section {
 }
 
 .menu-wrapper-toggle aside .logo-section .logo {
-  margin-left: calc((240px + 15px)*-1);
-}
-
-.menu-wrapper-toggle aside .logo-section .hamburger {
-  padding-right: 20px;
+  margin-left: calc(175px * -1);
 }
 
 .menu-wrapper-toggle aside nav ul li a span {
@@ -946,7 +960,6 @@ section {
 }
 
 .menu-wrapper-toggle aside .menu-manager-section a .manager-name {
-  visibility: hidden;
   display: none;
 }
 
@@ -1325,10 +1338,7 @@ section {
     transition: unset;
   }
   .menu-wrapper aside .logo-section .logo {
-    margin-left: calc((240px) * -1);
-  }
-  .menu-wrapper aside .logo-section .hamburger {
-    padding-right: 20px;
+    margin-left: calc(175px * -1);
   }
   .menu-wrapper aside nav ul {
     padding-bottom: 0px;
@@ -1338,22 +1348,25 @@ section {
     visibility: hidden;
   }
   .menu-wrapper aside .menu-manager-section {
-    margin: 0;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    padding: 10px 0;
+    padding: 0;
     border-bottom: solid 2px #303030;
   }
   .menu-wrapper aside .menu-manager-section h4 {
     display: none;
   }
   .menu-wrapper aside .menu-manager-section a {
-    -ms-flex-direction: column;
-        flex-direction: column;
+    -ms-flex-direction: unset;
+        flex-direction: unset;
+    -ms-flex-pack: center;
+        justify-content: center;
     -ms-flex-align: center;
         align-items: center;
+    width: 100%;
+    padding: 16px 20px;
   }
   .menu-wrapper aside .menu-manager-section a .avatar-img {
     margin: 0;
@@ -1442,15 +1455,8 @@ section {
     width: 240px;
   }
   .menu-wrapper-toggle aside .logo-section .logo {
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 100px;
-    margin-left: 15px;
-    opacity: 1;
-  }
-  .menu-wrapper-toggle aside .logo-section .hamburger {
-    padding-right: 31px;
-    margin-right: 0;
+    margin-left: 0;
+    padding-left: 15px;
   }
   .menu-wrapper-toggle aside nav ul {
     list-style-type: none;
@@ -1493,21 +1499,36 @@ section {
     background-color: #f58220;
   }
   .menu-wrapper-toggle aside .menu-manager-section {
-    padding: 20px 0 20px 20px;
-    width: 100%;
+    padding: 0;
+    height: auto;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-align: start;
         align-items: flex-start;
-    -ms-flex-pack: center;
-        justify-content: center;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    overflow: hidden;
   }
   .menu-wrapper-toggle aside .menu-manager-section h4 {
     display: unset;
+    text-transform: uppercase;
+    justify-self: stretch;
+    margin: 16px 0 0 20px;
   }
   .menu-wrapper-toggle aside .menu-manager-section a {
-    -ms-flex-direction: row;
-        flex-direction: row;
+    padding: 12px 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
     -ms-flex-align: center;
         align-items: center;
+    cursor: pointer;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 240px;
   }
   .menu-wrapper-toggle aside .menu-manager-section a .avatar-img {
     margin-right: 10px;
@@ -1515,10 +1536,11 @@ section {
     max-width: 60px;
   }
   .menu-wrapper-toggle aside .menu-manager-section a .manager-name {
-    display: -ms-flexbox;
-    display: flex;
-    visibility: visible;
-    opacity: 1;
+    display: unset;
+  }
+  .menu-wrapper-toggle aside .menu-manager-section a:hover {
+    background-color: #303030;
+    color: #ffa200;
   }
   .menu-wrapper-toggle .top-header {
     display: -ms-flexbox;
