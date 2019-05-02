@@ -1,49 +1,50 @@
 [class^="status-"] {
     position: relative;
-    &::after {
+    &::before {
         content: "";
         display: block;
         position: absolute;
         border-radius: 50%;
+        z-index: 3;
     }
 }
 
 .status-sm,
 .status-icon {
-    &::after {
+    &::before {
         width: 10px;
         height: 10px;
     }
 }
 
 .status-md {
-    &::after {
+    &::before {
         width: 15px;
-        height: 15px;
+        height: 15px; 
     }
 }
 .alert-status {
-    &::after {
+    &::before {
         top: -5px;
-        right: 0;
+        right: 0;  
     }
 }
 
 .manager-status {
-    &::after {
+    &::before {
         top: 0;
-        right: 0;
+        right: 0;     
     }
 }
 
 .status-green {
-    &::after {
+    &::before {
         background-color: $success-color;
     }
 }
 
 .status-orange {
-    &::after {
+    &::before {
         background-color: $warning-color;
     }
 }

@@ -611,39 +611,40 @@ section {
   position: relative;
 }
 
-[class^="status-"]::after {
+[class^="status-"]::before {
   content: "";
   display: block;
   position: absolute;
   border-radius: 50%;
+  z-index: 3;
 }
 
-.status-sm::after,
-.status-icon::after {
+.status-sm::before,
+.status-icon::before {
   width: 10px;
   height: 10px;
 }
 
-.status-md::after {
+.status-md::before {
   width: 15px;
   height: 15px;
 }
 
-.alert-status::after {
+.alert-status::before {
   top: -5px;
   right: 0;
 }
 
-.manager-status::after {
+.manager-status::before {
   top: 0;
   right: 0;
 }
 
-.status-green::after {
+.status-green::before {
   background-color: #04ae00;
 }
 
-.status-orange::after {
+.status-orange::before {
   background-color: #f58220;
 }
 
@@ -655,10 +656,6 @@ section {
   font-size: 1.3em;
 }
 
-.top-header i {
-  font-size: 0.9em;
-}
-
 .top-header ul {
   list-style: none;
   display: -ms-flexbox;
@@ -667,42 +664,80 @@ section {
       justify-content: flex-end;
 }
 
+.top-header ul li:after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -5;
+  background-color: #ffffff;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color ease-in .3s;
+}
+
+.top-header ul li:hover:after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: -5;
+  background-color: #f5f5f2;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .top-header ul li {
   display: -ms-flexbox;
   display: flex;
   border-left: solid 2px #e3e3e3;
+  position: relative;
+  background-color: unset;
+  z-index: 0;
 }
 
-.top-header ul li:hover {
-  background-color: #f5f5f2;
-}
-
-.top-header a {
+.top-header ul li a {
   display: -ms-flexbox;
   display: flex;
   color: #a6a6a6;
   padding: 18px;
+  z-index: 3;
 }
 
-.top-header a span {
+.top-header ul li a span {
   margin: 0 20px;
+  z-index: 3;
 }
 
-.top-header .wallet span {
+.top-header ul li a span i {
+  font-size: 0.9em;
+  z-index: 3;
+}
+
+.top-header ul li a i {
+  font-size: 0.9em;
+  z-index: 3;
+}
+
+.top-header ul .wallet a span {
   font-weight: 600;
 }
 
-.top-header .notification a span {
+.top-header ul .notification a span {
   display: block;
 }
 
-.top-header .profile span {
+.top-header ul .profile span {
   font-size: 0.7em;
   font-weight: 600;
   color: #56819f;
 }
 
-.top-header .profile:hover span {
+.top-header ul .profile:hover span {
   color: #ffa200;
 }
 
@@ -1682,6 +1717,12 @@ section {
   }
   .links-section .links-list .underlined-link span:nth-child(3) .icon-trash {
     color: #979797;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-wrapper .top-header ul li {
+    background-color: unset;
   }
 }
 

@@ -489,3 +489,8 @@
       }
     }
   }
+  @media(min-width: 768px) {
+    .menu-wrapper .top-header ul li {
+      background-color: unset;
+    }
+  } 

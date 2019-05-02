@@ -1,62 +1,97 @@
-
 .top-header {
     background-color: $section-background-color;
     margin-left: calc(#{$menu-width} - #{$menu-minus-width});
     width: calc(100% - (#{$menu-width} - #{$menu-minus-width}));
     font-size: 1.3em;
-    i {
-        font-size: 0.9em;
-    }
 
     ul {
         list-style: none;
         display: flex;
         justify-content: flex-end;
+        
+        li:after {
+            display: block;
+            content: "";
+            position: absolute;
+            z-index: -5;
+            background-color: $section-background-color;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: background-color ease-in .3s;
+        }
+
+        li:hover:after {
+            display: block;
+            content: "";
+            position: absolute;
+            z-index: -5;
+            background-color: $section-background-color-hover;
+            opacity: 1;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
 
         li {
             display: flex;
             border-left: solid 2px $input-border-color;
-            &:hover {
-                background-color: $section-background-color-hover;
+            position: relative;
+            background-color: unset;
+            z-index: 0;
+
+            a {
+                display: flex;
+                color: $section-main-color;
+                padding: 18px;
+                z-index: 3;
+
+                span {
+                    margin: 0 20px;
+                    z-index: 3;
+
+                    i {
+                        font-size: 0.9em;
+                        z-index: 3;
+                    }
+                }
+
+                i {
+                    font-size: 0.9em;
+                    z-index: 3;
+                }
+            }
+        }
+        .wallet a {
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .notification a {
+                span {
+                    display: block;
+                }  
+        }
+
+        .profile  {
+            span {
+                font-size: 0.7em;
+                font-weight: 600;
+                color: $link-color;
+            }
+
+            &:hover span {
+                color: $link-color-hover;
             }
         }
     }
-
-    a {
-        display: flex;
-        color: $section-main-color;
-        padding: 18px;
-
-        span {
-            margin: 0 20px;
-        }
-    }
-
-    .wallet {
-        span {
-            font-weight: 600;
-        }
-    }
-    .notification {
-        a {
-          span {
-            display: block;
-          }
-          
-        }
-      }
-
-    .profile {
-        span {
-            font-size: 0.7em;
-            font-weight: 600;
-            color: $link-color;
-        }
-    &:hover span {
-        color: $link-color-hover;
-    }
-    }
 }
+
+
 
 .top-header-show-menu {
     margin-left: $menu-width;
