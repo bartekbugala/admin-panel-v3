@@ -1,5 +1,6 @@
 [class^="status-"] {
     position: relative;
+
     &::before {
         content: "";
         display: block;
@@ -20,20 +21,21 @@
 .status-md {
     &::before {
         width: 15px;
-        height: 15px; 
+        height: 15px;
     }
 }
+
 .alert-status {
     &::before {
         top: -5px;
-        right: 0;  
+        right: 0;
     }
 }
 
 .manager-status {
     &::before {
         top: 0;
-        right: 0;     
+        right: 0;
     }
 }
 
@@ -48,4 +50,3 @@
         background-color: $warning-color;
     }
 }
-

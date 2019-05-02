@@ -10,6 +10,7 @@
     padding: 10px 20px;
     text-decoration: none;
     transition: background-color ease-in $color-transition-speed, color ease-in $color-transition-speed;
+
     &:hover {
         cursor: pointer;
     }

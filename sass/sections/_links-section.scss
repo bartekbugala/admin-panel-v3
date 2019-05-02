@@ -47,7 +47,7 @@
                 display: flex;
                 justify-content: flex-start;
                 white-space: nowrap;
-         
+
             }
 
             span:nth-child(2) {
@@ -55,6 +55,7 @@
                 text-overflow: ellipsis;
                 display: flex;
                 justify-content: flex-start;
+
                 a:hover {
                     color: $link-color-hover;
                 }
@@ -68,6 +69,7 @@
 
                 a {
                     opacity: 0;
+
                     &:first-of-type {
                         padding-right: 20px;
                     }

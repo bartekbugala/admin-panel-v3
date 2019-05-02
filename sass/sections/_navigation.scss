@@ -9,6 +9,7 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
+
         .logo-section {
             height: $logo-bar-height;
             display: flex;
@@ -16,14 +17,17 @@
             justify-content: flex-start;
             flex-wrap: nowrap;
             overflow: hidden;
+
             a {
                 height: 22px;
                 display: flex;
                 align-items: center;
+
                 i {
                     line-height: 22px;
                 }
             }
+
             .logo {
                 display: flex;
                 color: $menu-color-hover;
@@ -40,6 +44,7 @@
                 color: $menu-color;
                 font-size: 22px;
                 margin-right: 0;
+
                 &:hover {
                     color: $menu-color-hover;
                 }
@@ -57,6 +62,7 @@
                     padding-left: $menu-left-padding-hover;
                     background-color: $menu-background-color;
                     overflow: hidden;
+
                     a {
                         background-color: $menu-background-color;
                         color: $menu-color;
@@ -64,23 +70,26 @@
                         width: 100%;
                         display: flex;
                         font-size: 16px;
-                        padding: 16px 20px;           
+                        padding: 16px 20px;
                         flex-wrap: nowrap;
+
                         i {
                             margin-right: 20px;
                         }
-            
+
                         span {
                             white-space: nowrap;
                             display: flex;
                             visibility: visible;
                             opacity: 1;
                         }
+
                         &:hover {
                             color: $menu-color-hover;
                             background-color: $menu-background-color-hover
                         }
                     }
+
                     &:hover {
                         background-color: $menu-left-padding-color-hover;
                     }
@@ -96,6 +105,7 @@
             justify-content: flex-start;
             flex-direction: column;
             overflow: hidden;
+
             h4 {
                 white-space: nowrap;
                 display: unset;
@@ -103,6 +113,7 @@
                 justify-self: stretch;
                 margin: 0 0 10px 10px;
             }
+
             a {
                 padding: 5px 15px;
                 display: flex;
@@ -111,7 +122,8 @@
                 cursor: pointer;
                 flex-wrap: nowrap;
                 width: $menu-width;
-                .avatar-img {                
+
+                .avatar-img {
                     margin-right: 10px;
                     border-radius: 50%;
                     max-width: 60px;
@@ -122,6 +134,7 @@
                     overflow: hidden;
 
                 }
+
                 &:hover {
                     background-color: $menu-background-color-hover;
                     color: $link-color-hover;
@@ -147,28 +160,32 @@
         }
 
         nav ul li a span {
-                display: flex;
-                opacity: 0;
-                overflow: hidden;
-                visibility: hidden;
-                white-space: nowrap;     
+            display: flex;
+            opacity: 0;
+            overflow: hidden;
+            visibility: hidden;
+            white-space: nowrap;
         }
 
         .menu-manager-section {
             justify-content: flex-start;
             align-items: center;
+
             h4 {
                 display: none;
             }
+
             a {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
+
                 .avatar-img {
                     margin: 0;
-                    justify-content: flex-start;                    
+                    justify-content: flex-start;
                     max-width: 30px;
                 }
+
                 .manager-name {
                     visibility: hidden;
                     display: none;

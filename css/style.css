@@ -528,6 +528,10 @@ nav a,
   transition: color ease-in 0.2s;
 }
 
+.top-header ul li:after {
+  transition: background-color ease-in 0.2s;
+}
+
 .underlined-link a {
   transition: opacity ease-in 0.3s;
 }
@@ -668,27 +672,16 @@ section {
   display: block;
   content: "";
   position: absolute;
-  z-index: -5;
+  z-index: -1;
   background-color: #ffffff;
-  opacity: 1;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  transition: background-color ease-in .3s;
 }
 
 .top-header ul li:hover:after {
-  display: block;
-  content: "";
-  position: absolute;
-  z-index: -5;
   background-color: #f0f0ee;
-  opacity: 1;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
 }
 
 .top-header ul li {
@@ -705,30 +698,26 @@ section {
   display: flex;
   color: #a6a6a6;
   padding: 18px;
-  z-index: 3;
+  z-index: 1;
 }
 
 .top-header ul li a span {
   margin: 0 20px;
-  z-index: 3;
+  z-index: 1;
 }
 
 .top-header ul li a span i {
   font-size: 0.9em;
-  z-index: 3;
+  z-index: 1;
 }
 
 .top-header ul li a i {
   font-size: 0.9em;
-  z-index: 3;
+  z-index: 1;
 }
 
 .top-header ul .wallet a span {
   font-weight: 600;
-}
-
-.top-header ul .notification a span {
-  display: block;
 }
 
 .top-header ul .profile span {
@@ -1308,6 +1297,14 @@ section {
   .top-header a span {
     margin: 0;
   }
+  .top-header ul li:after {
+    display: none;
+    background-color: unset;
+    transition: unset;
+  }
+  .top-header ul li:hover:after {
+    display: none;
+  }
   .menu-wrapper {
     width: calc(240px - 175px);
     position: fixed;
@@ -1430,7 +1427,10 @@ section {
     font-weight: 400;
   }
   .menu-wrapper .top-header ul .notification a span {
-    display: block;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 0;
     width: 20px;
   }
   .menu-wrapper .top-header ul .profile:hover span {
@@ -1573,7 +1573,8 @@ section {
     font-weight: 400;
   }
   .menu-wrapper-toggle .top-header ul .notification a span {
-    display: block;
+    display: -ms-flexbox;
+    display: flex;
     margin: 0;
     padding: 0;
     width: 20px;
@@ -1587,11 +1588,11 @@ section {
   .top-header-show-menu {
     margin-left: unset;
   }
-  .status-sm::after {
+  .status-sm::before {
     width: 15px;
     height: 15px;
   }
-  .status-md::after {
+  .status-md::before {
     width: 10px;
     height: 10px;
   }
@@ -1717,12 +1718,6 @@ section {
   }
   .links-section .links-list .underlined-link span:nth-child(3) .icon-trash {
     color: #979797;
-  }
-}
-
-@media (min-width: 768px) {
-  .menu-wrapper .top-header ul li {
-    background-color: unset;
   }
 }
 

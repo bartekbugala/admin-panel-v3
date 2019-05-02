@@ -1,35 +1,35 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  
-  .container-fluid {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.container-fluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-  @for $i from 1 through 12 {
-    .col-#{$i} {
-      $width: 100% / 12 * $i;
-      flex: 0 0 $width;
-      max-width: $width;
-    }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    $width: 100% / 12 * $i;
+    flex: 0 0 $width;
+    max-width: $width;
   }
+}
 
 h1,
 h2,
@@ -42,46 +42,46 @@ a,
 div,
 ul,
 ol {
-    font-family: $main-font;
-    color: $section-main-color;
+  font-family: $main-font;
+  color: $section-main-color;
 }
 
 a {
-    text-decoration: none;
-    color: $link-color;
+  text-decoration: none;
+  color: $link-color;
 }
 
 body {
-    background-color: $body-background-color;
+  background-color: $body-background-color;
 }
 
 // Styling of sections in the content area
 section {
-    display: flex;
-    background-color: $section-background-color;
-    margin: $section-margin;
-    margin-left: calc(#{$menu-width} - #{$menu-minus-width} + #{$section-margin});
-    flex-wrap: wrap;
-    box-shadow: 0px 0px 16px 1px $section-shadow-color;
+  display: flex;
+  background-color: $section-background-color;
+  margin: $section-margin;
+  margin-left: calc(#{$menu-width} - #{$menu-minus-width} + #{$section-margin});
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 16px 1px $section-shadow-color;
 
-    h3 {
-        text-transform: uppercase;
-    }
+  h3 {
+    text-transform: uppercase;
+  }
 
-    header {
-        justify-self: stretch;
-    }
+  header {
+    justify-self: stretch;
+  }
 
-    header,
-    .section-part {
-        padding: $section-padding;
-        width: 100%;
-        border-bottom: solid 2px $input-border-color;
-    } 
+  header,
+  .section-part {
+    padding: $section-padding;
+    width: 100%;
+    border-bottom: solid 2px $input-border-color;
+  }
 }
 
 .section-show-menu {
-    margin-left: calc(#{$menu-width} + #{$section-margin});
+  margin-left: calc(#{$menu-width} + #{$section-margin});
 }
 
 .scroll-wrapper {
@@ -95,6 +95,7 @@ section {
   width: 100%;
   max-width: 100%;
 }
+
 .scroll-wrapper img {
   width: auto;
   margin: 0 auto;

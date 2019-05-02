@@ -6,8 +6,6 @@ nav a,
     transition: background-color ease-in $color-transition-speed;
 }
 
-
-
 .top-header .profile span,
 nav a,
 .hamburger,
@@ -15,6 +13,11 @@ nav a,
 .underlined-link a {
     transition: color ease-in $color-transition-speed;
 }
+
+.top-header ul li:after {
+    transition: background-color ease-in $color-transition-speed;
+}
+
 
 .underlined-link a {
     transition: opacity ease-in $opacity-transition-speed;
