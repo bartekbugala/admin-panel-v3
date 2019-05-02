@@ -66,6 +66,11 @@
         .notification {
             flex: 0 2 60px;
             background-color: red;
+            a span i {
+                    display: block;
+                    width: 20px;
+                    position: relative;
+            }
         }
 
         .profile {

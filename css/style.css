@@ -742,6 +742,12 @@ section {
   background-color: red;
 }
 
+.top-header ul .notification a span i {
+  display: block;
+  width: 20px;
+  position: relative;
+}
+
 .top-header ul .profile {
   -ms-flex: 0 2 220px;
       flex: 0 2 220px;
@@ -1480,11 +1486,6 @@ section {
   }
   .menu-wrapper .top-header ul .notification a span {
     display: none;
-  }
-  .menu-wrapper .top-header ul .notification a span i {
-    display: block;
-    width: 20px;
-    position: relative;
   }
   .menu-wrapper .top-header ul .notification a .status-icon {
     display: block;
