@@ -683,7 +683,7 @@ section {
   content: "";
   position: absolute;
   z-index: -5;
-  background-color: #f5f5f2;
+  background-color: #f0f0ee;
   opacity: 1;
   height: 100%;
   width: 100%;
@@ -813,7 +813,7 @@ section {
 .menu-wrapper aside nav ul {
   list-style-type: none;
   padding: 0 0 20px 0;
-  border-bottom: solid 2px #282828;
+  border-bottom: solid 2px #303030;
 }
 
 .menu-wrapper aside nav ul li {
@@ -849,7 +849,7 @@ section {
 
 .menu-wrapper aside nav ul li a:hover {
   color: #ffffff;
-  background-color: #282828;
+  background-color: #303030;
 }
 
 .menu-wrapper aside nav ul li:hover {
@@ -904,7 +904,7 @@ section {
 }
 
 .menu-wrapper aside .menu-manager-section a:hover {
-  background-color: #282828;
+  background-color: #303030;
   color: #ffa200;
 }
 
@@ -1217,7 +1217,7 @@ section {
 }
 
 .links-section .links-list .underlined-link:hover {
-  background-color: #f5f5f2;
+  background-color: #f0f0ee;
 }
 
 .links-section .links-list .underlined-link:hover span:nth-child(3) a {
@@ -1348,7 +1348,7 @@ section {
     -ms-flex-align: center;
         align-items: center;
     padding: 10px 0;
-    border-bottom: solid 2px #282828;
+    border-bottom: solid 2px #303030;
   }
   .menu-wrapper aside .menu-manager-section h4 {
     display: none;
@@ -1417,7 +1417,7 @@ section {
   }
   .menu-wrapper .top-header ul li a:hover {
     color: #ffffff;
-    background-color: #282828;
+    background-color: #303030;
   }
   .menu-wrapper .top-header ul li:first-of-type i:last-of-type {
     display: none;
@@ -1456,7 +1456,7 @@ section {
   .menu-wrapper-toggle aside nav ul {
     list-style-type: none;
     padding: 0;
-    border-bottom: solid 2px #282828;
+    border-bottom: solid 2px #303030;
   }
   .menu-wrapper-toggle aside nav ul li {
     padding-left: 5px;
@@ -1487,7 +1487,7 @@ section {
   }
   .menu-wrapper-toggle aside nav ul li a:hover {
     color: #ffffff;
-    background-color: #282828;
+    background-color: #303030;
   }
   .menu-wrapper-toggle aside nav ul li:hover {
     background-color: #f58220;
@@ -1561,7 +1561,7 @@ section {
   }
   .menu-wrapper-toggle .top-header ul li a:hover {
     color: #ffffff;
-    background-color: #282828;
+    background-color: #303030;
   }
   .menu-wrapper-toggle .top-header ul li:first-of-type i:last-of-type {
     display: none;
