@@ -1,2 +1,2 @@
-# BannerLink-Admin-Panel-RWD
-## Kodilla-10.1 Administration panel layout for banners and links
+# Admin Panel Layout for Banner / Link management
+## Kodilla-11.1 - Bootcamp Assignment
