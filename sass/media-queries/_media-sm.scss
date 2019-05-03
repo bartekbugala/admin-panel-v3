@@ -410,7 +410,7 @@
     padding: 0;
   }
 
-  .input-date-container {
+  .general-statistic .input-date-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -458,9 +458,7 @@
     }
   }
 
-
-
-  .links-section {
+  .links-section .links-section-part {
     .links-list {
 
       .underlined-button,

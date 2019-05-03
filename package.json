@@ -1,6 +1,6 @@
 {
-  "name": "banner_link_admin_rwd",
-  "version": "10.1.0",
+  "name": "admin-panel-v3",
+  "version": "11.1.0",
   "description": "Banner and link administration panel RWD",
   "main": "index.html",
   "scripts": {
@@ -41,11 +41,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git@github.com:bartekbugala/BannerLink-Admin-Panel-RWD.git.git"
+    "url": "git+ssh://git@github.com/bartekbugala/admin-panel-v3.git"
   },
   "bugs": {
-    "url": "https://git@github.com:bartekbugala/BannerLink-Admin-Panel-RWD.git/issues"
+    "url": "https://git@github.com:bartekbugala/admin-panel-v3.git/issues"
   },
-  "homepage": "https://git@github.com:bartekbugala/BannerLink-Admin-Panel-RWD.git#readme",
+  "homepage": "https://git@github.com:bartekbugala/admin-panel-v3.git#readme",
   "dependencies": {}
 }
