@@ -1,7 +1,7 @@
 {
   "name": "admin-panel-v3",
   "version": "11.1.0",
-  "description": "Banner and link administration panel RWD",
+  "description": "Banner and link administration panel layout",
   "main": "index.html",
   "scripts": {
     "test": "npm-run-all test:*",
