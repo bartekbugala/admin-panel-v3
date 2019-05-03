@@ -1,0 +1,37 @@
+form {
+    label {
+        font-weight: bold;
+    }
+    input {
+        border: solid 1px $input-border-color;
+        border-radius: 5%;
+        color: $input-color;
+        padding: 12px;
+    }
+    .field-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 8px 0;
+        label,
+        input {
+            justify-content: flex-start;
+        }
+        label {
+            flex: 0 2 180px;
+            justify-self: flex-start;
+            margin-left: 10px;
+        }
+        input {
+            flex: 0 2 280px;
+            margin-right: 10px;
+        }
+    }
+    button,
+    .btn {
+        display: block;
+        width: 100px;
+        margin: 0 auto;
+    }
+}

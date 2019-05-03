@@ -72,7 +72,8 @@ section {
     text-transform: uppercase;
   }
 
-  header {
+  header,
+  .section-part {
     justify-self: stretch;
   }
 
@@ -80,7 +81,7 @@ section {
   .section-part {
     padding: $section-padding;
     width: 100%;
-    border-bottom: solid 2px $input-border-color;
+    border-bottom: solid $section-dividing-line-width $section-dividing-line-color;
   }
 }
 

@@ -483,7 +483,8 @@ section h3 {
   text-transform: uppercase;
 }
 
-section header {
+section header,
+section .section-part {
   justify-self: stretch;
 }
 
@@ -491,7 +492,7 @@ section header,
 section .section-part {
   padding: 20px;
   width: 100%;
-  border-bottom: solid 2px #e3e3e3;
+  border-bottom: solid 1px #e3e3e3;
 }
 
 .section-show-menu {
@@ -618,6 +619,55 @@ section {
   padding: 15px;
   width: 50px;
   height: 50px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input {
+  border: solid 1px #e3e3e3;
+  border-radius: 5%;
+  color: #333333;
+  padding: 12px;
+}
+
+form .field-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 8px 0;
+}
+
+form .field-row label,
+form .field-row input {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+form .field-row label {
+  -ms-flex: 0 2 180px;
+      flex: 0 2 180px;
+  justify-self: flex-start;
+  margin-left: 10px;
+}
+
+form .field-row input {
+  -ms-flex: 0 2 280px;
+      flex: 0 2 280px;
+  margin-right: 10px;
+}
+
+form button,
+form .btn {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
 }
 
 [class^="status-"] {
@@ -1274,6 +1324,10 @@ section {
   color: #bababa;
 }
 
+.personal-data-section form {
+  width: 100%;
+}
+
 /* Pages / Views */
 /* Media Queries */
 @media (max-width: 767px) {
@@ -1670,6 +1724,7 @@ section {
     height: 10px;
   }
   section {
+    overflow: hidden;
     margin-right: 0;
     transition: unset;
   }
@@ -1684,7 +1739,7 @@ section {
     margin-left: calc(240px - 175px);
     padding: 0;
   }
-  .general-statistic .input-date-container {
+  .general-statistic-section .input-date-container {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -1693,9 +1748,8 @@ section {
         align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 50%;
   }
-  .general-statistic .input-date-container .input-date-range {
+  .general-statistic-section .input-date-container .input-date-range {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: stretch;
@@ -1708,7 +1762,7 @@ section {
         flex-basis: 50%;
     border: solid 2px #e3e3e3;
   }
-  .general-statistic .input-date-container .input-date-range .input-date {
+  .general-statistic-section .input-date-container .input-date-range .input-date {
     -ms-flex: 0 0 95%;
         flex: 0 0 95%;
     display: -ms-flexbox;
@@ -1718,12 +1772,12 @@ section {
     padding: 5px;
     margin: 5px;
   }
-  .general-statistic .input-date-container .input-date-range .input-date:first-of-type {
+  .general-statistic-section .input-date-container .input-date-range .input-date:first-of-type {
     border-right: unset;
     margin-right: unset;
     border-bottom: solid 2px #e3e3e3;
   }
-  .general-statistic .input-date-container .input-date-range .input-date i {
+  .general-statistic-section .input-date-container .input-date-range .input-date i {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -1735,7 +1789,7 @@ section {
     margin-right: 10px;
     margin-left: 5px;
   }
-  .general-statistic .input-date-container .input-date-btn {
+  .general-statistic-section .input-date-container .input-date-btn {
     margin: 10px;
     -ms-flex-preferred-size: 5%;
         flex-basis: 5%;
@@ -1791,6 +1845,19 @@ section {
   }
   .links-section .links-section-part .links-list .underlined-link span:nth-child(3) .icon-trash {
     color: #979797;
+  }
+  .personal-data-section form .section-part [class^="personal-data-"] .field-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .personal-data-section form .section-part [class^="personal-data-"] .field-row label {
+    -ms-flex: 0 0 190px;
+        flex: 0 0 190px;
+  }
+  .personal-data-section form .section-part [class^="personal-data-"] .field-row input {
+    -ms-flex: 0 0 190px;
+        flex: 0 0 190px;
+    overflow-x: auto;
   }
 }
 
