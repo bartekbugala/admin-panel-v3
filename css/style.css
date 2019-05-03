@@ -1724,7 +1724,6 @@ form .btn {
     height: 10px;
   }
   section {
-    overflow: hidden;
     margin-right: 0;
     transition: unset;
   }
