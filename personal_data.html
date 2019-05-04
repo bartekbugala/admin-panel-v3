@@ -25,7 +25,7 @@
                     <li><a href="./index.html"><i class="icon-general"></i><span>General</span></a></li>
                     <li><a href="#"><i class="icon-details"></i><span>Details</span></a></li>
                     <li><a href="./links.html"><i class="icon-links"></i><span>Links</span></a></li>
-                    <li><a href="#"><i class="icon-banners"></i><span>Banners</span></a></li>
+                    <li><a href="./banners.html"><i class="icon-banners"></i><span>Banners</span></a></li>
                     <li><a href="./personal_data.html"><i class="icon-personaldata"></i><span>Personal data</span></a>
                     </li>
                     <li><a href="#"><i class="icon-payout"></i><span>Payout</span></a></li>
@@ -76,7 +76,7 @@
         <header>
             <h3>Personal Data</h3>
         </header>
-        <form action="" method="">
+        <form action="" method="" novalidate>
             <div class="section-part">
                 <div class="personal-data-info">
                     <div class="field-row">
@@ -85,9 +85,11 @@
                     </div>
                     <div class="field-row">
                         <label>Surname</label>
-                        <input type="text" value="di Caprio" name="user-surname"></div>
+                        <input type="text" value="di Caprio" name="user-surname">
+                    </div>
                     <div class="field-row"><label>E-mail</label>
-                        <input type="email" value="leonardo@hollywood.com" required name="E-mail">
+                        <input type="email" value="leonardo@hollywood.com" required name="e-mail">
+                        <span class="error"></span>
                     </div>
                     <div class="field-row">
                         <label>Phone number</label>
@@ -138,6 +140,7 @@
             </div>
         </form>
     </section>
+    <script src="./js/validate_form.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

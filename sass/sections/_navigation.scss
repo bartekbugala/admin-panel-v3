@@ -21,26 +21,30 @@
 
             div {
                 display: flex;
+
                 a {
                     height: 22px;
                     display: flex;
                     align-items: center;
+
                     i {
                         line-height: 22px;
                     }
                 }
-            }  
+            }
 
             .logo {
                 display: flex;
-                flex: 0 0 calc(#{$menu-minus-width}) ;
+                flex: 0 0 calc(#{$menu-minus-width});
                 font-size: 100px;
                 padding-left: 25px;
+
                 a {
                     color: $menu-color-hover;
+
                     &:hover {
-                        text-shadow: 0 0 10px $link-color-hover;    
-                    }                    
+                        text-shadow: 0 0 10px $link-color-hover;
+                    }
                 }
 
             }
@@ -49,12 +53,14 @@
                 justify-content: center;
                 flex: 0 0 calc(#{$menu-width} - #{$menu-minus-width});
                 font-size: 22px;
+
                 a {
                     color: $menu-color;
+
                     &:hover {
                         text-shadow: 0 0 10px $link-color-hover;
-                        color: $menu-color-hover;    
-                    }                    
+                        color: $menu-color-hover;
+                    }
                 }
             }
         }
@@ -91,15 +97,24 @@
                             visibility: visible;
                             opacity: 1;
                         }
-
-                        &:hover {
-                            color: $menu-color-hover;
-                            background-color: $menu-background-color-hover
-                        }
                     }
 
                     &:hover {
                         background-color: $menu-left-padding-color-hover;
+
+                        a {
+                            &:hover {
+                                color: $menu-color-hover;
+                                background-color: $menu-background-color-hover
+                            }
+                        }
+                    }
+                }
+                .menu-selected {
+                    background-color: $menu-left-padding-color-hover;
+                    a {
+                        color: $menu-color-hover;
+                        background-color: $menu-background-color-hover
                     }
                 }
             }
