@@ -21,7 +21,7 @@
                 <div class="hamburger"><a class="" href="#"><i class="icon-hamburger"></i></a></div>
             </div>
             <script>
-                var menuSelected = "menu-personal";
+                var menuSelected = "menu-general";
             </script>
             <nav>
                 <ul>
@@ -36,7 +36,7 @@
                     <li id="menu-payout"><a href="#"><i class="icon-payout"></i><span>Payout</span></a></li>
                     <li id="menu-postback"><a href="#"><i class="icon-postback"></i><span>Postback</span></a></li>
                 </ul>
-            </nav><divax><divax>
+            </nav>
             <div class="menu-manager-section">
                 <h4>your mangager</h4>
                 <a href="#">
@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li class="profile">
-                    <a href="#">
+                    <a class="login-modal" href="#">
                         <i class="icon-profile"></i>
                         <span class="top-header-text">Leonardo di Caprio</span>
                     </a>
@@ -81,7 +81,7 @@
         <header>
             <h3>Personal Data</h3>
         </header>
-        <form action="#" method="POST" novalidate>
+        <form novalidate>
             <div class="section-part">
                 <div class="personal-data-info">
                     <label class="field-row">
@@ -95,8 +95,10 @@
                     <label class="field-row">
                         <span>E-mail</span>
                         <input type="email" value="leonardo@hollywood.com" required name="e-mail">
-                        <span class="error"></span>
                     </label>
+                    <div class="field-row">
+                        <div class="error"></div>
+                    </div>
                     <label class="field-row">
                         <span>Phone number</span>
                         <input type="text" value="+1 432 555 00 44" name="user-phone">
@@ -142,10 +144,38 @@
                 </div>
             </div>
             <div class="section-part">
-                <button class="btn btn-warning" type="submit">Save</button>
+                <div class="field-row">
+                    <div class="buttons-center">
+                        <button class="btn btn-warning" type="submit">Save</button>
+                        <button class="btn btn-secondary" type="reset">Reset</button>
+                    </div>
+                </div>
             </div>
         </form>
     </section>
+
+    <div class="overlay" id="overlay">
+            <div class="modal" id="loginModal">
+                <div role="button" class="btn btn-close btn-secondary js--close-modal">x</div>
+                <header>
+                    <h3>Login</h3>
+    
+                </header>
+                <div class="modal-content">
+                    <form>
+                        <div class="field-row">
+                            <input type="text" required>
+                            <input type="password" required>
+                            <div><button type="submit" class="btn btn-warning">Enter</button></div>
+    
+                        </div>
+                    </form>
+                </div>
+    
+            </div>
+            <!-- Tutaj będą nasze modale -->
+        </div>
+
     <script src="./js/validate_form.js"></script>
     <script src="./js/script.js"></script>
 </body>

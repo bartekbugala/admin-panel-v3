@@ -64,4 +64,21 @@
       }
     }
   }
+
+  .personal-data-section {
+    form {
+      .section-part {
+        [class^="personal-data-"] {
+          .field-row {
+            flex-wrap: wrap;       
+            .error {
+              flex: 0 2 180px;
+            }
+          }
+        }
+      }
+    }
+
+}
+
 }

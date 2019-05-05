@@ -64,7 +64,7 @@
                     </a>
                 </li>
                 <li class="profile">
-                    <a href="#">
+                    <a class="login-modal" href="#">
                         <i class="icon-profile"></i>
                         <span class="top-header-text">Leonardo di Caprio</span>
                     </a>
@@ -93,7 +93,7 @@
                     <i class="icon-refresh"></i></a>
             </div>
         </div>
-        <div class="section-part">
+        <div class="section-part counter-section">
             <div class="counters">
                 <div class="underlined-counter"><span>Visit Signups</span><span>123</span></div>
                 <div class="underlined-counter"><span>Net Deposit</span><span>123</span></div>
@@ -103,24 +103,14 @@
                 <div class="underlined-counter"><span>Turn Over</span><span>123</span></div>
             </div>
         </div>
-        <div class="section-part chart-container">
-            <div class="chart-legend">
-                <div class="chart-description-box">
-                    <div class="chart-legend-signups"></div>
-                    <span>Signups</span>
-                </div>
-                <div class="chart-description-box">
-                    <div class="chart-legend-ftd"></div>
-                    <span>FTD</span>
-                </div>
-                <div class="chart-description-box">
-                    <div class="chart-legend-earned"></div>
-                    <span>Earned</span>
-                </div>
-            </div>
-            <div class="chart-wrapper">
+        <div class="section-part chart-container container">
+            <div class="chart-positioner">
+                <h4>Earnings chart</h4>
                 <div class="scroll-wrapper">
-                    <img src="./images/chart.svg" alt="chart">
+                    <div class="chart-wrapper">
+                        <canvas id="myChart"></canvas>
+                    </div>
+
                 </div>
             </div>
 
@@ -198,6 +188,31 @@
             </div>
         </div>
     </section>
+
+    <div class="overlay" id="overlay">
+        <div class="modal" id="loginModal">
+            <div role="button" class="btn btn-close btn-secondary js--close-modal">x</div>
+            <header>
+                <h3>Login</h3>
+
+            </header>
+            <div class="modal-content">
+                <form>
+                    <div class="field-row">
+                        <input type="text" required>
+                        <input type="password" required>
+                        <div><button type="submit" class="btn btn-warning">Enter</button></div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <!-- Tutaj będą nasze modale -->
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="./js/chart.js"></script>
     <script src="./js/script.js">
     </script>
 </body>

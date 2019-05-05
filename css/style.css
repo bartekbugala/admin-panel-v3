@@ -501,20 +501,13 @@ section .section-part {
 
 .scroll-wrapper {
   display: block;
-  width: auto;
+  width: 100%;
   overflow-x: auto;
-  padding: 20px 0;
 }
 
 .scroll-wrapper table {
   width: 100%;
   max-width: 100%;
-}
-
-.scroll-wrapper img {
-  width: auto;
-  margin: 0 auto;
-  background: white;
 }
 
 .top-header li,
@@ -621,6 +614,15 @@ section {
   height: 50px;
 }
 
+.btn-close {
+  text-align: center;
+  font-size: 16px;
+  display: inline-block;
+  padding: 2px 0;
+  width: 25px;
+  height: 25px;
+}
+
 form label {
   font-weight: bold;
 }
@@ -639,8 +641,8 @@ form .field-row {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 8px 0;
 }
 
@@ -651,9 +653,9 @@ form .field-row input {
 }
 
 form .field-row span {
+  content: " ";
   -ms-flex: 0 2 180px;
       flex: 0 2 180px;
-  justify-self: flex-start;
   margin-left: 10px;
 }
 
@@ -664,12 +666,27 @@ form .field-row input {
 }
 
 form .field-row .error {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 0 4 460px;
+      flex: 0 4 460px;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  font-size: 0.8em;
   color: red;
-  background: white;
-  border-radius: 10px;
-  border: 1px solid grey;
-  padding: 10px;
-  right: 500;
+}
+
+form .buttons-center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+form .buttons-center .btn {
+  margin: 10px 10px;
 }
 
 form button,
@@ -718,6 +735,82 @@ form .btn {
 
 .status-orange::after {
   background-color: #f58220;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: auto;
+  padding: 30px;
+  display: none;
+}
+
+.overlay.show {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal {
+  max-width: 700px;
+  margin: auto;
+  background-color: #ffffff;
+  position: relative;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.modal .btn-close {
+  float: right;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+}
+
+.modal header {
+  padding: 40px;
+  width: 100%;
+  border-bottom: solid 1px #e3e3e3;
+}
+
+.modal header h3 {
+  float: left;
+}
+
+.modal .modal-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: wrap;
+      flex: wrap;
+  width: 100%;
+  padding: 20px;
+}
+
+.modal .modal-content form .field-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.modal .modal-content form .field-row input {
+  -ms-flex: 0 1 100px;
+      flex: 0 1 100px;
+  margin: 5px;
+}
+
+.modal .modal-content form .field-row div {
+  margin: 5px;
+  -ms-flex: 0 1 100px;
+      flex: 0 1 100px;
 }
 
 /* Sections */
@@ -1127,16 +1220,21 @@ form .btn {
       flex-basis: 5%;
 }
 
-.general-statistic-section .counters {
+.general-statistic-section .counter-section {
+  border-bottom: unset;
+}
+
+.general-statistic-section .counter-section .counters {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
+  border-bottom: unset;
 }
 
-.general-statistic-section .counters .underlined-counter {
+.general-statistic-section .counter-section .counters .underlined-counter {
   width: 200px;
   margin: 10px 30px;
   border-bottom: solid 2px #e3e3e3;
@@ -1146,14 +1244,14 @@ form .btn {
       justify-content: space-between;
 }
 
-.general-statistic-section .counters .underlined-counter span {
+.general-statistic-section .counter-section .counters .underlined-counter span {
   display: -ms-flexbox;
   display: flex;
   padding: 5px;
   white-space: nowrap;
 }
 
-.general-statistic-section .counters .underlined-counter span:first-of-type {
+.general-statistic-section .counter-section .counters .underlined-counter span:first-of-type {
   font-weight: bold;
   -ms-flex-pack: start;
       justify-content: flex-start;
@@ -1161,7 +1259,7 @@ form .btn {
       flex: 0 0 30%;
 }
 
-.general-statistic-section .counters .underlined-counter span:last-of-type {
+.general-statistic-section .counter-section .counters .underlined-counter span:last-of-type {
   color: #333333;
   -ms-flex-pack: end;
       justify-content: flex-end;
@@ -1169,57 +1267,17 @@ form .btn {
       flex: 0 0 20%;
 }
 
-.general-statistic-section .chart-container .chart-legend {
-  -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.general-statistic-section .chart-container .chart-positioner {
+  margin: 0 auto;
+  width: 70%;
 }
 
-.general-statistic-section .chart-container .chart-description-box {
-  display: inline-block;
-  background-color: #f3f3f1;
-  color: #a6a6a6;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 5px;
+.general-statistic-section .chart-container .chart-positioner h4 {
+  margin: 30px 0;
 }
 
-.general-statistic-section .chart-container .chart-description-box:last-of-type {
-  background: unset;
-}
-
-.general-statistic-section .chart-container [class^="chart-legend-"] {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 15px;
-  height: 15px;
-  top: 0;
-  right: 10%;
-}
-
-.general-statistic-section .chart-container .chart-legend-signups {
-  background-color: #80bfca;
-}
-
-.general-statistic-section .chart-container .chart-legend-ftd {
-  background-color: #ff9a38;
-}
-
-.general-statistic-section .chart-container .chart-legend-earned {
-  background-color: #59b66d;
-}
-
-.general-statistic-section .chart-container .chart-wrapper {
-  display: inline;
-  text-align: center;
+.general-statistic-section .chart-container .chart-positioner .chart-wrapper {
+  min-width: 500px;
 }
 
 .links-section .links-section-part {
@@ -1811,6 +1869,10 @@ form .btn {
     -ms-flex-preferred-size: 5%;
         flex-basis: 5%;
   }
+  .general-statistic-section .chart-container .chart-positioner {
+    margin: 0 auto;
+    width: 90%;
+  }
   .links-section .links-section-part .links-list .underlined-button,
   .links-section .links-section-part .links-list .underlined-link {
     display: -ms-flexbox;
@@ -1875,6 +1937,10 @@ form .btn {
     -ms-flex: 0 2 180px;
         flex: 0 2 180px;
     overflow-x: auto;
+  }
+  .personal-data-section form .section-part [class^="personal-data-"] .field-row .error {
+    -ms-flex: 0 2 180px;
+        flex: 0 2 180px;
   }
 }
 
@@ -1990,6 +2056,14 @@ form .btn {
   }
   .links-section .links-section-part .links-list .underlined-link span:nth-child(3) .icon-trash {
     color: #979797;
+  }
+  .personal-data-section form .section-part [class^="personal-data-"] .field-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .personal-data-section form .section-part [class^="personal-data-"] .field-row .error {
+    -ms-flex: 0 2 180px;
+        flex: 0 2 180px;
   }
 }
 

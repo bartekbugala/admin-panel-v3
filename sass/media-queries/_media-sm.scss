@@ -394,6 +394,7 @@
   section {
     margin-right: 0;
     transition: unset;
+
     &:first-of-type {
       margin-top: 0;
     }
@@ -454,6 +455,13 @@
       .input-date-btn {
         margin: 10px;
         flex-basis: 5%;
+      }
+    }
+
+    .chart-container {
+      .chart-positioner {
+        margin: 0 auto;
+        width: 90%;
       }
     }
   }
@@ -527,19 +535,25 @@
       .section-part {
         [class^="personal-data-"] {
           .field-row {
-            flex-wrap: wrap;       
+            flex-wrap: wrap;
+
             label {
               flex: 0 2 180px;
             }
+
             input {
               flex: 0 2 180px;
               overflow-x: auto;
+            }
+
+            .error {
+              flex: 0 2 180px;
             }
           }
         }
       }
     }
 
-}
+  }
 
 }

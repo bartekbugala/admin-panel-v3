@@ -1,11 +1,17 @@
 document.querySelector('form').addEventListener('submit', function(event) {
-    var isFormValidate = true;
-  
-    var emailAddressInput = event.target.querySelector('input[name="e-mail"]')
+    let isFormValidate = true;
+
+    const emailAddressInput = event.target.querySelector('input[name="e-mail"]')
+
     if(emailAddressInput.value.indexOf('@') < 0) {
       isFormValidate = false;
-      emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
+      
+      document.querySelector('.error').innerHTML = 'Wrong e-mail address';
+   
     }
   
     return !isFormValidate ? event.preventDefault() : true;
   })
+
+
+  

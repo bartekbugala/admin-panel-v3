@@ -4,7 +4,7 @@
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-    
+
         .input-date-range {
             display: flex;
             align-items: stretch;
@@ -12,22 +12,21 @@
             flex-wrap: nowrap;
             flex-basis: 40%;
             border: solid 2px $input-border-color;
-    
+
             .input-date {
-    
                 flex: 5 0 40%;
                 display: flex;
                 color: $input-color;
                 line-height: 30px;
                 padding: 5px;
                 margin: 5px;
-    
+
                 &:first-of-type {
                     border-right: solid 2px $input-border-color;
                     margin-right: -2px;
-    
+
                 }
-    
+
                 i {
                     display: flex;
                     align-items: center;
@@ -37,94 +36,67 @@
                 }
             }
         }
-    
+
         .input-date-btn {
             margin: 10px;
             flex-basis: 5%;
         }
     }
-    
-    .counters {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    
-        .underlined-counter {
-            width: 200px;
-            margin: 10px 30px;
-            border-bottom: solid 2px $input-border-color;
+
+    .counter-section {
+        border-bottom: unset;
+        .counters {
             display: flex;
-            justify-content: space-between;
-    
-            span {
-                display: flex;
-    
-                padding: 5px;
-                white-space: nowrap;
-    
-                &:first-of-type {
-                    font-weight: bold;
-                    justify-content: flex-start;
-                    flex: 0 0 30%;
-                }
-    
-                &:last-of-type {
-                    color: $input-color;
-                    justify-content: flex-end;
-                    flex: 0 0 20%;
-    
-                }
-            }
-        }
-    }
-    
-    .chart-container {
-        .chart-legend {
-            flex: 0 0 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
             flex-wrap: wrap;
-        }
-    
-        .chart-description-box {
-            display: inline-block;
-            background-color: $chart-button-bg-color;
-            color: $chart-button-color;
-            border-radius: 5px;
-            padding: 10px 20px;
-            margin: 5px;
-    
-            &:last-of-type {
-                background: unset
+            justify-content: center;
+            border-bottom: unset;
+
+            .underlined-counter {
+                width: 200px;
+                margin: 10px 30px;
+                border-bottom: solid 2px $input-border-color;
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    display: flex;
+
+                    padding: 5px;
+                    white-space: nowrap;
+
+                    &:first-of-type {
+                        font-weight: bold;
+                        justify-content: flex-start;
+                        flex: 0 0 30%;
+                    }
+
+                    &:last-of-type {
+                        color: $input-color;
+                        justify-content: flex-end;
+                        flex: 0 0 20%;
+
+                    }
+                }
             }
         }
-    
-        [class^="chart-legend-"] {
-            content: "";
-            display: inline-block;
-            border-radius: 50%;
-            width: 15px;
-            height: 15px;
-            top: 0;
-            right: 10%;
+
+    }
+
+
+    .chart-container {
+        .chart-positioner {
+            h4 {
+                margin: 30px 0;
+            }
+
+            margin: 0 auto;
+            width: 70%;
+
+            .chart-wrapper {
+                min-width: 500px;
+
+            }
         }
-    
-        .chart-legend-signups {
-            background-color: $chart-signups-color;
-        }
-    
-        .chart-legend-ftd {
-            background-color: $chart-ftd-color;
-        }
-    
-        .chart-legend-earned {
-            background-color: $chart-earned-color;
-        }
-    
-        .chart-wrapper {
-            display: inline;
-            text-align: center;
-        }
+
     }
 }
