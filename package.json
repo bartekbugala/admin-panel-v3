@@ -19,7 +19,7 @@
     "watch:sassprefixer": "onchange -d 100 sass/*.scss sass/**/*.scss -- npm-run-all watch:sass watch:autoprefixer",
     "watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch:autoprefixer": "autoprefixer-cli css/style.css ",
-    "watch:validate": "onchange *.html -- npm-run-all test",
+    "watch:validate": "onchange *.html -- npm-run-all test:all",
     "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
   },
   "keywords": [],
