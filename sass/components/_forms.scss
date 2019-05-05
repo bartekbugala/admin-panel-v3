@@ -14,18 +14,27 @@ form {
         justify-content: center;
         flex-wrap: nowrap;
         margin: 8px 0;
-        label,
+        
+        span,
         input {
             justify-content: flex-start;
         }
-        label {
+        span {
             flex: 0 2 180px;
             justify-self: flex-start;
-            margin-left: 10px;
+            margin-left: 10px;       
         }
         input {
             flex: 0 2 280px;
             margin-right: 10px;
+        }
+        .error {
+            color: red;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid grey;
+            padding: 10px;
+            right: 500;
         }
     }
     button,

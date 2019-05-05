@@ -20,18 +20,23 @@
                 <div class="logo"><a href="./index.html"><i class="icon-logo"></i></a></div>
                 <div class="hamburger"><a class="" href="#"><i class="icon-hamburger"></i></a></div>
             </div>
+            <script>
+                var menuSelected = "menu-personal";
+            </script>
             <nav>
                 <ul>
-                    <li><a href="./index.html"><i class="icon-general"></i><span>General</span></a></li>
-                    <li><a href="#"><i class="icon-details"></i><span>Details</span></a></li>
-                    <li><a href="./links.html"><i class="icon-links"></i><span>Links</span></a></li>
-                    <li><a href="./banners.html"><i class="icon-banners"></i><span>Banners</span></a></li>
-                    <li><a href="./personal_data.html"><i class="icon-personaldata"></i><span>Personal data</span></a>
+                    <li id="menu-general"><a href="./index.html"><i class="icon-general"></i><span>General</span></a>
                     </li>
-                    <li><a href="#"><i class="icon-payout"></i><span>Payout</span></a></li>
-                    <li><a href="#"><i class="icon-postback"></i><span>Postback</span></a></li>
+                    <li id="menu-details"><a href="#"><i class="icon-details"></i><span>Details</span></a></li>
+                    <li id="menu-links"><a href="./links.html"><i class="icon-links"></i><span>Links</span></a></li>
+                    <li id="menu-banners"><a href="./banners.html"><i class="icon-banners"></i><span>Banners</span></a>
+                    </li>
+                    <li id="menu-personal"><a href="./personal_data.html"><i
+                                class="icon-personaldata"></i><span>Personal data</span></a></li>
+                    <li id="menu-payout"><a href="#"><i class="icon-payout"></i><span>Payout</span></a></li>
+                    <li id="menu-postback"><a href="#"><i class="icon-postback"></i><span>Postback</span></a></li>
                 </ul>
-            </nav>
+            </nav><divax><divax>
             <div class="menu-manager-section">
                 <h4>your mangager</h4>
                 <a href="#">
@@ -76,62 +81,63 @@
         <header>
             <h3>Personal Data</h3>
         </header>
-        <form action="" method="" novalidate>
+        <form action="#" method="POST" novalidate>
             <div class="section-part">
                 <div class="personal-data-info">
-                    <div class="field-row">
-                        <label>Name</label>
+                    <label class="field-row">
+                        <span>Name</span>
                         <input type="text" value="Leonardo" name="user-name">
-                    </div>
-                    <div class="field-row">
-                        <label>Surname</label>
+                    </label>
+                    <label class="field-row">
+                        <span>Surname</span>
                         <input type="text" value="di Caprio" name="user-surname">
-                    </div>
-                    <div class="field-row"><label>E-mail</label>
+                    </label>
+                    <label class="field-row">
+                        <span>E-mail</span>
                         <input type="email" value="leonardo@hollywood.com" required name="e-mail">
                         <span class="error"></span>
-                    </div>
-                    <div class="field-row">
-                        <label>Phone number</label>
+                    </label>
+                    <label class="field-row">
+                        <span>Phone number</span>
                         <input type="text" value="+1 432 555 00 44" name="user-phone">
-                    </div>
+                    </label>
                 </div>
             </div>
             <div class="section-part">
                 <div class="personal-data-social">
-                    <div class="field-row">
-                        <label>Skype</label>
+                    <label class="field-row">
+                        <span>Skype</span>
                         <input type="text" value="ArizonaDreamer" name="user-skype">
-                    </div>
-                    <div class="field-row">
-                        <label>ICQ</label>
+                    </label>
+                    <label class="field-row">
+                        <span>ICQ</span>
                         <input type="text" name="user-icq">
-                    </div>
-                    <div class="field-row">
-                        <label>Msn</label>
+                    </label>
+                    <label class="field-row">
+                        <span>Msn</span>
                         <input type="text" name="user-msn">
-                    </div>
+                    </label>
                 </div>
             </div>
             <div class="section-part">
                 <div class="personal-data-wallet">
-                    <div class="field-row">
-                        <label>Wallet</label>
+                    <label class="field-row">
+                        <span>Wallet</span>
                         <input type="text" value="2000 $" name="user-wallet">
-                    </div>
+                    </label>
                 </div>
             </div>
             <div class="section-part">
                 <div class="personal-data-social">
                     <div class="personal-data-login">
-                        <div class="field-row">
-                            <label>Password</label>
+                        <label class="field-row">
+                            <span>Password</span>
                             <input type="password" name="user-password">
-                        </div>
-                        <div class="field-row">
-                            <label>Repeat</label>
+                        </label>
+                        <label class="field-row">
+                            <span>Repeat</span>
                             <input type="password" name="user-password-repeat">
-                        </div>
+                        </label>
                     </div>
                 </div>
             </div>

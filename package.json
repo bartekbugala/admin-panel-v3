@@ -5,9 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "npm-run-all test:*",
-    "test-nu:html": "globstar nu-html-checker *.html",
-    "test:index": "html-validator --file=index.html --verbose",
-    "test:styleguide": "html-validator --file=styleguide.html --verbose",
+    "test:all": "html-validator --allfiles --verbose",
     "init-project": "npm install && npm-run-all init:*",
     "init:dirs": "mkdirp sass sass/components sass/pages sass/sections css vendor images images/icons js",
     "init:files": "touch README.md index.html styleguide.html sass/style.scss sass/_mixins.scss sass/_layout.scss sass/_normalize.scss sass/_variables.scss js/script.js css/style.css",
@@ -21,7 +19,7 @@
     "watch:sassprefixer": "onchange -d 100 sass/*.scss sass/**/*.scss -- npm-run-all watch:sass watch:autoprefixer",
     "watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch:autoprefixer": "autoprefixer-cli css/style.css ",
-    "watch:validate": "onchange index.html styleguide.html -- npm-run-all test:index test:styleguide",
+    "watch:validate": "onchange *.html -- npm-run-all test",
     "watch:browsersync": "browser-sync start --server --files css/*.css *.html"
   },
   "keywords": [],
@@ -31,13 +29,12 @@
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.5",
     "globstar": "^1.0.0",
-    "html-validator-cli": "^6.0.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
-    "nu-html-checker": "^0.1.0",
     "onchange": "^5.2.0",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "allhtml-validator-cli": "git+https://github.com/bartekbugala/allhtml-validator-cli"
   },
   "repository": {
     "type": "git",
