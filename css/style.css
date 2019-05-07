@@ -927,6 +927,11 @@ form .btn {
   width: calc(100% - 240px);
 }
 
+.menu-wrapper * {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
 .menu-wrapper aside {
   position: fixed;
   top: 0;
@@ -947,8 +952,8 @@ form .btn {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: hidden;
